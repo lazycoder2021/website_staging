@@ -1,0 +1,464 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>How to Create Tasks or Todos using Microsoft 365 To Do app? </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Microsoft 365 To Do, Tasks, Microsoft Task Management App, Microsoft To Do, create tasks, create/share task lists, mark tasks as important, sort or group tasks, move/copy tasks, delete tasks" name="keywords ">
+    <meta content="Learn how to create tasks or todos, mark tasks as important, sort or group tasks, delete tasks, and move/copy tasks. Also learn how to create/share task lists." name="description">
+
+    <link rel="stylesheet" href="https://unpkg.com/freezeframe@3.0.10/build/css/freezeframe_styles.min.css">
+    
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../css/style.css" rel="stylesheet">
+    <style>
+        thead td {
+            border: 2px solid black;
+            text-align: center;
+        }
+
+        thead {
+            font-weight: 900;
+        }
+
+        td {
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        ol li {
+            margin: 5px;
+            line-height: 25px;
+        }
+
+        h2 {
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid d-none d-lg-block">
+
+        <div class="row align-items-center bg-white py-3 px-lg-5">
+            <div class="col-lg-4">
+                <a href="../index.html" class="navbar-brand p-0 d-none d-lg-block">
+                    <p class="m-0 display-4  text-primary" style="font-weight: 700;">M365<span class="text-secondary font-weight-normal">Corner</span></p>
+                </a>
+            </div>
+            <div class="col-lg-8 text-center text-lg-right">
+
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-2 py-lg-0 px-lg-5">
+            <a href="index.html" class="navbar-brand d-block d-lg-none">
+                <p class="m-0 display-4 text-primary" style="font-weight: 700;">m365<span class="text-white font-weight-normal">Tutorials</span></p>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-0 px-lg-6" id="navbarCollapse">
+                <div class="navbar-nav mr-auto py-0">
+                    <a href="../index.html" class="nav-item nav-link active">Home</a>
+                    <a href="../m365-for-beginners/microsoft-365-beginner-series-overview.html" class="nav-item nav-link">M365 for Beginners</a>
+                    <a href="../m365-how-tos/how-to-overview.html" class="nav-item nav-link">M365 How Tos</a>
+                    <a href="../m365-graph-api/graph-api-overview.html" class="nav-item nav-link">M365 Graph API</a>
+                    <a href="../m365-updates/m365-updates-overview.html" class="nav-item nav-link">M365 Updates</a>
+                    <a href="../m365-administration/m365-administration-overview.html" class="nav-item nav-link">M365 Administration</a>
+                    <a href="../contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <div class="input-group ml-auto d-none d-lg-flex" style="width: 100%; max-width: 300px;">
+
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+    <!-- Breaking News Start -->
+    <div class="container-fluid mt-5 mb-3 pt-3">
+
+    </div>
+    <!-- Breaking News End -->
+    <!-- News With Sidebar Start -->
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- News Detail Start -->
+                    <div class="position-relative mb-3">
+
+                        <div class="bg-white border border-top-0 p-4">
+                            <div class="mb-3">
+                                <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                   href="">Business</a>
+                                <a class="text-body" href="">Jan 01, 2045</a>
+                            </div>
+
+                            <h1 class="mb-3 text-secondary font-weight-bold">
+                                Working with Todo App in Microsoft 365
+                            </h1>
+                            <p style="background-color:red;color:white;text-align:center;"><b>Note:</b> Most of the images contained within this article are gifs. Click them to understand how Microsoft To dos work better. </p>
+
+
+                            <p>The Microsoft 365 Todo app helps you create tasks and task lists that help you get your work done. You can also collaborate with others and work together on tasks by sharing task lists.  </p>
+                            <h2 class="mb-3 text-secondary font-weight-bold" id="access-todo">
+                                Accessing the Todo App the first time
+                            </h2>
+                            <ol>
+                                <li>Login to Microsoft 365 using your credentials. </b>. </li>
+                                <li>Click <b>App Launcher</b> >> Select <b>Explore all your Apps</b> . Then select the <b>To Do</b> app under the <b>Productivity</b> category. </li>
+                                <img class="img-fluid my_class_2" src="img/accessing-todo-app-1.gif" style="border:1px solid black;" alt="Image shows how to access Microsoft 365 To Do app the first time from App Launcher by clicking Explore all your Apps link.">
+                                <p><b>Note:</b> After you access the <b>To do</b> app for the first time, it becomes available under the <b>Apps launcher</b>. </p>
+                                <img class="img-fluid my_class_2" src="img/accessing-todo-app-2.gif" style="border:1px solid black;" alt="Image shows how you can access the Microsoft 365 To Do app from the App Launcher in the Microsoft 365 home page.">
+
+                            </ol>
+                            <h2 class="mb-3 text-secondary font-weight-bold" id="create-todo">
+                                Creating your first Microsoft 365 Todo
+                            </h2>
+                            <ol>
+                                <li>Click the <b>Add a task</b> link. <b>Enter</b> the task details and click the <b>Add</b> button.    </li>
+                                <img class="img-fluid my_class_2" src="img/adding-task-1.gif" style="border:1px solid black;" alt="Image shows how you can add a task under my day section by entering the task name and pressing the enter key. ">
+                                <p><b>Note:</b> By default, <b>My Day </b>section opens. This is where all the tasks that are due today (assigned to you by others or by yourself) get listed. You can also add tasks by going to <b>Tasks</b> section >> clicking <b>Add a task</b> link. Try adding one task using the <b>Tasks</b> section as shown in the image below.  </p>
+                                <img class="img-fluid my_class_2" src="img/adding-task-2.gif" style="border:1px solid black;" alt="Image shows how you can add a task under tasks section by entering the task name and pressing the enter key. ">
+                                <p><b>Note:</b> You’ll notice that the <b>My Day</b> section will list one task; whereas <b>Tasks</b> section would list <b>two</b> as shown in the image below. This is because when you add a task under <b>My Day</b> section, the due date is automatically considered as the current date (which you can modify to suit your requirements, if required).   </p>
+                                <img class="img-fluid my_class_2" src="img/adding-task-3.gif" style="border:1px solid black;" alt="Image shows how you toggle between tasks under my day section and tasks under tasks section by clicking on them. ">
+
+                            </ol>
+                            <h3 id="multi-step-task">Task With several steps   </h3>
+                            <p>You can add several steps to the task as shown in the image. Steps help you break down a task. </p>
+                            <img class="img-fluid my_class_2" src="img/task-steps.gif" style="border:1px solid black;" alt="Image shows how you can add several steps to a task by clicking the add step option, entering the details and pressing the enter key. ">
+
+
+                            <h2 id="task-details">Task Details Section   </h2>
+
+                            <p>Once a task is created, you can add the following task details by clicking on the task.  </p>
+
+                            <ul>
+                                <li><b>Add to My Day</b>: lets you add the task to the <b>My Day</b> list. When you do this, the <b>My Day task count</b> increases as shown in the image below. (And when you remove the task from the My Day list, the <b>My Day task count</b> decreases). </li>
+                                <img class="img-fluid my_class_2" src="img/add-to-my-day.gif" style="border:1px solid black;" alt="Image shows how you can add a task to my day list by selecting the task and clicking add to my day option available to your right. ">
+
+                                <li><b>Set a reminder</b>: lets you set a reminder for the task. Click <b>Remind me</b> option. This opens the <b>Reminder</b> dialog box. Set the remainder date as per your requirements.  </li>
+                                <img class="img-fluid my_class_2" src="img/set-task-reminder.png" style="border:1px solid black;" alt="This image shows how you can set a reminder for your task by selecting the task and then selecting the remind me option available to your right. ">
+
+
+                                <li><b>Add due date</b>: lets you set a due date for the task. Click the <b>Add due date</b> option. This opens the <b>Due </b>dialog box. Set the due date as per your requirements. </li>
+
+
+                                <img class="img-fluid my_class_2" src="img/add-due-date.png" style="border:1px solid black;" alt="This image shows how you can set the due date for your task by selecting the task and then selecting the add due date option available to your right. ">
+
+                                <li><b>Repeat:</b> let’s you set a repeat date for the task. Useful for recurring tasks to be performed on a weekly, monthly, yearly etc., basis. Click the<b> Repeat</b> option. The <b> Repeat</b> dialog box opens. Set the repeat date as per your requirements. </li>
+                                <img class="img-fluid my_class_2" src="img/repeat.png" style="border:1px solid black;" alt="This image shows how you can create a repeat task that will repeat itself every week or month or year by selecting the task and then selecting the repeat option available to your right. ">
+
+
+                                <li><b>Pick a Category:</b> let’s you select a <b>Category</b> for the task. Click the <b>Pick a Category</b> option >> and <b>select a category</b> that suits your requirements. </li>
+
+                                <img class="img-fluid my_class_2" src="img/category.png" style="border:1px solid black;" alt="This image shows how you can add a category to your task by selecting your task and then selecting a category from the pick a category dropdown available to your right. ">
+
+                                <li><b>Add file:</b> let’s you add or attach files to the task. You can upload your task related files using this option. </li>
+                                <li><b>Add note:</b> let’s you add notes related to the task. Click the ‘Add note’ option and enter the note you wish to add.  </li>
+
+
+                            </ul>
+
+                            <br />
+
+                            <h2 id="important-task">Marking a Task as Important    </h2>
+
+                            <p>This can be done in 2 ways: </p>
+
+                            <ul>
+                                <li><b>From outside the task:</b> Click the star icon available to your right.   </li>
+                                <img class="img-fluid my_class_2" src="img/important-task-1.gif" style="border:1px solid black;" alt="This image shows how you can mark a task as important by clicking the star icon available to the right of the task. ">
+
+                                <li><b>From inside the task details section:</b> Click the star icon available to your top right corner.   </li>
+                                <img class="img-fluid my_class_2" src="img/important-task-2.gif" style="border:1px solid black;" alt="This screenshot shows how you can mark a task as important by clicking the star icon available within the task details section. ">
+
+                                <p><b>Note:</b>Notice how Important task count gets updated when you mark a task as important. And also the task marked as important moves up the list.</p>
+
+
+
+
+                            </ul>
+
+                            <h2 id="planned-tasks">Planned Tasks</h2>
+
+                            <p>Any task that has a <b>due date assigned</b> to it (be it past, present or the future) gets listed under the <b>Planned</b> section. Basically, all the tasks you have ‘planned’ get listed here. While you <b>assign a due date</b> to a task, notice that the <b>Planned task count</b> goes up as shown in the image below. </p>
+                            <p><b>Note</b>: The Planned task count goes down for the reverse action. </p>
+                            <img class="img-fluid my_class_2" src="img/planned-task.gif" style="border:1px solid black;" alt="This image explains what planned tasks by assigning a due date to a task and making it appear under the planned tasks section.">
+
+                            <h2 id="assigned-to-me">Assigned to me </h2>
+
+                            <p>Tasks getting listed under this section are tasks assigned to you by others in the Planner app. Read <a href="#" style="color:blue">this article on Planner app</a> to know more about how others can assign tasks to you using Planner app. </p>
+                            <img class="img-fluid my_class_2" src="img/assigned-to-me.png" style="border:1px solid black;" alt="This image shows how all the tasks assigned to you get listed under the assigned to me section. ">
+
+                            <h2 id="flagged-email">Flagged email  </h2>
+
+                            <p>The emails you flag as important in the Outlook app get listed in this section. Because these emails might contain important task-related information.  </p>
+                            <img class="img-fluid my_class_2" src="img/flagged-mail.png" style="border:1px solid black;" alt="This image shows how the flagged mail section lists all the mails you flagged as important using the Microsoft 365 outlook app. ">
+
+                            <h2 id="sorting-and-grouping">Sorting and Grouping Tasks  </h2>
+                            <ul>
+                                <li>You get to sort tasks based on the following criteria: <b>Importance, Due date, Added to My Day, Alphabetically</b> and <b>Creation Date</b> as shown in the image below. </li>
+                                <img class="img-fluid my_class_2" src="img/sorting-tasks.gif" style="border:1px solid black;" alt="This image shows how you can sort tasks based on their importance, due date, creation date etc., ">
+
+                                <li>You also get to group the tasks based on the various <b>categories</b> available. Tasks that haven’t been assigned any category are listed get listed as <b>Uncategorised</b>. </li>
+                                <img class="img-fluid my_class_2" src="img/grouping-tasks.gif" style="border:1px solid black;" alt="This image shows how you can filter your tasks based on the category they belong to by clicking Group and selecting Categories option. ">
+
+                            </ul>
+
+                            <h2 id="moving-and-copying">Moving and Copying Tasks  </h2>
+                            <p>You can move a task from one task list to another by <b>right-clicking the task</b> >> and selecting the <b>Move task</b> to option. </p>
+                            <img class="img-fluid my_class_2" src="img/moving-task.gif" style="border:1px solid black;" alt="This image shows how you can move a task by right clicking the task and selecting the location for your task to be moved. ">
+                            <p>You can copy a task from one task list to another by <b>right-clicking the task</b> >> and selecting the <b>Copy task</b> to option. </p>
+                            <p><b>Note:</b> The copied task is different from the task it is being copied. Both can have their own due dates, category, files etc., </p>
+                            <img class="img-fluid my_class_2" src="img/copying-tasks.gif" style="border:1px solid black;" alt="This image shows how you can copy a task by right clicking the task and selecting the location for your task to be copied. ">
+                            <p><b>Note: </b>Check out <a href="#create-task-list" style="color:blue">creating a task list</a> section to understand what task lists are</p>
+
+                            <h2 id="deleting-tasks">Deleting Tasks  </h2>
+                            <p>This can be done in 2 ways:</p>
+                            <ul>
+                                <li>By <b>right clicking the task</b> >> and selecting the <b>Delete task</b> option.  </li>
+                                <img class="img-fluid my_class_2" src="img/delete-task-1.gif" style="border:1px solid black;" alt="This image shows how you can delete a task by right clicking the task and selecting the delete task option. ">
+
+                                <li>By <b>clicking the task</b> >> and selecting the <b>Delete button</b> from the task details pane.  </li>
+                                <img class="img-fluid my_class_2" src="img/delete-task-2.gif" style="border:1px solid black;" alt="This image shows how you can delete a task by clicking the task and selecting the delete task icon from the task details section. ">
+
+                            </ul>
+
+
+                            <h2 id="modify-tasks-theme">Modifying the Tasks theme </h2>
+                            <ul>
+                                <li>Click the <b>‘…’</b> icon >> and <b>Change theme</b> >> and <b>Select the color</b> you wish to set as theme for the tasks, as shown in the image below.  </li>
+                            </ul>
+
+
+                            <img class="img-fluid my_class_2" src="img/changing-task-theme.gif" style="border:1px solid black;" alt="The image shows how you can modify the tasks theme by clicking the three dots icon  and selecting the Change theme option. ">
+
+
+
+                            <h2 id="create-task-list">Creating a task list </h2>
+                            <p>A task list helps you group similar tasks under one group. You could have a ‘Marketing’ task list where each of your marketing activity (be it social media or email related) can be a separate task.</p>
+                            <ul>
+                                <li>Click the <b>New list</b>, enter a task list name [Example: Marketing] and press <b>Enter</b>. </li>
+                                <li>The task list gets created. </li>
+                            </ul>
+                            <p><b>Note:</b> You can create task within a task list just as you would create an individual task; only difference is the tasks get added to the task list.  </p>
+
+                            <img class="img-fluid my_class_2" src="img/creating-task-list.gif" style="border:1px solid black;" alt="This image shows how you can create a task list by clicking the New list option and entering the name for your task list and pressing the enter key. ">
+
+
+                            <h3 id="task-list-from-task">Creating a task list from a task </h3>
+                            <p>Normally a task list is created and tasks are added to it. But you can do it the other way around too. That is, create a task list from a task. You can do so by <b>right clicking a task</b> >> and selecting the <b>Create new list from this task</b> option as shown below. </p>
+
+
+                            <p><b>Note:</b> Once the task list gets created, give it an appropriate name.  </p>
+
+                            <img class="img-fluid my_class_2" src="img/task-list-from-task.gif" style="border:1px solid black;" alt="This image shows how you can create a new task list from a task by right clicking on the task and selecting the create new list from this task option. ">
+
+                            <h2 id="sharing-task-list">Sharing a task list </h2>
+                            <p>Task lists help you collaborate and work together with others. You can share a task list with others in the following 2 ways: </p>
+                            <ul>
+                                <li>Using the <b>Share Icon</b> on the top right corner </li>
+                                <ul>
+                                    <li style="list-style-type:circle">Click the <b>Share</b> Icon.  </li>
+                                    <li style="list-style-type:circle">Click the <b>create invitation link</b> button. </li>
+                                    <li style="list-style-type:circle"><b>Send the invitation link</b> via email or some other means.  </li>
+                                    <img class="img-fluid my_class_2" src="img/sharing-task-list-1.gif" style="border:1px solid black;" alt="Image shows how you can share a task list by clicking the Share option and generating the invitation link for your task list to be shared.  ">
+
+                                </ul>
+                                <br />
+                                <li>By <b>right clicking the task list name</b> on the left pane</li>
+                                <ul>
+                                    <li style="list-style-type:circle">Click the <b>Share</b> Icon.  </li>
+                                    <li style="list-style-type:circle">Click the <b>create invitation link</b> button. </li>
+                                    <li style="list-style-type:circle"><b>Send the invitation link </b>via email or some other means.  </li>
+                                    <img class="img-fluid my_class_2" src="img/sharing-task-list-2.gif" style="border:1px solid black;" alt="Image shows how you can share a task list by right clicking the task list name and selecting the Share list option and generating the invitation link for your task list to be shared.  ">
+
+                                </ul>
+                            </ul>
+                            <p><b>Notes:</b></p>
+                            <ul>
+                                <li>Users have to accept the invitation to join the task list and start collaborating</li>
+                                <img class="img-fluid my_class_2" src="img/sharing-task-list-3.gif" style="border:1px solid black;" alt="Image shows how you can accept an invitation link to a shared task list and join the shared task list group. ">
+
+                                <li>Everyone part of the shared task list has the same right. For example, ff someone marks a task as important, it reflects in the task list of others as well. </li>
+                                <li>Anyone with the invitation link can join the task list. But you can limit <b>access to current members</b> only by selecting <b>Manage Access</b> >> and turning on <b>Limit access to current members</b> >> then clicking <b>Stop Sharing</b> button. </li>
+                                <img class="img-fluid my_class_2" src="img/sharing-task-list-4.gif" style="border:1px solid black;" alt="This image shows how you can limit access to shared task list to its current members only by clicking the manage access option. ">
+
+                                <li>Members can leave the task list anytime by clicking the <b>Leave list</b> option. </li>
+                                <img class="img-fluid my_class_2" src="img/sharing-task-list-5.gif" style="border:1px solid black;" alt="This image shows how you can leave a task list group by clicking the leave list option and confirming your action. ">
+
+                            </ul>
+
+
+
+                            <h2 id="duplicate-task-list">Duplicating a task list </h2>
+                            <p>When you duplicate a task list all the tasks present in the list get cloned, but not the members you might have shared the original task list with. So, you’ll have to reshare the task list with the members once again.  </p>
+
+
+
+
+                            <img class="img-fluid my_class_2" src="img/sharing-task-list-6.gif" style="border:1px solid black;" alt="This image shows how you can clone a task list by right clicking the task list name and selecting the duplicate list option. ">
+                            <br /><br />
+                            <h2 id="delete-task-list">Deleting a task list   </h2>
+                            <p>This can be done in 2 ways: </p>
+
+                            <ul>
+                                <li>By clicking the <b>‘…’</b> icon >> and selecting the <b>Delete list</b> option.   </li>
+                                <img class="img-fluid my_class_2" src="img/delete-task-list-1.gif" style="border:1px solid black;" alt="This image shows how you can delete a task list by clicking the three dots icon and selecting the delete list option. ">
+                                <li>By <b>right clicking the task list name</b> in the left pane >> and selecting the <b>Delete list</b> option.  </li>
+                                <img class="img-fluid my_class_2" src="img/delete-task-list-2.gif" style="border:1px solid black;" alt="This image shows how you can delete a task list by right clicking the task list name and selecting the delete list option. ">
+
+                            </ul>
+
+
+                            
+                            
+
+
+                            
+
+                                                        <h2 class="mb-3 text-secondary font-weight-bold" id="todo-settings">
+                                To do settings
+                            </h2>
+                            <p>The <b>To do settings</b> option in the <b>Settings</b> menu provides you with controls that help you customize the To do app to suit your requirements. For example, you can choose to:  </p>
+
+                            <ul>
+                                <li>Not display the confirmation message that appears before a user deletes a task</li>
+                                <li>Prevent the newly added task from being placed at the top </li>
+                                <li>Hide the Planned tasks section </li>
+                                <li>Disconnect Planner and Outlook apps </li>
+                                <li>Turn off email notifications</li>
+                            </ul>
+
+                            <p>To access the <b>To Do Settings</b> option, click the <b>Settings</b> icon >> and select the <b>To Do Settings</b> option.  </p>
+                            <img class="img-fluid my_class_2" src="img/to-do-settings-1.png" style="border:1px solid red;" alt="This screenshot shows how you can access the to do settings page by clicking on the settings icon available to your right.   ">
+                            <br/><br />
+                            <p>You can modify the <b>To do Settings</b> as shown in the image. </p>
+                            <img class="img-fluid my_class_2" src="img/to-do-settings-2.gif" style="border:1px solid red;" alt="This image shows how you can modify the  To do app settings like disabling confirmation messages, disabling planned tasks section etc., by clicking on the settings icon and selecting the To Do settings option.   ">
+
+                            <br />
+                        </div>
+
+
+
+                    </div>
+                    <!-- News Detail End -->
+                    <!-- side TOC start -->
+                    <div class="side-table-box">
+                        <div class="table-content">
+                            <h5 class="menu-icon">Table of Contents</h5>
+                        </div>
+                    </div>
+            <!-- side TOC end         -->
+            <!-- side TOC menu slider section start         -->
+                    <div class="scroll-box menu">
+                        <div class="icons-scroll">
+                            <h1 class="x">X</h1>
+                        </div>
+                        <h1>Table of Contents</h1>
+                        <ul>
+                            <li><a href="#access-todo">Accessing the Todo App the first time</a></li>
+                            <li><a href="#create-todo">Creating your first Microsoft 365 Todo</a>
+                                <ul>
+                                    <li><a href="#multi-step-task">Tasks With Several Steps</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#task-details">Task Details Section</a></li>
+                            <li><a href="#important-task">Marking a Task as Important</a></li>
+                            <li><a href="#planned-tasks">Planned Tasks</a></li>
+                            <li><a href="#assigned-to-me">Assigned to me</a></li>
+                            <li><a href="#flagged-email">Flagged email</a></li>
+                            <li><a href="#sorting-and-grouping">Sorting and Grouping Tasks</a></li>
+                            <li><a href="#moving-and-copying">Moving and Copying Tasks</a></li>
+                            <li><a href="#deleting-tasks">Deleting Tasks</a></li>
+                            <li><a href="#modify-tasks-theme">Modifying the Tasks theme</a></li>
+                            <li><a href="#create-task-list">Creating a task list</a>
+                                <ul>
+                                    <li><a href="#task-list-from-task">Creating a task list from a task</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#sharing-task-list">Sharing a task list</a></li>
+                            <li><a href="#duplicate-task-list">Duplicating a task list</a></li>
+                            <li><a href="#delete-task-list">Deleting a task list</a></li>
+                            <li><a href="#todo-settings">To do settings</a></li>
+                       </ul>
+                    </div>
+            <!-- side TOC menu slider section end         -->
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- News With Sidebar End -->
+    <!-- Footer Start -->
+    <div class="container-fluid py-4 px-sm-3 px-md-5" style="background: #111111;">
+        <p class="m-0 text-center">
+            &copy; <a href="#">m365corner.com</a>. All Rights Reserved.
+
+            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+            Design by <a href="https://htmlcodex.com">HTML Codex</a>
+        </p>
+    </div>
+    <!-- Footer End -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+    <script type="text/javascript" src="https://unpkg.com/freezeframe@3.0.10/build/js/freezeframe.pkgd.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            second = new freezeframe({
+                'selector': '.my_class_2',
+                'animation_play_duration': Infinity,
+                'non_touch_device_trigger_event': 'click'
+            }).freeze();
+        })
+    </script>
+    <!-- JavaScript Libraries -->
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script>
+        document.querySelector('.menu-icon').addEventListener('click', function () {
+            //alert('haiii')
+            document.querySelector('.menu').classList.remove('hide');
+            //alert('clicked')
+            //document.querySelector('.menu').style.transform = "translateX(-110%)";
+            document.querySelector('.menu').classList.toggle('move-menu');
+        })
+
+        document.querySelector('.x').addEventListener('click', function () {
+            document.querySelector('.menu').classList.add('hide');
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,354 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Registering App with Microsoft Entra ID Tutorial</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Office 365 api, Microsoft 365 api, m365 api" name="keywords ">
+    <meta content="Learn to register a Office 365 API based app in Microsoft Entra ID admin center and provide app permissions and delegated permissions for the app." name="description">
+
+    <link rel="stylesheet" href="https://unpkg.com/freezeframe@3.0.10/build/css/freezeframe_styles.min.css">
+    
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../css/style.css" rel="stylesheet">
+    <style>
+
+        p, li {
+            line-height: 35px;
+        }
+
+
+
+        thead td {
+            border: 2px solid black;
+            text-align: center;
+        }
+
+        thead {
+            font-weight: 900;
+        }
+
+        td {
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        ol li {
+            margin: 5px;
+            line-height: 25px;
+        }
+
+        h2 {
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid d-none d-lg-block">
+
+        <div class="row align-items-center bg-white py-3 px-lg-5">
+            <div class="col-lg-4">
+                <a href="../index.html" class="navbar-brand p-0 d-none d-lg-block">
+                    <p class="m-0 display-4  text-primary" style="font-weight: 700;">M365<span class="text-secondary font-weight-normal">Corner</span></p>
+                </a>
+            </div>
+            <div class="col-lg-8 text-center text-lg-right">
+
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-2 py-lg-0 px-lg-5">
+            <a href="index.html" class="navbar-brand d-block d-lg-none">
+                <p class="m-0 display-4 text-primary" style="font-weight: 700;">m365<span class="text-white font-weight-normal">Tutorials</span></p>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-0 px-lg-6" id="navbarCollapse">
+                <div class="navbar-nav mr-auto py-0">
+                    <a href="../index.html" class="nav-item nav-link active">Home</a>
+                    <a href="../m365-for-beginners/microsoft-365-beginner-series-overview.html" class="nav-item nav-link">M365 for Beginners</a>
+                    <a href="../m365-how-tos/how-to-overview.html" class="nav-item nav-link">M365 How Tos</a>
+                    <a href="../m365-graph-api/graph-api-overview.html" class="nav-item nav-link">M365 Graph API</a>
+                    <a href="../m365-updates/m365-updates-overview.html" class="nav-item nav-link">M365 Updates</a>
+                    <a href="../m365-administration/m365-administration-overview.html" class="nav-item nav-link">M365 Administration</a>
+                    <a href="../contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <div class="input-group ml-auto d-none d-lg-flex" style="width: 100%; max-width: 300px;">
+
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+    <!-- Breaking News Start -->
+    <div class="container-fluid mt-5 mb-3 pt-3">
+
+    </div>
+    <!-- Breaking News End -->
+    <!-- News With Sidebar Start -->
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- News Detail Start -->
+                    <div class="position-relative mb-3">
+
+                        <div class="bg-white border border-top-0 p-4">
+                            <div class="mb-3">
+                                <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                   href="">Business</a>
+                                <a class="text-body" href="">Jan 01, 2045</a>
+                            </div>
+
+                            <h1 class="mb-3 text-secondary font-weight-bold" id="How-to-register-you-app-with-micsft-entra-ID?">How to Register your app with Microsoft Entra ID?</h1>
+                            <p>The first step to creating your Microsoft 365 based app is to get it registered – just like you would do with any other API based app or extension. Usually this is done through automation – via a PowerShell script or something similar – which the tenant admin subscribing to your app has to initiate from his or her end. But for demo purpose, let’s do this manually.  </p>
+
+                            <p><b>Note:</b> You should know how and where to register your app in Microsoft 365 so that you can setup your script, request for app permissions and manage your app within the Microsoft 365 tenant.  </p>
+                            
+                            <h2 class="mb-3 text-secondary font-weight-bold" id="Intro-mirsof-entea-id-AD">Introducing Microsoft Entra ID Admin Center</h2>
+                            <p>Microsoft Entra ID Admin Center (previously known as Azure Active Directory) is where you can register your app. This is where the identity of all the Microsoft 365 user accounts (relying on cloud-based Active Directory or on-premise Active Directory) are managed. This is going to manage your app’s identity too, meaning it is going to be responsible for authenticating and authorizing any Microsoft 365 app-based extension that you create. </p>
+                            
+                            <h2 class="mb-3 text-secondary font-weight-bold" id="Accessing-micsft-Entra-id-admin-center">Accessing Microsoft Entra ID Admin Center</h2>
+                            <p>You can access Microsoft Entra ID Admin Center using the following 2 ways: </p>
+                            <ul>
+                                <li>By clicking this link directly: <a href="https://entra.microsoft.com/#view/Microsoft_AAD_IAM/TenantOverview.ReactView" style="color: blue;">https://entra.microsoft.com/#view/Microsoft_AAD_IAM/TenantOverview.ReactView [or]</a></li>
+                                <li>By selecting the <b>Admin</b> tab <b><i class="fa-solid fa-arrow-right"></i> Show all <i class="fa-solid fa-arrow-right"></i> Identity</b> [under Admin Centers] as pointed out in the animated GIF below. 
+                                <img class="img-fluid my_class_2" src="img/accessing-msft-entra-admin-center.gif" style="border:1px solid black;" alt="Demo of how Microsoft Entra ID Admin Center can be accessed from Microsoft 365 home page.">
+                                </li>
+                            </ul>
+                            <p><b>Note:</b> Read various <u>Microsoft 365 Admin Centers and their purpose</u> if you wish to know about the different admin centers that exist within Microsoft 365. </p>
+
+                            <h2 class="mb-3 text-secondary font-weight-bold" id="Registering-you-micsft-365-based-app">Registering Your Microsoft 365 Based App</h2>
+                            <p>Follow these instructions: </p>
+                            <ol>
+                                <li>Select <b>Identity <i class="fa-solid fa-arrow-right"></i> Applications <i class="fa-solid fa-arrow-right"></i> App registrations.</b> 
+                                <img class="img-fluid my_class_2" src="img/accessing-app-registration-page.png" style="border:1px solid black;" alt="Demo of how App Registrations page can be accessed from Microsoft Entra Admin Center.">
+                                </li>
+                                <li>
+                                    Next click <b>New registration</b> button. This opens Register an application box shown in image 2. 
+                                    <img class="img-fluid my_class_2" src="img/new-registration-button.png" style="border:1px solid black;" alt="New registration button within the App Registrations page.">
+                                </li>
+                                <li>
+                                    Enter your <b>app’s name</b>. Select <b>who</b> can use your app. [You can create apps that can be used or consumed by a single tenant or multiple tenants. Since you are just getting started, go with the single tenant option]. Select the <b>app type</b> as <b>Web</b> and set the <b>redirect URI.</b> Redirect URI is the URI to which the authentication response is sent to, after Microsoft Entra ID successfully authenticates your app. Basically this is a path or location within your app’s server that is going to handle the authentication response. Example value could be: http://localhost:3000 as shown in the image.  Click <b>Register</b> to register your app. 
+                                    <img class="img-fluid my_class_2" src="img/app-registration-details-1.png" style="border:1px solid black;" alt="Demo of steps involved in registering an app like adding app name, account type and app type. ">
+                                </li>
+                                <li>
+                                    Once your app is registered, you are led to the app details page. Note down your <b>tenant ID</b> and <b>application ID.</b> We’ll be using this later to authenticate and authorize your application. 
+                                    <img class="img-fluid my_class_2" src="img/app-registration-details-2.png" style="border:1px solid black;" alt="Application ID and Tenant ID of the app being displayed in the app overview page. ">
+                                </li>
+                            </ol>
+
+                            <h2 class="mb-3 text-secondary font-weight-bold" id="Generating-client-secret">Generating Client Secret</h2>
+
+                            <p>If your app is going to be a web app, then you’ll need to generate a client secret. Follow these instructions to generate a client secret for your web app. </p>
+
+                            <ol>
+                                <li>
+                                    Select the <b>Certificates & secrets</b> tab and click the <b>New client secret</b> option. This opens the <b>Add a client secret</b> flyout. Enter a simple <b>description</b> and click the <b>Add</b> button. 
+                                    <b>Note:</b> Go with the default Expires option for now.  
+                                    <img class="img-fluid my_class_2" src="img/client-secret.png" style="border:1px solid black;" alt="Demo of the steps involved in generating the client secret for the app.  ">
+                                </li>
+                                <li>
+                                    The <b>client secret</b> is generated and gets listed on the page. Ensure you <b>copy the client</b> secret <b>value</b> and <b>save</b> it somewhere. Because the value gets hidden shortly after it is generated and the only way to retrieve it would be to generate a new client secret and delete the old one.
+                                    <img class="img-fluid my_class_2" src="img/client-secret-value.png" style="border:1px solid black;" alt="The generated client secret being displayed on the screen. "> 
+                                </li>
+                            </ol>
+
+                            <br/>
+
+                            <h2 class="mb-3 text-secondary font-weight-bold" id="Configuring-you-app-permission">Configuring Your App Permissions</h2>
+
+                            <p>Next you should setup your app’s permissions. App permissions help you decide what type of permission your app needs (user level or application level), the resources your app needs access to (example: user profile, mail, files etc.,), and the kind of actions you wish to perform on them (read, write or both). </p>
+                            <p>Click the <b> API permissions</b> option under <b>Manage</b> to configure your app’s permissions. The API permissions page opens as shown in image 2. </p>
+                            <img class="img-fluid my_class_2" src="img/app-permissions-1.png" style="border:1px solid black;" alt="Image highlights the API permissions tab that helps you configure the API permissions for the app. ">
+                            <img class="img-fluid my_class_2" src="img/app-permissions-2.png" style="border:1px solid black;" alt="Default app permission available for all registered apps being displayed. ">
+                            <p>You’ll notice that a User.Read default permission has been setup for you (and that it <b>does not require admin’s consent).</b> This permission lets you read the user profile of the signed in user. Another thing you’ll notice is that this permission is listed under the <b>Microsoft Graph</b> category of permissions, implying that there are other APIs that you can make use of. </p>
+                            <p><b>Note:</b> Microsoft Graph API is the focus of this series. We’ll explore the other APIs later. </p>
+                            
+                            <h3 id="Two-type-of-micsft-grap-API-permission">Two Types of Microsoft Graph API Permissions </h3>
+                            <p>Before you starting adding your app permissions, you should know about the two types of Microsoft Graph API permissions that exist. They are: <b>Delegated permissions</b> (user-level permissions) and <b>Application permissions</b> (application-level permissions). </p>
+                            <ul>
+                                <li>
+                                    <b>Delegated permissions:</b> These are permissions that let you access the <b>Microsoft 365 tenant you are querying as a user.</b>  Delegated permissions are permissions that you can distribute among a bunch of users. Depending upon the permission being requested, the Microsoft 365 users have to consent to these permissions, before you can start querying the tenant for data. 
+                                </li>
+                                <li>
+                                    <b>Example for Delegated permission:</b> Let’s say you are creating a simple in-house CRM solution for a sales team that is using Microsoft 365 to provide them with views that are not offered by default in the app. Then, each member of the sales team who is going to use your app becomes a delegated user who can consume delegated permissions assigned to him or her, once they consent to it. 
+                                </li>
+                                <li>
+                                    <b>Application permissions:</b> These are application-level permissions. Best suited for <b>applications running as a background service.</b> Here too, depending on the permission being requested, the tenant admin has to consent to the app permissions, before your app can start querying the tenant for data. 
+                                </li>
+                                <li>
+                                    <b>Example for Application permission:</b> Let’s say an organization using Microsoft 365 is not happy with the reports offered by Microsoft 365 and seeks for a more comprehensive reporting tool. Now a reporting tool like this has to run as a background service to query the tenant from time to time and offer real-time reports. If you are going to develop an app of this nature, your app will need application permissions assigned to it. 
+                                </li>
+                            </ul>
+                            <p>Let understand how you can configure both delegated and application permissions. </p>
+                            <h4 id="Configuring-delegated-permission">Configuring Delegated Permission</h4>
+                            <p>Follow these instructions to configure a delegated permission: </p>
+                            <ol>
+                                <li>
+                                    Click the <b>Add a permission</b> button. This opens the <b>Request API permissions</b> box shown in image 2. Select the <b>Microsoft Graph</b> option.
+                                    <img class="img-fluid my_class_2" src="img/permission-1.png" style="border:1px solid black;" alt="Image highlights add a permission option that lets you add permissions to your app. ">
+                                    <img class="img-fluid my_class_2" src="img/permission-2.png" style="border:1px solid black;" alt="Image highlights the Microsoft Graph option which contains all the API permissions for the app. ">
+                                </li>
+                                <li>
+                                    Next click on <b>Delegated permissions</b> option. The list of available API permissions opens up.
+                                    <img class="img-fluid my_class_2" src="img/delegated-permission-1.png" style="border:1px solid black;" alt="Image highlights the delegated permission option that lets you configure delegated permissions for the app. ">
+                                </li>
+                                <li>
+                                    Let’s go with a simple read all users within the tenant permission (User.Read.All). To select this permission, you have to scroll down to User permissions section and then select User.Read.All option. Then click <b>Add permissions</b> button to add the permission.
+                                    <img class="img-fluid my_class_2" src="img/delegated-permission-2.png" style="border:1px solid black;" alt="Image shows how to select user.read.all permission that lets you read all the user profiles within the Microsoft 365 tenant.">
+                                </li>
+                                <li>
+                                    You’ll be returned back to the <b>API permissions</b> page and the newly added User.Read.All appears on the <b>list of configured permissions</b> for your app. You’ll also note that this permission requires the <b>tenant admin consent</b> and that he or she is yet to grant the same.
+                                    <img class="img-fluid my_class_2" src="img/delegated-permission-3.png" style="border:1px solid black;" alt="Image shows the selected User.Read.All permission and that it requires the tenant admin consent. ">
+                                </li>
+
+                                <p>Read <a style="color: blue;" href="https://learn.microsoft.com/en-us/graph/auth-v2-user?tabs=http">delegated permissions</a> for more info about how you can get access on behalf of a user for your app.  </p>
+
+                            </ol>
+
+                            <h4 id="Configuring-app-permission">Configuring Application Permission</h4>
+                            <p><b>Note:</b> It’s best to create another app and add this permission. Because it’s not good to have both delegated and application permissions for the same app. At least, not when you are learning the Microsoft 365 API basics. </p>
+                            <ol>
+                                <li>
+                                    Click the <b>Add a permission</b> button. This opens the <b>Request API permissions</b> box shown in image 2. Select the <b>Microsoft Graph</b> option.
+                                    <img class="img-fluid my_class_2" src="img/permission-1.png" style="border:1px solid black;" alt="Image highlights the Add a permission option within the API permissions page. ">
+                                    <img class="img-fluid my_class_2" src="img/permission-2.png" style="border:1px solid black;" alt="Image highlights the Microsoft Graph option which contains all the API permissions for the app. ">
+                                </li>
+                                <li>
+                                    Next click on <b>Application permissions</b> option. The list of available API permissions opens up.
+                                    <img class="img-fluid my_class_2" src="img/application-permission-1.png" style="border:1px solid black;" alt="Image highlights the application permission option that lets you configure application permissions for the app. ">
+                                </li>
+                                <li>
+                                    Let’s go with a simple read all bookings within the tenant permission (Bookings.Read.All). To select this permission, you have to scroll down to <b>Bookings</b> permissions section and then select Bookings.Read.All option. Then click <b>Add permissions</b> button to add the permission.
+                                    <b>Note:</b> Bookings stands for appointments. So the Bookings.Read.All gets you all the appointments customers made with the organization.
+                                    <img class="img-fluid my_class_2" src="img/app-permissions-3.png" style="border:1px solid black;" alt="Image shows how you can add the Bookings.Read.All permission to your app. ">
+                                </li>
+                                <li>
+                                    You’ll be returned back to the <b>API permissions</b> page and the newly added Bookings.Read.All appears on the <b>list of configured permissions</b> for your app. You’ll also note that this permission requires the <b>tenant admin consent</b> and that he or she is yet to grant the same.
+                                </li>
+
+                                <p>Read <a style="color: blue;" href="https://learn.microsoft.com/en-us/graph/auth-v2-service?tabs=http ">app permissions</a> for more info about how you can get access without a user for your app.  </p>
+
+                            </ol>
+
+                            <h2 class="mb-3 text-secondary font-weight-bold" id="What-next">What’s Next? </h2>
+                            <p>Now that we have configured permissions for our app, in the next article, let’s see how the tenant admin can consent to these permissions, so that your app can start making use of the data that can be obtained through these permissions. </p>
+                        </div>
+                    </div>
+                    <!-- News Detail End -->
+                    <!-- side TOC start -->
+                    <div class="side-table-box">
+                        <div class="table-content">
+                            <h5 class="menu-icon">Table of Contents</h5>
+                        </div>
+                    </div>
+            <!-- side TOC end         -->
+            <!-- side TOC menu slider section start         -->
+                    <div class="scroll-box menu">
+                        <div class="icons-scroll">
+                            <h1 class="x">X</h1>
+                        </div>
+                        <h1>Table of Contents</h1>
+                        <ul>
+                            <li><a href="#How-to-register-you-app-with-micsft-entra-ID?">How to Register your app with Microsoft Entra ID?</a>
+                                <ul>
+                                    <li><a href="#Intro-mirsof-entea-id-AD">Introducing Microsoft Entra ID Admin Center </a></li>
+                                    <li><a href="#Accessing-micsft-Entra-id-admin-center">Accessing Microsoft Entra ID Admin Center </a></li>
+                                    <li><a href="#Registering-you-micsft-365-based-app">Registering Your Microsoft 365 Based App</a></li>
+                                    <li><a href="#Generating-client-secret">Generating Client Secret</a></li>
+                                    <li><a href="#Configuring-you-app-permission">Configuring Your App Permissions </a>
+                                        <ul>
+                                            <li><a href="#Two-type-of-micsft-grap-API-permission">Two Types of Microsoft Graph API Permissions </a>
+                                                <ul>
+                                                    <li><a href="#Configuring-delegated-permission">Configuring Delegated Permission</a></li>
+                                                    <li><a href="#Configuring-app-permission">Configuring Application Permission</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#What-next">What’s Next? </a></li>
+                                </ul>
+                            </li>
+                       </ul>
+                    </div>
+            <!-- side TOC menu slider section end         -->
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- News With Sidebar End -->
+    <!-- Footer Start -->
+    <div class="container-fluid py-4 px-sm-3 px-md-5" style="background: #111111;">
+        <p class="m-0 text-center">
+            &copy; <a href="#">m365corner.com</a>. All Rights Reserved.
+
+            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+            Design by <a href="https://htmlcodex.com">HTML Codex</a>
+        </p>
+    </div>
+    <!-- Footer End -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+    <script type="text/javascript" src="https://unpkg.com/freezeframe@3.0.10/build/js/freezeframe.pkgd.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            second = new freezeframe({
+                'selector': '.my_class_2',
+                'animation_play_duration': Infinity,
+                'non_touch_device_trigger_event': 'click'
+            }).freeze();
+        })
+    </script>
+    <!-- JavaScript Libraries -->
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script>
+        document.querySelector('.menu-icon').addEventListener('click', function () {
+            //alert('haiii')
+            document.querySelector('.menu').classList.remove('hide');
+            //alert('clicked')
+            //document.querySelector('.menu').style.transform = "translateX(-110%)";
+            document.querySelector('.menu').classList.toggle('move-menu');
+        })
+
+        document.querySelector('.x').addEventListener('click', function () {
+            document.querySelector('.menu').classList.add('hide');
+        })
+    </script>
+</body>
+
+</html>

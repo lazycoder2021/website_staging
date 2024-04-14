@@ -1,0 +1,326 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>M365 Corner Beginner Series - Using Outlook Toolbar </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    
+    <meta content="Microsoft 365 Outlook toolbar, Office 365 Outlook toolbar" name="keywords ">
+    <meta content="Learn to use Microsoft 365 Outlook toolbar options like sweep, flagging, pinning, snoozing etc,. Also explore Outlook right click menu and left pane apps." name="description">
+
+
+
+            <!--GIF controller-->
+            <link rel="stylesheet" href="https://unpkg.com/freezeframe@3.0.10/build/css/freezeframe_styles.min.css">
+            <!--GIF controller-->
+            <!-- Favicon -->
+            <link href="img/favicon.ico" rel="icon">
+
+            <!-- Google Web Fonts -->
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+            <!-- Font Awesome -->
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+            <!-- Libraries Stylesheet -->
+            <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+            <!-- Customized Bootstrap Stylesheet -->
+            <link href="../css/style.css" rel="stylesheet">
+            <style>
+
+                p, li {
+                    line-height: 35px;
+                }
+
+                thead td {
+                    border: 2px solid black;
+                    text-align: center;
+                }
+
+                thead {
+                    font-weight: 900;
+                }
+
+                td {
+                    border: 1px solid black;
+                    text-align: center;
+                }
+
+                ol li {
+                    margin: 5px;
+                    line-height: 30px;
+                }
+            </style>
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid d-none d-lg-block">
+        <div class="row align-items-center bg-white py-3 px-lg-5">
+            <div class="col-lg-4">
+                <a href="../index.html" class="navbar-brand p-0 d-none d-lg-block">
+                    <p class="m-0 display-4 text-uppercase text-primary" style="font-weight: 700;">m365<span class="text-secondary font-weight-normal">Corner</span></p>
+                </a>
+            </div>
+            <div class="col-lg-8 text-center text-lg-right">
+
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-2 py-lg-0 px-lg-5">
+            <a href="../index.html" class="navbar-brand d-block d-lg-none">
+                <p class="m-0 display-4 text-uppercase text-primary" style="font-weight: 700;">m365<span class="text-white font-weight-normal">Corner</span></p>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-0 px-lg-6" id="navbarCollapse">
+                <div class="navbar-nav mr-auto py-0">
+                    <a href="../index.html" class="nav-item nav-link active">Home</a>
+                    <a href="../m365-for-beginners/microsoft-365-beginner-series-overview.html" class="nav-item nav-link">M365 for Beginners</a>
+                    <a href="../m365-how-tos/how-to-overview.html" class="nav-item nav-link">M365 How Tos</a>
+                    <a href="../m365-graph-api/graph-api-overview.html" class="nav-item nav-link">M365 Graph API</a>
+                    <a href="../m365-updates/m365-updates-overview.html" class="nav-item nav-link">M365 Updates</a>
+                    <a href="../m365-administration/m365-administration-overview.html" class="nav-item nav-link">M365 Administration</a>
+                    <a href="../contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <div class="input-group ml-auto d-none d-lg-flex" style="width: 100%; max-width: 300px;">
+
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+    <!-- Breaking News Start -->
+    <div class="container-fluid mt-5 mb-3 pt-3">
+
+    </div>
+    <!-- Breaking News End -->
+    <!-- News With Sidebar Start -->
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- News Detail Start -->
+                    <div class="position-relative mb-3">
+
+                        <div class="bg-white border border-top-0 p-4">
+                            <div class="mb-3">
+                                <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                   href="">Business</a>
+                            </div>
+                            <h1 class="mb-3 text-secondary font-weight-bold">Microsoft 365 Outlook Basics II</h1>
+                            <p>Now that you know how to create and respond to mails in Outlook, let’s dive deep and understand the various actions you can take on a specific mail like moving it to a specific folder, flagging it as important, grouping it under a specific category etc.,  </p>
+                            <h2 id="outlook-toolbar">Using the Microsoft 365 Outlook Toolbar</h2>
+                            <p>The outlook 365 toolbar appears when you select a specific mail. It contains many options that help you declutter your inbox in one way or another. Let understand them one by one. </p>
+                            <img class="img-fluid" src="img/outlook-toolbar.png" alt="Image highlights the Microsoft 365 Outlook Web App toolbar and its various options." style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                            <ul>
+                                <li id="new-mail-dropdown"><b>New mail dropdown</b> – Outlook 365 is not just for sending/receiving mails. It helps you to setup meetings and manage outlook groups among other things. So, if you click open the New mail dropdown, you’ll see some more options – of which <b>Mail, Event and Group</b> are the most important - as shown in the image.  </li>
+                                <p><b>Note:</b></p>
+                                <ul>
+                                    <li style="list-style-type: circle">To understand how <b>Outlook Events</b> can be configured, read <a href="" style="color:red;">Microsoft 365 Outlook Basics III</a>. </li>
+                                    <li style="list-style-type: circle">To understand how <b>Outlook Groups</b> can be configured, read <a href="" style="color:red;">Microsoft 365 Outlook Basics IV</a>.</li>
+
+                                </ul>
+                                <img class="img-fluid" src="img/new-mail-dropdown.png" alt="Image highlights the different options available within the New mail dropdown like Mail, Email and Group." style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                                <li id="delete-dropdown"><b>Delete dropdown</b> – This is not only for deleting mails but also contains another option called <b>Ignore</b>. When you choose to Ignore a mail or conversation thread, you are training the AI model to <b>Ignore</b> not only the selected mail, but also future mails belonging to the same thread. </li>
+                                <img class="img-fluid" src="img/delete-dropdown.png" alt="Image highlights the different options available within the Delete dropdown like Delete and Ignore.  " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                <p><b>Note:</b> When you try to Ignore a mail by selecting <b>Delete >> Ignore</b> option, you get a confirmation message which clearly explains what <b>Ignore</b> does. </p>
+                                <img class="img-fluid" src="img/ignore-conversation.png" alt="Image shows the warning message you get when you try to ignore a Microsoft 365 Outlook mail from a sender. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                <li id="archive"><b>Archive</b> – This sends the selected mail to the Archive folder. In case of accidental archiving, you can always move the mail back to your Inbox. </li>
+                                <br />
+
+
+                                <li id="report-dropdown"><b>Report dropdown</b> – This helps you report phishing and junk mails to Microsoft. When you do this, you are not just reporting an issue to Microsoft but training their AI model to prevent unnecessary mails from reaching your inbox.  </li>
+                                <br />
+                                <li id="sweep"><b>Sweep</b> – This helps you <b>sweep messages in bulk </b>(from a specific sender) to <b>another folder</b>; especially useful if you want to ‘junk’ or ‘delete’ mails you deem unnecessary; but can also come in handy for <b>segregating important mails</b> into another folder. You also get to choose the kind of messages you wish to sweep – past, present or future – depending on your requirements (as shown in the image below).  </li>
+                                <img class="img-fluid" src="img/sweep-1.png" alt="Image explains how you can use Sweep feature for sweeping Microsoft 365 mails from a particular sender to different folders. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                <p><b>Note:</b> You can also create a new folder and sweep messages into them using the <b>Create new folder</b> option as shown in the image. </p>
+                                <img class="img-fluid" src="img/sweep-2.png" alt="Image explains how you can create a new folder and sweep Microsoft 365 mails into that folder.   " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                                <li id="move-to-dropdown"><b>Move to dropdown:</b> This helps you move the selected mail to a different folder. By default, the <b>Archive</b> and <b>Deleted Items</b> folder get listed, but you can move the mail to other folders as well by searching for them. You can also create a new folder and move the selected mail to that using the <b>Create new folder</b>option.  </li>
+                                <img class="img-fluid my_class_2" src="img/move-to-dropdown.gif" alt="Image explains how to move Microsoft 365 mails into different folders using the Move to option available in the toolbar.  " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                                <li id="reply"><b>Reply and Reply All</b> – Both help you reply to the selected message. You also have reply and reply options within the mail as shown in the <a href="" style="color:red">Microsoft 365 Outlook Basics I</a> article.   </li>
+                                <li id="forward-dropdown"><b>Forward Dropdown</b> – The forward dropdown contains 2 options: <b>Forward</b> and <b>Forward as Attachment</b>. While both help you in forwarding a message to others, <b>the second option forwards the message as a downloadable attachment</b> as shown in the image 2. </li>
+                                <img class="img-fluid" src="img/forward-dropdown-1.png" alt="Image explains the various foward options available for your Microsoft 365 mails under the forward dropdown in the toolbar. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                <img class="img-fluid" src="img/forward-dropdown-2.png" alt="Image displays how you can forward another mail as attachment.   " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                <li id="quick-steps">
+                                    <b>Quick Steps</b> – This helps you <b>apply special rules to incoming mails based on certain criteria</b> you setup. For example, you could configure quick steps to <b>move mails from a particular sender to a specific folder</b>. But the drawback when this feature is that <b>these rules have to be applied manually</b> by you for each and every mail.  For this reason, <b>Inbox rules</b> (that support automation) <b>are preferred over quick steps rules</b>.
+                                    <b>Note:</b> Read <a href="" style="color:red">How to Set Up Quick Steps</a> for more info.
+                                </li>
+                                <img class="img-fluid" src="img/quick-steps.png" alt="Image displays the various elements available within the Quick Steps box.  " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                <li id="read-unread"><b>Read/Unread</b> – This helps you mark mails as read or unread. <b>Unread messages appear darker than read messages</b> to grab your attention. You can also mark mails to be attended within the working day as Unread so that they can be responded quickly.    </li>
+                                <li id="categories"><b>Categories or Label:</b> This helps you categorize (or label) the selected mail. By default, you have <b>color-based categories</b> (as shown in the image). But you can <b>create new categories of your own</b> and delete categories that don’t suit your requirements. </li>
+                                <img class="img-fluid" src="img/category-1.png" alt="Various categories under category dropdown. Options for managing category and adding new category also available.   " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                <p>To add a new category, select the <b>New Category</b> option. This opens the <b>Create new category</b> box as shown in the image. Provide a <b>name</b> and <b>color code</b> for the category and <b>save</b> it. </p>
+                                <img class="img-fluid" src="img/category-2.jpg" alt="The create new category box opens when you select new category option from the category dropdown. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                <p>To manage existing categories, select the <b>Manage Categories</b> option. This opens the Categories page (as shown in the image). Here, you can <b>create, edit, delete</b> and mark <b>categories as favorite</b>.  </p>
+                                <img class="img-fluid" src="img/category-3.png" alt="Manage Categories box opens when you click Manage Categories option from the Category dropdown. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                <p><b>Categories marked as Favorites</b> appear under the <b>Favorites</b> section as shown in the image. </p>
+                                <img class="img-fluid" src="img/category-4.png" alt="Categories marked as favorites appear under the favorites folder.  " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                <li id="flagging"><b>Flagging a Mail</b>: This helps you <b>flag the selected mail</b>. You can flag important mails so that they appear different from other mails and can be accessed easily using the <b>filter</b> dropdown. Once a mail is flagged as important, a <b>red flag</b> appears beside it. </li>
+                                <img class="img-fluid" src="img/flag-mail.png" alt="Flagged mails contain a red flag. You can use filter to filter for flagged mails. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                <li id="pinning"><b>Pinning a Mail:</b> This helps you pin the selected mail at the top of your inbox so that you don’t miss it. You can pin mails that need immediate attention. You can pin multiple mails. All of them would appear the at the top of your inbox as shown in the image. </li>
+                                <img class="img-fluid" src="img/pinning-mail.png" alt="Pinned mails appear at the top of your inbox. You can pin mails that need immediate attention.   " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                <li id="snoozing"><b>Snoozing a Mail:</b> This allows you to snooze mails that don’t require immediate attention. Snoozed mails are <b>moved to the Snoozed folder</b> and <b>become available in your inbox again at the date and hour you specify</b> while snoozing the mail. </li>
+                                <img class="img-fluid" src="img/snoozing-mail.png" alt="You can snooze mails not requiring immediate attention. Snoozed mails will be back in your inbox at the time you choose.    " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                <li id="retention"><b>Retention Labels:</b> This allows you to apply retention policy to the selected mail. Retention policies <b>helps you decide how long the mail stays in your inbox before gets deleted</b>. There is a default policy – <b>Use parent folder policy</b> – configured for your mails which you can modify if required.  </li>
+                                <img class="img-fluid" src="img/retention-label.png" alt="Retention policy helps you decide how long the mail stays in your inbox. Parent folder policy applies by default.   " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                <li id="print"><b>Print</b>: This helps you print the mail. </li>
+                                <li id="more"><b>Three dots icon or More Option</b>:The following options are available when you click this icon: <b>Block, Rules, Meeting, Discover Groups</b> and <b>Customize</b> as shown in the image. <b>Block</b> helps you block the sender. <b>Rules</b> helps you configure Microsoft 365 Outlook Inbox Rules that keep your inbox sorted. <b>Meeting</b> helps you set up Outlook meetings – something you can do from within the mail itself as discussed in the <b>Respond with Meeting</b> option in the Microsoft Outlook Basics I article. <b>Discover Groups</b> helps you discover (and join) the various Microsoft 365 Outlook Groups available in your organization. And <b>Customize</b> helps you customize the buttons – add or delete them – available in the Outlook 365 toolbar. </li>
+                                <img class="img-fluid" src="img/more-option.png" alt="The three dots icon or the more option provides quick access to rules, meetings and groups.    " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                <li id="layout"><b>Layout:</b> The <b>tiny dropdown</b> you see besides the Three dots icon helps you modify the <b>toolbar’s layout</b>. It contains 2 options: <b>Classic ribbon</b> and <b>Simplified ribbon</b>. Simplified ribbon is the default option. </li>
+                                <img class="img-fluid" src="img/layout-1.png" alt="Toolbar layout can be switched between classic ribbon and simplified ribbon using the dropdown. Simplified ribbon is the default option. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                <p>If you like the old Outlook’s toolbar, you can switch to <b>Classic</b> ribbon.  The classic ribbon is displayed in the image below. </p>
+                                <img class="img-fluid" src="img/layout-2.png" alt="This image displays the Microsoft 365 Outlook classic ribbon layout. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+
+                            </ul>
+                            <h2 class=" font-weight-bold mb-3" id="right-click">Right Click Menu and Options</h2>
+                            <p>Most of the options discussed above are also available in the menu that appears when you right click a mail. Copy and Move are the only two new additions. Copy helps you copy the mail to another folder; whereas Move helps you move the mail to another folder. The Move all message from option is a redirection to Sweep messages feature we saw earlier.  </p>
+                            <p><b>Note:</b> Note: While Copying and Moving mails, you are also presented with the option of creating a new folder as the destination.  </p>
+                            <img class="img-fluid" src="img/right-click-menu-1.png" alt="Right-click a mail to create a copy of it in another folder that you choose. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <img class="img-fluid" src="img/right-click-menu-2.png" alt="Right-click a mail to move a mail to another folder that you choose.  " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <p><b>Note:</b> You are also presented with another menu on the right side within the mail with pretty much the same option rearranged in a different order. </p>
+                            <img class="img-fluid" src="img/right-click-menu-3.png" alt="The three dots icon or the more option available to the right of the mail. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                            <h2 class=" font-weight-bold mb-3" id="left-pane">Left Pane Apps </h2>
+                            <p>The left pane lists a few apps that are closely knit with Microsoft 365 Outlook and work together.  </p>
+                            <ul>
+                                <li><b>Calendar</b> – This lists all the meetings, tasks and appointments you have in the month. You can also create meetings (by double-clicking on a specific date), <b>configure work hours, configure your availability schedule, share your calendar with others</b> etc.,  </li>
+                                <br />
+                                <li><b>People</b> – This lists all your contacts who might have come in touch with <b>via email, groups you are a part of, groups that might have contacted you</b> and more. You can also <b>create your own contacts</b> and maintain <b>several different contact lists</b> for your reference.  </li>
+                                <br />
+                                <li><b>Groups</b> – This lists all the <b>groups you are part of</b> – be it outlook based group or some other group – and <b>groups you can join as a member</b>. You can also perform other actions like <b>mailing to your groups, checking for files and events associated with the groups, look for group members </b>etc.,  </li>
+                                <br />
+                                <p><b>Note:</b> <a href="" style="color:red"></a>Read Microsoft 365 Outlook Groups </a>section to know more about Outlook groups.</p>
+                                <br />
+                                <li><b>Todo App</b> – This lets you add your daily tasks or to dos in the Microsoft 365 To Do application. Read Working with To Do App in Microsoft 365 to know more. </li>
+                                <br />
+                                <li><b>OneDrive</b> – This leads you to the Microsoft 365 OneDrive app where all your Microsoft 365 files are stored, including the ones you downloaded via Microsoft 365 Outlook emails.  </li>
+                                <br />
+                                <li><b>More apps</b> - This options leads to you other Microsoft 365 apps like Bookings, Excel, OneNote, PowerPoint etc., </li>
+                                <img class="img-fluid" src="img/left-pane-apps.png" alt="The different apps available in the left pane of the Microsoft 365 Outlook app. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                            </ul>
+                            <h3 class=" font-weight-bold mb-3" id="send-mail-in-Microsoft">What's Next? </h3>
+                            <p>In the next article, let’s dig deep into Microsoft Outlook 365 meetings and understand how you can set them up so that you can collaborate and work with your colleagues.  </p>
+                            <!-- note -->
+
+                        </div>
+
+
+
+                    </div>
+                    <!-- News Detail End -->
+
+            <!-- side TOC start -->
+                    <div class="side-table-box">
+                        <div class="table-content">
+                            <h5 class="menu-icon">Table of Contents</h5>
+                        </div>
+                    </div>
+            <!-- side TOC end         -->
+            <!-- side TOC menu slider section start         -->
+                    <div class="scroll-box menu">
+                        <div class="icons-scroll">
+                            <h1 class="x">X</h1>
+                        </div>
+                        <h1>Table of Contents</h1>
+                        <ul>
+                            <li><a href="#outlook-toolbar">Using the Microsoft 365 Outlook Toolbar</a>
+                                <ul>
+                                    <li><a href="#new-mail-dropdown">New mail dropdown</a></li>
+                                    <li><a href="#delete-dropdown">Delete dropdown</a></li>
+                                    <li><a href="#archive">Archive</a></li>
+                                    <li><a href="#report-dropdown">Report dropdown</a></li>
+                                    <li><a href="#sweep">Sweep</a></li>
+                                    <li><a href="#move-to-dropdown">Move to dropdown</a></li>
+                                    <li><a href="#reply">Reply and Reply All</a></li>
+                                    <li><a href="#forward-dropdown">Forward dropdown</a></li>
+                                    <li><a href="#quick-steps">Quick Steps</a></li>
+                                    <li><a href="#read-unread">Read/Unread</a></li>
+                                    <li><a href="#categories">Categories</a></li>
+                                    <li><a href="#flagging">Flagging a Mail</a></li>
+                                    <li><a href="#pinning">Pinning a Mail</a></li>
+                                    <li><a href="#snoozing">Snoozing a Mail</a></li>
+                                    <li><a href="#retention">Retention Labels</a></li>
+                                    <li><a href="#print">Print</a></li>
+                                    <li><a href="#more">Three dots icon or More Option</a></li>
+                                    <li><a href="#layout">Layout</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#right-click">Right Click Menu and Options</a></li>
+                            <li><a href="#left-pane">Left Pane Apps</a></li>
+                       </ul>
+                    </div>
+            <!-- side TOC menu slider section end         -->
+          </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- News With Sidebar End -->
+    <!-- Footer Start -->
+
+    <div class="container-fluid py-4 px-sm-3 px-md-5" style="background: #111111;">
+        <p class="m-0 text-center">
+            &copy; <a href="#">Your Site Name</a>. All Rights Reserved.
+
+            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+            Design by <a href="https://htmlcodex.com">HTML Codex</a>
+        </p>
+    </div>
+    <!-- Footer End -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+    <!--GIF Controller-->
+    <script type="text/javascript" src="https://unpkg.com/freezeframe@3.0.10/build/js/freezeframe.pkgd.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            second = new freezeframe({
+                'selector': '.my_class_2',
+                'animation_play_duration': Infinity,
+                'non_touch_device_trigger_event': 'click'
+            }).freeze();
+        })
+    </script>
+    <!--GIF Controller-->
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script>
+        document.querySelector('.menu-icon').addEventListener('click', function () {
+            //alert('haiii')
+            document.querySelector('.menu').classList.remove('hide');
+            //alert('clicked')
+            //document.querySelector('.menu').style.transform = "translateX(-110%)";
+            document.querySelector('.menu').classList.toggle('move-menu');
+        })
+
+        document.querySelector('.x').addEventListener('click', function () {
+            document.querySelector('.menu').classList.add('hide');
+        })
+    </script>
+</body>
+
+</html>

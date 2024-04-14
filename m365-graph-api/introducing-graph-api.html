@@ -1,0 +1,301 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Learn Microsoft Graph Using Graph Explorer & Postman</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Office 365 api, Microsoft 365 api, m365 api" name="keywords ">
+    <meta content="This tutorial explains what Microsoft Graph API is using Graph Explorer and Postman tools. Also learn Graph API using JavaScript. Office 365 api, m365api." name="description">
+
+    <link rel="stylesheet" href="https://unpkg.com/freezeframe@3.0.10/build/css/freezeframe_styles.min.css">
+    
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../css/style.css" rel="stylesheet">
+    <style>
+
+        p, li {
+            line-height: 35px;
+        }
+
+
+
+        thead td {
+            border: 2px solid black;
+            text-align: center;
+        }
+
+        thead {
+            font-weight: 900;
+        }
+
+        td {
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        ol li {
+            margin: 5px;
+            line-height: 25px;
+        }
+
+        h2 {
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid d-none d-lg-block">
+
+        <div class="row align-items-center bg-white py-3 px-lg-5">
+            <div class="col-lg-4">
+                <a href="../index.html" class="navbar-brand p-0 d-none d-lg-block">
+                    <p class="m-0 display-4  text-primary" style="font-weight: 700;">M365<span class="text-secondary font-weight-normal">Corner</span></p>
+                </a>
+            </div>
+            <div class="col-lg-8 text-center text-lg-right">
+
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-2 py-lg-0 px-lg-5">
+            <a href="index.html" class="navbar-brand d-block d-lg-none">
+                <p class="m-0 display-4 text-primary" style="font-weight: 700;">m365<span class="text-white font-weight-normal">Tutorials</span></p>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-0 px-lg-6" id="navbarCollapse">
+                <div class="navbar-nav mr-auto py-0">
+                    <a href="../index.html" class="nav-item nav-link active">Home</a>
+                    <a href="../m365-for-beginners/microsoft-365-beginner-series-overview.html" class="nav-item nav-link">M365 for Beginners</a>
+                    <a href="../m365-how-tos/how-to-overview.html" class="nav-item nav-link">M365 How Tos</a>
+                    <a href="../m365-graph-api/graph-api-overview.html" class="nav-item nav-link">M365 Graph API</a>
+                    <a href="../m365-updates/m365-updates-overview.html" class="nav-item nav-link">M365 Updates</a>
+                    <a href="../m365-administration/m365-administration-overview.html" class="nav-item nav-link">M365 Administration</a>
+                    <a href="../contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <div class="input-group ml-auto d-none d-lg-flex" style="width: 100%; max-width: 300px;">
+
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+    <!-- Breaking News Start -->
+    <div class="container-fluid mt-5 mb-3 pt-3">
+
+    </div>
+    <!-- Breaking News End -->
+    <!-- News With Sidebar Start -->
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- News Detail Start -->
+                    <div class="position-relative mb-3">
+
+                        <div class="bg-white border border-top-0 p-4">
+                            <div class="mb-3">
+                                <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                   href="">Business</a>
+                                <a class="text-body" href="">Jan 01, 2045</a>
+                            </div>
+
+                            <h1 class="mb-3 text-secondary font-weight-bold" id="Revisiting-micsft-graph-API">Revisiting Microsoft Graph API</h1>
+                            <p>You might think why you have to go through Microsoft Graph API to query Microsoft 365 data? Wouldn’t it be easier if you directly made calls to Microsoft 365 APIs? Of course, you can. But the problem is Microsoft 365 is made of multiple services – like Teams, Exchange, SharePoint etc., - and you’ll be required to authenticate yourself against each of these services separately, as and when required. At least, that’s how things where until Microsoft Graph was introduced.  </p>
+                            <P>Microsoft Graph unified all of the Microsoft 365 API services into one single module. So no more multiple authentications. What’s more is that Microsoft Graph connects these services together well, meaning your API calls would be more efficient. And the more efficient your API calls are, the more efficient would be your app. </P>
+                            <P><b>Note:</b> Office 365 API (or Microsoft 365) API is now legacy and Microsoft recommends using the Microsoft Graph API instead. </P>
+                           
+
+                            <h2 class="mb-3 text-secondary font-weight-bold" id="What-exactly-is-graph-API-again">What exactly is Graph API again? </h2>
+                            <p>Graph API is a REST API that allows you to access data across Microsoft 365 Core Services (like Teams, Exchange, SharePoint etc.,) and Microsoft 365 Enterprise Mobility and Security Services (Microsoft Entra ID and Intune). You can also use Graph API to query Microsoft Dynamics 365. </p>
+                            <p><b>Note:</b> Microsoft Dynamics 365 is a cloud-based application that combines CRM and ERP capabilities and is out of scope of this beginner series on Microsoft 365 APIs. </p>
+
+
+                            <h2 class="mb-3 text-secondary font-weight-bold" id="Why-is-it-named-micsft-graph-API">Why is it named Microsoft Graph API? </h2>
+                            <p>If you have observed mathematical graphs carefully, you’ll understand they are especially good at connecting two dissimilar objects or resources. And since Microsoft Graph API does exactly the same – bringing together different Microsoft 365 services like Teams, Exchange, SharePoint etc., - they were eventually named as Graph API.  </p>
+                            
+                            
+                            <h2 class="mb-3 text-secondary font-weight-bold" id="Introducing-graph-explorer">Introducing Graph Explorer </h2>
+                            <p>The easiest way to get started with Graph API endpoints is by using the <a href="https://developer.microsoft.com/en-us/graph/graph-explorer" style="color:red">Graph Explorer</a>. Here you can explore how the Graph API requests can be made, what the request parameters should be, what the request body should contain etc., You can do this without signing in to your tenant, as you are provided with sample data too. </p>
+                            <p><b>Note:</b> You can only perform <b>GET</b> operations on sample data without signing in. For POST, PUT, DELETE operations, you should sign in with your Microsoft account. </p>
+
+
+                            <h3 id="Querying-sample-date-using-graph-Explore">Querying Sample Data Using Graph Explorer </h3>
+                            <p>Search for the <b>resource</b> you want to query, select the <b>operation,</b> and click the <b>Run Query</b> button. You’ll get back the <b>response</b> as shown in the image below. </p>
+                            <img class="img-fluid my_class_2" src="img/graph-explorer.png" style="border:1px solid black;" alt="Demo shows steps involved in using Graph Explorer. ">
+                            <p><b>Note:</b> By default, get all users in the organization (operation executed in the image) is a protected operation; meaning you need access permission (either delegated or application level) to execute it. But for demo purposes, Graph Explorer lets you execute it without asking for it. </p>
+                           
+
+                            <h3 id="Signing-into-graph-explorer">Signing into Graph Explorer </h3>
+                            <p>Select the user icon and provide your tenant credentials (as shown in the animated GIF below) and you can get started. </p>
+                            <img class="img-fluid my_class_2" src="img/logging-into-graph-explorer.gif" style="border:1px solid black;" alt="Demo shows how you can login into Graph Explorer using Microsoft account. ">
+                            <p>You’ll notice that as you sign in, the Graph Explorer requests you to provide access permission to read your profile. That is, the profile of the logged in user. Another point to note here is all the access permissions you consent to via Graph Explorer are delegated permissions. </p>
+
+                            <h3 id="Querying-for-all-your-tenant-users-using-graph-exlorer">Querying for All Your Tenant Users Using Graph Explorer </h3>
+                            <p>Let’s execute the same get all users in the organization operation again and see what happens. The operation won’t execute saying that you do not have <b>sufficient privileges</b> and that you need to <b>consent to one of the permissions</b> on the <b>Modify permissions</b> tab. Once you consent to the access permission in question, you’ll get back the required response. (Check the animated GIF below to understand this better). </p>
+                            <p><b>Note:</b> Basically, you are applying for access permissions as you make the API calls; something you have to do in advance while creating the app (as shown in the previous article). </p>
+                            <img class="img-fluid my_class_2" src="img/logging-into-graph-explorer-2.gif" alt="Demo shows how you an run a query in Graph Explorer after signing in. ">
+
+
+                            <h2 class="mb-3 text-secondary font-weight-bold" id="Your-first-graph-API-call">Your First Graph API Call</h2>
+                            <p>Let’s make the Graph API call in 2 ways: i) First using Postman and ii) Then using JavaScript.</p>
+                            <p><b>Note:</b> You should send the authentication token along with the request while making Graph API calls. </p>
+                            <p><b>Note:</b> Let’s try hitting the same /users endpoint this time too to get the list of all tenant users. </p>
+                            <p><b>Note:</b> Microsoft Authentication Tokens typically expire in 60 minutes (an hour). So, if yours has expired you should generate a new one and then make the Graph API call.</p>
+                            <h3 id="using-postman">Using Postman</h3>
+                            <p>Just like with any protected API call, the authentication token should go under <b>Authorization</b> field with <b>type</b> set as <b>Bearer Token</b> within Postman as shown in the animated GIF. </p>
+                            <img class="img-fluid my_class_2" src="img/using-postman-img-1.gif" alt="Demo shows how you can execute a Graph API call after adding the authorization token. ">
+                            <p><b>Note:</b> Notice how the call fails if the authentication token is tampered with or is not present. </p>
+                            <h3 id="Using-javaScript">Using JavaScript</h3>
+                            <p>Let’s execute a JavaScript Fetch based API call without even running a server. All you have to do is create an HTML file and add the below code with the <script></script> tags and ensure you replace YOUR_ACCESS_TOKEN_GOES_HERE placeholder value with the access token you generated. </p>
+                            <p style="border: 1px solid black; padding: 40px;">
+                                window.onload = function () { <br>
+                                    // Replace 'ACCESS_TOKEN' with your actual access token <br>
+                                    const accessToken = 'YOUR_ACCESS_TOKEN_GOES_HERE'; <br><br>
+                        
+                                    // Construct the Microsoft Graph API endpoint URL <br>
+                                    const apiUrl = 'https://graph.microsoft.com/v1.0/users'; <br><br>
+                        
+                                    // Make a GET request to the Graph API endpoint <br>
+                                    fetch(apiUrl, { <br>
+                                        headers: { <br>
+                                            'Authorization': `Bearer ${accessToken}` <br>
+                                        } <br>
+                                    }) <br>
+                                        .then(response => response.json()) <br>
+                                        .then(data => { <br>
+                                            // Handle the response data <br>
+                                            console.log('Tenant Users:', data); <br>
+                                        }) <br> 
+                                        .catch(error => { <br>
+                                            // Handle errors <br>
+                                            console.error('Error:', error); <br>
+                                        }); <br>
+                                }                        
+                            </p>
+                            <p>As you can see, the script triggers a function when the HTML file is loaded. This function makes use of Fetch API to make the call to Microsoft Graph. And the access token is placed in the request header. Once your app proves its authenticity via the authorization token, the call goes through and you should get the list of your tenant users as response in your browser console (as shown in the image below). </p>
+                            <img class="img-fluid my_class_2" src="img/users-api-call.png" alt="Image shows list of tenant users being fetched and displayed using Graph API. ">
+
+                            <h2 class="mb-3 text-secondary font-weight-bold" id="What-next">What’s Next?</h2>
+                            <p>Now that you know how to make Graph API calls, in the next article, let’s take it a step further and understand how you can make use of MSAL (Microsoft Authentication Library) to simplify the authentication/authorization process in your app. MSAL takes care of your app’s authentication and authorization, so that you can focus on the core areas of your app.  </p>
+
+                        </div>
+                    </div>
+                    <!-- News Detail End -->
+                    <!-- side TOC start -->
+                    <div class="side-table-box">
+                        <div class="table-content">
+                            <h5 class="menu-icon">Table of Contents</h5>
+                        </div>
+                    </div>
+            <!-- side TOC end         -->
+            <!-- side TOC menu slider section start         -->
+                    <div class="scroll-box menu">
+                        <div class="icons-scroll">
+                            <h1 class="x">X</h1>
+                        </div>
+                        <h1>Table of Contents</h1>
+                        <ul>
+                            <li>
+                                <a href="#Revisiting-micsft-graph-API">Revisiting Microsoft Graph API</a>
+                                <ul>
+                                    <li><a href="#What-exactly-is-graph-API-again">What exactly is Graph API again?</a></li>
+                                    <li><a href="#Why-is-it-named-micsft-graph-API">Why is it named Microsoft Graph API? </a></li>
+                                    <li><a href="#Introducing-graph-explorer">Introducing Graph Explorer </a>
+                                        <ul>
+                                            <li><a href="#Querying-sample-date-using-graph-Explore">Querying Sample Data Using Graph Explorer </a></li>
+                                            <li><a href="#Signing-into-graph-explorer">Signing into Graph Explorer </a></li>
+                                            <li><a href="#Querying-for-all-your-tenant-users-using-graph-exlorer">Querying for All Your Tenant Users Using Graph Explorer</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#Your-first-graph-API-call">Your First Graph API Call</a>
+                                        <ul>
+                                            <li><a href="#using-postman">Using Postman</a></li>
+                                            <li><a href="#Using-javaScript">Using JavaScript</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#What-next">What’s Next?</a></li>
+                                </ul>
+                            </li>
+                       </ul>
+                    </div>
+            <!-- side TOC menu slider section end         -->
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- News With Sidebar End -->
+    <!-- Footer Start -->
+    <div class="container-fluid py-4 px-sm-3 px-md-5" style="background: #111111;">
+        <p class="m-0 text-center">
+            &copy; <a href="#">m365corner.com</a>. All Rights Reserved.
+
+            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+            Design by <a href="https://htmlcodex.com">HTML Codex</a>
+        </p>
+    </div>
+    <!-- Footer End -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+    <script type="text/javascript" src="https://unpkg.com/freezeframe@3.0.10/build/js/freezeframe.pkgd.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            second = new freezeframe({
+                'selector': '.my_class_2',
+                'animation_play_duration': Infinity,
+                'non_touch_device_trigger_event': 'click'
+            }).freeze();
+        })
+    </script>
+    <!-- JavaScript Libraries -->
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script>
+        document.querySelector('.menu-icon').addEventListener('click', function () {
+            //alert('haiii')
+            document.querySelector('.menu').classList.remove('hide');
+            //alert('clicked')
+            //document.querySelector('.menu').style.transform = "translateX(-110%)";
+            document.querySelector('.menu').classList.toggle('move-menu');
+        })
+
+        document.querySelector('.x').addEventListener('click', function () {
+            document.querySelector('.menu').classList.add('hide');
+        })
+    </script>
+</body>
+
+</html>

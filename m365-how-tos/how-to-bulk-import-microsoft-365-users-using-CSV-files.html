@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>How to import Microsoft 365 users using CSV files? </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Microsoft 365 Bulk User Import using CSV, adding multiple Microsoft 365 users, add multiple users at once in Microsoft 365, sample CSV file for adding users to Office 365, import multiple users using CSV in M365, sample downloadable CSV file with only header, sample downloadable CSV file with user info, CSV file import" name="keywords">
+    <meta content="This article explains Microsoft 365 bulk user import using CSV files. You can also use the sample downloadable CSV files in Microsoft 365 admin center for reference." name="description">
+    <!--GIF controller-->
+    <link rel="stylesheet" href="https://unpkg.com/freezeframe@3.0.10/build/css/freezeframe_styles.min.css">
+    <!--GIF controller-->
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../css/style.css" rel="stylesheet">
+    <style>
+        thead td {
+            border: 2px solid black;
+            text-align: center;
+        }
+
+        thead {
+            font-weight: 900;
+        }
+
+        td {
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        ol li {
+            margin: 5px;
+            line-height: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid d-none d-lg-block">
+
+        <div class="row align-items-center bg-white py-3 px-lg-5">
+            <div class="col-lg-4">
+                <a href="../index.html" class="navbar-brand p-0 d-none d-lg-block">
+                    <p class="m-0 display-4  text-primary" style="font-weight: 700;">M365<span class="text-secondary font-weight-normal">Corner</span></p>
+                </a>
+            </div>
+            <div class="col-lg-8 text-center text-lg-right">
+
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-2 py-lg-0 px-lg-5">
+            <a href="index.html" class="navbar-brand d-block d-lg-none">
+                <p class="m-0 display-4 text-primary" style="font-weight: 700;">m365<span class="text-white font-weight-normal">Tutorials</span></p>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-0 px-lg-6" id="navbarCollapse">
+                <div class="navbar-nav mr-auto py-0">
+                    <a href="../index.html" class="nav-item nav-link active">Home</a>
+                    <a href="../m365-for-beginners/microsoft-365-beginner-series-overview.html" class="nav-item nav-link">M365 for Beginners</a>
+                    <a href="../m365-how-tos/how-to-overview.html" class="nav-item nav-link">M365 How Tos</a>
+                    <a href="../m365-graph-api/graph-api-overview.html" class="nav-item nav-link">M365 Graph API</a>
+                    <a href="../m365-updates/m365-updates-overview.html" class="nav-item nav-link">M365 Updates</a>
+                    <a href="../m365-administration/m365-administration-overview.html" class="nav-item nav-link">M365 Administration</a>
+                    <a href="../contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <div class="input-group ml-auto d-none d-lg-flex" style="width: 100%; max-width: 300px;">
+
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+    <!-- Breaking News Start -->
+    <div class="container-fluid mt-5 mb-3 pt-3">
+
+    </div>
+    <!-- Breaking News End -->
+    <!-- News With Sidebar Start -->
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- News Detail Start -->
+                    <div class="position-relative mb-3">
+
+                        <div class="bg-white border border-top-0 p-4">
+                            <div class="mb-3">
+                                <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                   href="">Business</a>
+                                <a class="text-body" href="">Jan 01, 2045</a>
+                            </div>
+
+                            <h1 class="mb-3 text-secondary font-weight-bold">
+                                How to Import Microsoft 365 Users Using CSV files?
+                            </h1>
+                            <p style="background-color:red;color:white;text-align:center;"><b>Note:</b> Most of the images contained within this article are gifs. Click them to understand Microsoft 365 User Import better. </p>
+
+                            <ol>
+                                <li>Sign in to your <b>Microsoft 365 tenant</b>. </li>
+                                <li>Go to <b>Microsoft 365 admin center</b> by selecting the <b>Admin tab</b>. </li>
+                                <img class="img-fluid my_class_2" src="img/access-microsoft-admin-center.gif" style="border:1px solid black;" alt="Image shows how you can access Microsoft 365 admin center by clicking the Admin tab from the Microsoft 365 home page.">
+                                <li>Select <b>Show All</b> >> <b>Users</b> >> <b>Active Users</b> option.</li>
+                                <img class="img-fluid my_class_2" src="img/access-active-users-page.gif" style="border:1px solid black;" alt="Image shows how you can access Microsoft 365 Active users page from the Microsoft 365 Admin Center navigation menu.">
+                                <li>Click <b>Add multiple users</b> and scroll down to <b>I’d like to upload a CSV with user information checkbox</b>.  </li>
+                                <img class="img-fluid my_class_2" src="img/adding-multiple-users.gif" style="border:1px solid black;" alt="Image shows you can add multiple users by clicking the add multiple users button.">
+                                <li>Enable <b>I’d like to upload a CSV with user information </b> checkbox. You’ll notice 2 links as shown in the image below: </li>
+                                <img class="img-fluid my_class_2" src="img/csv-file-download-links.JPG" style="border:1px solid black;" alt="Image shows sample Microsoft 365 user import CSV files that you can download for reference.">
+
+                                <ul>
+                                    <li><b>Download a blank CSV with the required headers:</b> if you download the sample CSV file using this link, the sample CSV file will only contain headers as shown in the image. </li>
+                                    <img class="img-fluid my_class_2" src="img/sample-csv-file-with-only-headers.JPG" style="border:1px solid black;" alt="Sample CSV file with only headers that you can use as reference for adding your user details.">
+
+                                    <li><b>Download a CSV file that includes example user info:</b> if you download the sample CSV file using this link, the sample CSV file will contain example user info too as shown in the image. </li>
+                                    <img class="img-fluid my_class_2" src="img/sample-csv-file-with-sample-user-info.JPG" style="border:1px solid black;" alt="Sample CSV file with sample user info that you can use as reference for adding your user details.">
+
+                                </ul>
+
+                                <li><b>Add your user details</b> to the CSV file and <b>upload</b> the same. </li>
+                                <img class="img-fluid my_class_2" src="img/uploading-csv-file-with-user-details.gif" style="border:1px solid black;" alt="Image shows how you can upload the CSV file containing your Microsoft 365 user details and assign them with Microsoft 365 user license. ">
+
+
+
+                            </ol>
+                            <br />
+
+                        </div>
+
+
+
+                    </div>
+                    <!-- News Detail End -->
+
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- News With Sidebar End -->
+    <!-- Footer Start -->
+    <div class="container-fluid py-4 px-sm-3 px-md-5" style="background: #111111;">
+        <p class="m-0 text-center">
+            &copy; <a href="#">m365corner.com</a>. All Rights Reserved.
+
+            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+            Design by <a href="https://htmlcodex.com">HTML Codex</a>
+        </p>
+    </div>
+    <!-- Footer End -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+    <!--GIF Controller-->
+    <script type="text/javascript" src="https://unpkg.com/freezeframe@3.0.10/build/js/freezeframe.pkgd.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            second = new freezeframe({
+                'selector': '.my_class_2',
+                'animation_play_duration': Infinity,
+                'non_touch_device_trigger_event': 'click'
+            }).freeze();
+        })
+    </script>
+    <!--GIF Controller-->
+    <!-- JavaScript Libraries -->
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

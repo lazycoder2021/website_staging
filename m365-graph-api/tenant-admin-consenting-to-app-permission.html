@@ -1,0 +1,339 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Learn how Microsoft 365 Admin Consents to app permissions</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Office 365 api, Microsoft 365 api, m365 api" name="keywords ">
+    <meta content="Learn how Microsoft 365 admin grants consent for Office 365 api apps. This m365 api tutorial explains how to get authorization token from Microsoft Entra." name="description">
+
+    <link rel="stylesheet" href="https://unpkg.com/freezeframe@3.0.10/build/css/freezeframe_styles.min.css">
+    
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../css/style.css" rel="stylesheet">
+    <style>
+
+        p, li {
+            line-height: 35px;
+        }
+
+
+
+        thead td {
+            border: 2px solid black;
+            text-align: center;
+        }
+
+        thead {
+            font-weight: 900;
+        }
+
+        td {
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        ol li {
+            margin: 5px;
+            line-height: 25px;
+        }
+
+        h2 {
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid d-none d-lg-block">
+
+        <div class="row align-items-center bg-white py-3 px-lg-5">
+            <div class="col-lg-4">
+                <a href="../index.html" class="navbar-brand p-0 d-none d-lg-block">
+                    <p class="m-0 display-4  text-primary" style="font-weight: 700;">M365<span class="text-secondary font-weight-normal">Corner</span></p>
+                </a>
+            </div>
+            <div class="col-lg-8 text-center text-lg-right">
+
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-2 py-lg-0 px-lg-5">
+            <a href="index.html" class="navbar-brand d-block d-lg-none">
+                <p class="m-0 display-4 text-primary" style="font-weight: 700;">m365<span class="text-white font-weight-normal">Tutorials</span></p>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-0 px-lg-6" id="navbarCollapse">
+                <div class="navbar-nav mr-auto py-0">
+                    <a href="../index.html" class="nav-item nav-link active">Home</a>
+                    <a href="../m365-for-beginners/microsoft-365-beginner-series-overview.html" class="nav-item nav-link">M365 for Beginners</a>
+                    <a href="../m365-how-tos/how-to-overview.html" class="nav-item nav-link">M365 How Tos</a>
+                    <a href="../m365-graph-api/graph-api-overview.html" class="nav-item nav-link">M365 Graph API</a>
+                    <a href="../m365-updates/m365-updates-overview.html" class="nav-item nav-link">M365 Updates</a>
+                    <a href="../m365-administration/m365-administration-overview.html" class="nav-item nav-link">M365 Administration</a>
+                    <a href="../contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <div class="input-group ml-auto d-none d-lg-flex" style="width: 100%; max-width: 300px;">
+
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+    <!-- Breaking News Start -->
+    <div class="container-fluid mt-5 mb-3 pt-3">
+
+    </div>
+    <!-- Breaking News End -->
+    <!-- News With Sidebar Start -->
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- News Detail Start -->
+                    <div class="position-relative mb-3">
+
+                        <div class="bg-white border border-top-0 p-4">
+                            <div class="mb-3">
+                                <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                   href="">Business</a>
+                                <a class="text-body" href="">Jan 01, 2045</a>
+                            </div>
+
+                            <h1 class="mb-3 text-secondary font-weight-bold" id="how-tenant-admin-cosents-to-app-permisiion">How Tenant Admin Consents to App Permissions? </h1>
+                            <p>There are two ways in which a tenant admin can consent to the app permissions your app requested for <u>in the previous article:</u> </p>
+                            <ol>
+                                <li style="list-style: none;">i) From within the Microsoft Entra ID Admin Center and </li>
+                                <li style="list-style: none;">ii) From within your app. </li>
+                            </ol>
+                            <p>Let’s understand both these methods though the second one is the most preferred one since the tenant admin probably does not have the enough time to access Microsoft Entra ID Admin Center to approve the permissions your app is requesting for.  </p>
+                            <p><b>Note:</b> Since you have a Microsoft 365 E5 subscription at your disposal and are in the early stages of Microsoft 365 API based app development, you can try out the app you are developing as the tenant admin too. </p>
+
+                            <h2 class="mb-3 text-secondary font-weight-bold" id="from-within-the-micsft-entra-id-admin-center">From within the Microsoft Entra ID Admin Center </h2>
+                            <p>Once you are within the App registrations page of the Microsoft Entra ID Admin Center, select the app you configured earlier. Next go to the API permissions tab and click on the Grant admin consent for MSFT option. Click Yes in the Grant admin consent confirmation message to grant all the permissions requested by the app.  </p>
+                            <img class="img-fluid my_class_2" src="img/admin-consent-1.png" style="border:1px solid black;" alt="Microsoft Entra App Registrations page where all your Microsoft 365 API apps get listed. ">
+                            <img class="img-fluid my_class_2" src="img/admin-consent-2.png" style="border:1px solid black;" alt="Steps involved in Microsoft 365 admin granting API permissions for an app. ">
+                            <p>Once the permission is granted for the app, the status of the API permissions turns to <b>Granted for MSFT</b> as shown in the image. </p>
+                            <img class="img-fluid my_class_2" src="img/admin-consent-3.png" style="border:1px solid black;" alt="Image highlights how the status of an api permission changes to granted when the admin grants access permission for the api.">
+
+
+                            <h2 class="mb-3 text-secondary font-weight-bold" id="From-within-your-app-granint-consent-to-delegate-permissions">From within your app -- Granting Consent to Delegate Permissions</h2>
+                            <p>This is the Microsoft 365 login endpoint your app should make the API call to to get the tenant admin to consent to the delegated permissions your app is requesting for. For testing purposes, you don’t need to make the API call formally from your app. You just need to use this URL and pass in your tenant ID and Client ID and see how the tenant admin can consent to the requested permissions. </p>
+                            <p><b>Note:</b> You should run a simple web server containing the redirect URI path you configured while setting up the app. Because this is the path to which the response gets returned. If you try to execute the below URL without running the server, you’ll run into an error. </p>
+                            <a href="https://login.microsoftonline.com/{tenant-id}/oauth2/v2.0/authorize?client_id={client-id}&response_type=code&redirect_uri=http://localhost:3000&scope=user.readwrite.all&response_mode=query" style="color: blue;">https://login.microsoftonline.com/<span style="color: red;">{tenant-id}</span>/oauth2/v2.0/authorize?client_id=<span style="color: red;">{client-id}</span>&response_type=code&redirect_uri=http://localhost:3000&scope=user.readwrite.all&response_mode=query</a>
+                            <p>You’ll notice that the following in the URL: </p>
+                            <ul>
+                                <li>
+                                    You need to pass in your <b>tenant-id</b> and client-id. This is how Microsoft recognizes your app and the Microsoft 365 tenant it is going to connect to or integrate with. 
+                                </li>
+                                <li>
+                                    Next you set the <b>response_type</b> parameter as <b>code.</b> Basically, you are asking for a code in response. This code is required to get the <b>authentication token.</b> 
+                                </li>
+                                <li>
+                                    Then you redirect the response you get to the redirect URI ( <a href="http://localhost:3000" style="color: blue;">http://localhost:3000</a>) you setup earlier while configuring the app by declaring the redirect_uri parameter. 
+                                </li>
+                                <li>
+                                    Then you pass in the user <b>scope</b> [permission] the users or subscribers of your app need by declaring it within the scope <u class="spelling-error">param</u> as user.readwrite.all.
+                                </li>
+                                <li>
+                                    <b>response mode</b> – param which helps you specify how you wish to send back the code you got to Microsoft 365 in exchange for an authentication token. This is set to <b>query,</b> meaning you wish to send back or post the code as a query parameter in the request. 
+                                </li>
+                            </ul>
+                            <p>You can see how executing the above URL requests tenant admin to grant app permissions using the animated GIF below. </p>
+                            <img class="img-fluid my_class_2" src="img/admin-consent-delegated-permission.gif" style="border:1px solid black;" alt="Steps involved in tenant admin granting access permissions for your app. ">
+                            <p><b>Note:</b> You can access your app’s API permissions page within the Microsoft <u class="spelling-error">Entra</u> ID admin center and confirm whether the API permission has been granted or not.</p>
+
+                            <h3 id="Applying-for-authorization-token">Applying for Authorization Token </h3>
+                            <p>Once the tenant admin has consented to your app permissions, you receive a code in the response as shown below. You’ll have to reproduce this code in order to get the authorization token (that helps you authorize your app and thereby access the protected Microsoft Graph (Microsoft 365) APIs). </p>
+                            <a  style="color:black" href="http://localhost:3000/?code=0.AT0AzAza6ijktkmmds-CSj44UIdl4_ajjltFuLFKwKUX2JShAAA.AgABAAIAAADnfolhJpSnRYB1SVj-Hgd8AgDs_wUA9P--Y067a42RnwdWb5jk9YRs2EBxUi3iNsQsO_4hvhpDX2IJ8T6zV4HDWqP7X5aaARRcXkwfs8JvfrIvS9WcqnHAM-0JPYYkgyFNxvSGc6rpRowUADRpZE3OV5aGy8SI8PA3zNtSTteglvK4QfB5rX4p2fgKQ7uIkYG4YMBvLedEC5rgwuxzTQGoHCRf6PicdijF-fAedFYZAkjETHuJAQxc-77lT0kDTuQnVtmXZhf8ss4s8P_EfI6SYDouZzCJwtnIxM1SMs5-4egI5P-nT1ZT7hyTwAEAyP2SCFwVPK6RNPO2mtYfML4lYcNzyPVgQumECoHZNtDh-Xhd9GBDknyrJR3zj2fntVEEyehh8Fwt-Z8tlzJbMFwZ9IqZBt7R_F8PfyRKqgcEOx9II_qFAuImZPdzGk_vQdyVFGU2IRGwtws3ujmju_8gPOgx_2hIvqeZO12bdLofYDut3vX8eWGeJazHXKtqlwFZh54cJWJWck5C__-MkcbnvS6YY64Abvn53eEWaKn8XXNNj0VgupDaaa7hTXl_O5gZmptm-7zFhLZ3jRWdQMC_zi83osAfmS3dkwnYfZI1MtVZA-W7qHfNsOjYbQz916nh0cr-ybloaj0UwlaN0DxIH0gkvlAQ9wAMnK1fWcy82tmMjzxjP_PPoJrHzXuy5JDMboX0gND7piArhSNlnaM&state=12345&session_state=6f7bce09-a87c-4ff9-82b8-cf937658f2e2#">
+                                    http://localhost:3000/?code=<u><span style="color: red;">0.AT0AzAza6ijktkmmds-CSj44UIdl4_ajjltFuLFKwKUX2JShAAA.AgABAAIAAADnfolhJpSnRYB1SVj-Hgd8AgDs_wUA9P--Y067a42RnwdWb5jk9YRs2EBxUi3iNsQsO_4hvhpDX2IJ8T6zV4HDWqP7X5aaARRcXkwfs8JvfrIvS9WcqnHAM-0JPYYkgyFNxvSGc6rpRowUADRpZE3OV5aGy8SI8PA3zNtSTteglvK4QfB5rX4p2fgKQ7uIkYG4YMBvLedEC5rgwuxzTQGoHCRf6PicdijF-fAedFYZAkjETHuJAQxc-77lT0kDTuQnVtmXZhf8ss4s8P_EfI6SYDouZzCJwtnIxM1SMs5-4egI5P-nT1ZT7hyTwAEAyP2SCFwVPK6RNPO2mtYfML4lYcNzyPVgQumECoHZNtDh-Xhd9GBDknyrJR3zj2fntVEEyehh8Fwt-Z8tlzJbMFwZ9IqZBt7R_F8PfyRKqgcEOx9II_qFAuImZPdzGk_vQdyVFGU2IRGwtws3ujmju_8gPOgx_<br>2hIvqeZO12bdLofYDut3vX8eWGeJazHXKtqlwFZh54cJWJWck5C__-MkcbnvS6YY64Abvn53eEWaKn8XXNNj0VgupDaaa7hTXl_O5gZmptm-7zFhLZ3jRWdQMC_zi83osAfmS3dkwnYfZI1MtVZA-W7qHfNsOjYbQz916nh0cr-ybloaj0UwlaN0DxIH0gkvlAQ9wAMnK1fWcy82tmMjzxjP_PPoJrHzXuy5JDMboX0gND7piArhSNlnaM</span></u>&state=12345&session_state=6f7bce09-a87c-4ff9-82b8-cf937658f2e2#
+                            </a>
+                            <p>Use postman to make the API call for getting the authorization token. This is the endpoint you have to query to get the authorization token: https://login.microsoftonline.com/{your-tenant-id}/oauth2/v2.0/token. As you can see, you’ll have to pass in your tenant-id to this endpoint. </p>
+                            <p>Your authentication token request should look like the one shown in the image below. It has to contain the <b>code</b> you received and the <b>client_secret</b> you generated earlier, among other things. </p>
+                            <img class="img-fluid my_class_2" src="img/authentication-token-request.png" style="border:1px solid black;" alt="Demo of how the authentication token request along with the query parameters and values it should contain. ">
+                            <p>Other properties you need to pass in the request:</p>
+                            <ul>
+                                <li>
+                                    <b>grant-type:</b> should be set to authorization_code; basically, you are requesting Microsoft Entra ID to grant permission to access the authorization code or token generated for you app. 
+                                </li>
+                                <li>
+                                    <b>redirect_uri:</b> redirect_uri helps you specify the page your app gets redirected to once the authorization token is received as response. For testing purposes, you could reproduce the same redirect URI you added earlier in the app. 
+                                </li>
+                                <li>
+                                    <b>scope:</b> pass in the API permission your app needs. Example: user.read
+                                </li>
+                                <li>
+                                    <b>client_id:</b> you should pass in your app id here.  
+                                </li>
+                                <li>
+                                    <b>client_secret:</b> you should pass in the client secret you generated in the app here.  
+                                </li>
+                            </ul>
+
+                            <h3 id="Authentication-token-endpoint-response">Authentication Token Endpoint Response</h3>
+                            <p>You should receive the authentication token in the response as shown in the image. You’ll also notice the response contains app permissions too. Just like any auth token, it has an expiry time as well.</p>
+                            <img class="img-fluid my_class_2" src="img/authentication-token-request-2.png" style="border:1px solid black;" alt="Demo of how the access token is sent back as response. ">
+                            <p>You need to make use of this authentication token in your subsequent requests to authorize your app when you query Microsoft Graph (or Microsoft 365) APIs. </p>
+                            
+
+                            <h2 class="mb-3 text-secondary font-weight-bold" id="Frome=within-your-app-granting-consent-to-application-permissions">From within your app -- Granting Consent to Application Permissions</h2>
+                            <p>This is the Microsoft 365 login endpoint your app should make the API call to to get the tenant admin to consent to the app permissions your app is requesting for. For testing purposes, you don’t need to make the API call formally from your app. You just need to use this URL and pass in your tenant ID and Client ID and see how the tenant admin can consent to the requested permissions. </p>
+                            <a style="color: blue;" href="https://login.microsoftonline.com/{tenant-id}/adminconsent?client_id={client-id}&redirect_uri=http://localhost:8000">https://login.microsoftonline.com/<span style="color: red;">{tenant-id}</span>/adminconsent?client_id=<span style="color: red;">{client-id}</span>&redirect_uri=http://localhost:8000</a>
+                            <p><b>Note:</b> You should run a simple web server containing the redirect URI path you configured while setting up the app. Because this is the path to which the response gets returned. If you try to execute the below URL without running the server, you’ll run into an error while trying to grant permissions for the app as the tenant admin. </p>
+                            <p>You’ll notice that the following in the URL: </p>
+                            <ul>
+                                <li>
+                                    You need to pass in your <b>tenant-id</b> and <b>client-id.</b> This is how Microsoft recognizes your app and the Microsoft 365 tenant it is going to connect to or integrate with. 
+                                </li>
+                                <li>
+                                    Then you redirect the response you get to the redirect URI (<a style="color: blue;" href="http://localhost:3000">http://localhost:3000</a>) you setup earlier while configuring the app by declaring the redirect_uri parameter. 
+                                </li>
+                            </ul>
+                            <p>You can see how executing the above URL requests tenant admin to grant app permissions using the animated GIF below. Also notice how the <b>admin_consent</b> parameter is set to <b>true,</b> when the tenant admin grants your app the required permissions.</p>
+                            <p><b>Note:</b> You can access your app’s API permissions page within the Microsoft Entra ID admin center and confirm whether the API permission has been granted or not.  </p>
+                            <img class="img-fluid my_class_2" src="img/admin-consent-app-permission.gif" style="border:1px solid black;" alt="Demo of how the tenant admin can grant api permissions to your app. ">
+                            
+
+                            <h3 id="apllying-for-authentaction-token">Applying for Authentication Token </h3>
+                            <p>Once the admin has consented to your app permissions, your app can apply for auth token and authorize itself before it starts making Graph API calls. The endpoint for making Graph API calls is shown below. </p>
+                            <a style="color: blue;" href="https://login.microsoftonline.com/{tenant-id}/adminconsent?client_id={client-id} &redirect_uri=http://localhost:8000">https://login.microsoftonline.com/{<span style="color: red;">tenant-id</span>}/adminconsent?client_id={<span style="color: red;">client-id</span>} &redirect_uri=http://localhost:8000</a>
+                            <p>As you can see, you’ll have to pass in your tenant-id and client-id to this endpoint. </p>
+                            <p>Use postman to make the API call for getting the authorization token. Your authentication token request should look like the one shown in the image below. It should contain the following parameters.  </p>
+                                <ul>
+                                    <li>
+                                        <b><u class="spelling-error">client_id</u></b> – pass your app or client id here.
+                                     </li>
+                                     <li>
+                                        <b>scope</b> – set this to <a style="color: blue;" href="https://graph.microsoft.com/.default">https://graph.microsoft.com/.default</a>  (where <a href="https://graph.microsoft.com/" style="color: blue;">https://graph.microsoft.com/</a> identifies the resource you are querying (which is Graph API) and the <b>/.default</b> that follows informs Microsoft <u class="spelling-error">Entra</u> ID to include in the access token all the app-level permissions the admin has consented to. 
+                                     </li>
+                                     <li>
+                                        <b><u class="spelling-error">client_secret</u></b> – you should pass in the client secret you generated in the app here
+                                     </li>
+                                     <li>
+                                        <b><u class="spelling-error">grant_type</u></b> - should be set to <u class="spelling-error">client_credentials;</u> basically, you are requesting Microsoft <u class="spelling-error">Entra</u> ID to grant authorization token for your client credentials. 
+                                     </li>
+                                </ul>
+                                <img class="img-fluid my_class_2" src="img/authentication-token-request-3.png" style="border:1px solid black;" alt="Demo of how access token is returned as response. ">
+                                
+
+                            <h2 class="mb-3 text-secondary font-weight-bold" id="What-next">What’s Next? </h2>
+                            <p>Now that you know how tenant admins can consent to your app permissions and how your app can get the authorization token required to authorize itself, in the next article, let’s understand how your app can query Microsoft 365 tenant (via Microsoft Graph API) to get the data it requires.  </p>
+
+                        </div>
+                    </div>
+                    <!-- News Detail End -->
+                    <!-- side TOC start -->
+                    <div class="side-table-box">
+                        <div class="table-content">
+                            <h5 class="menu-icon">Table of Contents</h5>
+                        </div>
+                    </div>
+            <!-- side TOC end         -->
+            <!-- side TOC menu slider section start         -->
+                    <div class="scroll-box menu">
+                        <div class="icons-scroll">
+                            <h1 class="x">X</h1>
+                        </div>
+                        <h1>Table of Contents</h1>
+                        <ul>
+                            <ul>
+                                <li><a href="#how-tenant-admin-cosents-to-app-permisiion">How Tenant Admin Consents to App Permissions? </a>
+                                    <ul>
+                                        <li><a href="#from-within-the-micsft-entra-id-admin-center">From within the Microsoft Entra ID Admin Center </a></li>
+                                        <li><a href="#From-within-your-app-granint-consent-to-delegate-permissions">From within your app -- Granting Consent to Delegate Permissions</a>
+                                            <ul>
+                                                <li><a href="#Applying-for-authorization-token">Applying for Authorization Token </a></li>
+                                                <li><a href="#Authentication-token-endpoint-response">Authentication Token Endpoint Response</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#Frome=within-your-app-granting-consent-to-application-permissions">From within your app -- Granting Consent to Application Permissions</a>
+                                            <ul>
+                                                <li><a href="#apllying-for-authentaction-token">Applying for Authentication Token </a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#What-next">What’s Next? </a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                       </ul>
+                    </div>
+            <!-- side TOC menu slider section end         -->
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- News With Sidebar End -->
+    <!-- Footer Start -->
+    <div class="container-fluid py-4 px-sm-3 px-md-5" style="background: #111111;">
+        <p class="m-0 text-center">
+            &copy; <a href="#">m365corner.com</a>. All Rights Reserved.
+
+            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+            Design by <a href="https://htmlcodex.com">HTML Codex</a>
+        </p>
+    </div>
+    <!-- Footer End -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+    <script type="text/javascript" src="https://unpkg.com/freezeframe@3.0.10/build/js/freezeframe.pkgd.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            second = new freezeframe({
+                'selector': '.my_class_2',
+                'animation_play_duration': Infinity,
+                'non_touch_device_trigger_event': 'click'
+            }).freeze();
+        })
+    </script>
+    <!-- JavaScript Libraries -->
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script>
+        document.querySelector('.menu-icon').addEventListener('click', function () {
+            //alert('haiii')
+            document.querySelector('.menu').classList.remove('hide');
+            //alert('clicked')
+            //document.querySelector('.menu').style.transform = "translateX(-110%)";
+            document.querySelector('.menu').classList.toggle('move-menu');
+        })
+
+        document.querySelector('.x').addEventListener('click', function () {
+            document.querySelector('.menu').classList.add('hide');
+        })
+    </script>
+</body>
+
+</html>

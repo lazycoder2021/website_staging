@@ -1,0 +1,459 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>M365 Corner Beginner Series - Outlook Groups</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <meta content="Microsoft 365 Outlook Group, Office 365 Outlook Group" name="keywords ">
+    <meta content="Learn to create and use Microsoft 365 Outlook Groups. Also learn Outlook-Group actions like sending group mails, follow/unfollow group, add members etc., " name="description">
+
+
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../css/style.css" rel="stylesheet">
+    <style>
+        /*line height*/
+        p, li {
+            line-height: 35px;
+        }
+        /*line height*/
+
+        thead td {
+            border: 2px solid black;
+            text-align: center;
+        }
+
+        thead {
+            font-weight: 900;
+        }
+
+        td {
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        ol li {
+            margin: 5px;
+            line-height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid d-none d-lg-block">
+        <div class="row align-items-center bg-white py-3 px-lg-5">
+            <div class="col-lg-4">
+                <a href="../index.html" class="navbar-brand p-0 d-none d-lg-block">
+                    <p class="m-0 display-4 text-uppercase text-primary" style="font-weight: 700;">m365<span class="text-secondary font-weight-normal">Corner</span></p>
+                </a>
+            </div>
+            <div class="col-lg-8 text-center text-lg-right">
+
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-2 py-lg-0 px-lg-5">
+            <a href="../index.html" class="navbar-brand d-block d-lg-none">
+                <p class="m-0 display-4 text-uppercase text-primary" style="font-weight: 700;">m365<span class="text-white font-weight-normal">Corner</span></p>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-0 px-lg-6" id="navbarCollapse">
+                <div class="navbar-nav mr-auto py-0">
+                    <a href="../index.html" class="nav-item nav-link active">Home</a>
+                    <a href="../m365-for-beginners/microsoft-365-beginner-series-overview.html" class="nav-item nav-link">M365 for Beginners</a>
+                    <a href="../m365-how-tos/how-to-overview.html" class="nav-item nav-link">M365 How Tos</a>
+                    <a href="../m365-graph-api/graph-api-overview.html" class="nav-item nav-link">M365 Graph API</a>
+                    <a href="../m365-updates/m365-updates-overview.html" class="nav-item nav-link">M365 Updates</a>
+                    <a href="../m365-administration/m365-administration-overview.html" class="nav-item nav-link">M365 Administration</a>
+                    <a href="../contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <div class="input-group ml-auto d-none d-lg-flex" style="width: 100%; max-width: 300px;">
+
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+    <!-- Breaking News Start -->
+    <div class="container-fluid mt-5 mb-3 pt-3">
+
+    </div>
+    <!-- Breaking News End -->
+    <!-- News With Sidebar Start -->
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- News Detail Start -->
+                    <div class="position-relative mb-3">
+
+                        <div class="bg-white border border-top-0 p-4">
+                            <div class="mb-3">
+                                <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                   href="">Business</a>
+                            </div>
+                            <h1 class="mb-3 text-secondary font-weight-bold">Microsoft 365 Outlook Basics IV</h1>
+                            
+                            <p>The previous article gave a detailed understanding of <a href="" style="color:red">how to handle a Microsoft 365 Outlook mail using the available toolbar options</a>. Now we move to the next best thing that helps organizations communicate – Microsoft 365 groups. Let’s understand how you can create a Microsoft 365 Outlook Group (that groups a bunch of people under a common email address), add members to it, and let members share files with each other to get the job done.  </p>
+                            <p><b>Note:</b> <a href="" style="color:red">Microsoft Teams</a> is Microsoft 365’s preferred communication tool now, as it supports real-time communication – via video conferencing and voice calls – and offers all the benefits that a Microsoft 365 Group does. But if your requirement is simple enough that you don’t need advance communication features, then read on.</p>
+
+
+                            <h2 id="outlook-group-def">What is a Microsoft 365 Group? </h2>
+                            <p>Microsoft 365 Groups bring together a bunch of individuals under a common email address so that they can exclusively communicate with each other and share their work as files, folders or links. You can create groups across Microsoft 365 apps like Planner, SharePoint, Bookings etc., The one we are going to discuss here is a Microsoft 365 Outlook-based group you can create using the Microsoft 365 Outlook app. </p>
+
+                            <h2 id="access-microsoft-outlook-groups-tab">Accessing Microsoft 365 Outlook Groups tab  </h2>
+                            <p>The <b>Microsoft 365 Outlook Groups tab</b> (check the image below) helps you create Outlook-based groups. Once you select this tab, the <b>Outlook-Groups home page</b> opens as shown in the image 2.  </p>
+                            <img class="img-fluid" src="img/outlook-groups-tab.png" alt="Image explains how you can access Microsoft Outlook from the app launcher by clicking the Outlook app icon. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                            <img class="img-fluid" src="img/outlook-groups-home-page.png" alt="Image explains how you can access Microsoft Outlook from the app launcher by clicking the Outlook app icon. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <p><b>Note:</b> If you are <b>accessing this tab the first time</b> and <b>nobody in your organization has created or shared a Microsoft 365 Group with you</b>, the home page would be <b>empty</b> (as shown in the image above).</p>
+
+                            <h2 id="create-outlook-group">How to create a Microsoft 365 Outlook Group?  </h2>
+                            <p>Click the <b>New group</b> button (on the left) or the <b>Create group</b> button (on the right). Both open the <b>New group</b> dialog box shown below. </p>
+                            <img class="img-fluid" src="img/create-new-group-1.png" alt="Image shows how to invite meeting attendees by entering their email addresses and selecting them from suggested contacts list. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <p>Enter the <b>group name</b>. The <b>email address</b> gets created based on the group name (you can modify this, if required). Provide a <b>simple description</b> for the group. </p>
+                            <img class="img-fluid" src="img/create-new-group-2.png" alt="Image shows how to invite optional meeting attendees by clicking the Optional link and entering their email addresses. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <p>The group you are creating can be <b>public</b> or <b>private</b>. The <b>Private setting </b>(or sensitivity label) is <b>selected by default</b>. If you wish to modify this, click the<b> Edit</b> icon. </p>
+                            <p><b>Note:</b> <b>Private groups</b> are visible <b>only to its members</b> and new members can join only by invite. <b>Public groups</b> are <b>open to everyone</b>. </p>
+                            <img class="img-fluid" src="img/create-new-group-3.png" alt="Image shows how to invite optional meeting attendees by clicking the Optional link and entering their email addresses. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <p>This opens the <b>Edit Settings</b> section where you can select the <b>public</b> setting. You can also modify the <b>Language for group-related notifications</b> if required. (It is recommended you leave the enabled checkbox as it is). Click <b>Create </b>to create the Microsoft 365 Outlook group.  </p>
+                            <img class="img-fluid" src="img/create-new-group-4.png" alt="Image shows how to invite optional meeting attendees by clicking the Optional link and entering their email addresses. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <p>Next <b>select the members</b> who are going to be part of the group by <b>typing in their email addresses</b>. Then click <b>Add</b> button. </p>
+                            <img class="img-fluid" src="img/add-outlook-group-members.png" alt="Image shows how to invite optional meeting attendees by clicking the Optional link and entering their email addresses. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <p>The <b>Outlook group gets created</b> and becomes available for use. </p>
+                            <img class="img-fluid" src="img/outlook-group-created.png" alt="Image shows how to invite optional meeting attendees by clicking the Optional link and entering their email addresses. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+
+                            <h3 id="access-microsoft-outlook-group">Accessing the newly created Microsoft 365 Outlook Group</h3>
+                            <p>Clicking the <b>Outlook Group card</b> takes you to the <b>Outlook group’s page</b> as shown in image 2. First thing you’ll notice is that you would have received a welcome mail from the group (though you were the one who created it). This mail gets sent to all the group members as well.    </p>
+                            <p><b>Note:</b></p>
+                            <ul>
+                                <li><b>Ensure you click the group’s card</b> and <b>not its name</b>. Because when you <b>click its name</b>, you are taken to <b>group overview page</b>. </li>
+                                <li>You can also reach the Outlook Group’s page by <b>selecting it from the Groups</b> section. </li>
+                            </ul>
+                            <img class="img-fluid" src="img/access-outlook-group-1.png" alt="Image shows how you can select the meeting's date and time from the Suggested times being displayed below the attendee list. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <img class="img-fluid" src="img/access-outlook-group-2.png" alt="Image shows how you can select the meeting's date and time from the Suggested times being displayed below the attendee list. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                            <h3 id="send-mail">Sending mail to the group  </h3>
+                            <p>Click the <b>Send email</b> button. The mail composer opens with the <b>group email address selected</b>. Type in the <b>email subject</b> and <b>body</b> and click the <b>Send</b> button.   </p>
+                            <img class="img-fluid" src="img/send-mail.png" alt="Image shows how to configure meeting location by entering the location name or enabling Teams meeting option for virtual meets. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+
+                            <h3 id="follow-unfollow-group">Following/Unfollowing Group from Inbox </h3>
+                            <p>By default, all your outlook group emails go to your personal inbox too. You can prevent this by selecting <b>Don’t receive any group messages</b> under the <b>Stop following in inbox</b> option from the <b>Following in Inbox</b> dropdown as shown in the image.     </p>
+                            <p><b>Note:</b> You’ll still receive your outlook group’s mails. But <b>only in the inbox dedicated for the outlook group within the Outlook groups tab. Not in your personal inbox directly</b>. As the name suggests, you’ll be unfollowing the group only from your personal inbox, keeping it clean. </p>
+                            <img class="img-fluid" src="img/follow-unfollow-group.png" alt="Image shows how you can send the Microsoft 365 Outlook meeting invite to attendees by clicking the Send button. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <p>You can also choose to receive <b>specific group mails in your personal inbox</b> by choosing one of the two following options. </p>
+                            <ul>
+                                <li><b>Receive only replies to you and group events</b> – This ensures only the replies to group events along with replies to group conversations initiated by you fall in your personal inbox</li>
+                                <li><b>Receive only replies to you</b> - This ensures only replies to group conversations initiated from your side fall in your personal inbox.</li>
+                            </ul>
+                            <img class="img-fluid" src="img/follow-unfollow-2.png" alt="Image shows how you can send the Microsoft 365 Outlook meeting invite to attendees by clicking the Send button. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+
+
+
+
+
+
+                            <h3 id="group-settings">Accessing Group Settings</h3>
+                            <p>The <b>Group Settings</b> pane opens when you click the <b>Settings</b> icon.      </p>
+                            <img class="img-fluid" src="img/group-settings.png" alt="Image shows how you can check for the configured Microsoft 365 Outlook meeting details in the calendar app. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <p>It lets you manage the following <b>Outlook Group related settings</b>. </p>
+                            <ul>
+                                <li><b>Manage group email</b>: Lets you decide the kind of group-related mails you will receive. These are the same options you saw under the <b>Following in Inbox</b> dropdown. </li>
+                                <li><b>Connectors</b>: Lets you connect your group to popular services or apps like <b>Jira Cloud, Asana </b>etc., that help improve your Outlook Group’s productivity.  </li>
+                                <li><b>Edit Group</b>: Lets you edit the Outlook Group’s details like the <b>group name, description, privacy settings</b> and even lets you add members.  </li>
+                                <img class="img-fluid" src="img/edit-group.png" alt="Image shows how you can get a detailed view of the configured Outlook meeting by clicking the expand icon in the calendar app. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                                <li><b>Rules</b>: Lets you configure group-related inbox rules. Click the <b>Add new rule</b> button to create a group-related rule. The <b>Add new rule box</b> opens as shown in the image 2.  </li>
+                                <p><b>Note:</b></p>
+                                <li style="list-style-type:circle;margin-left:30px;"><b>Group-related inbox rules</b> can be created only by <b>group owners</b>. </li>
+                                <li style="list-style-type:circle;margin-left:30px;"><b>Group-related inbox rules</b> can be also be accessed from the <b>Rules dropdown </b>available in the <b>Groups page toolbar</b>. </li>
+                                <img class="img-fluid" src="img/add-rule-1.png" alt="Image shows how you can get a detailed view of the configured Outlook meeting by clicking the expand icon in the calendar app. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                <img class="img-fluid" src="img/add-rule-2.png" alt="Image shows how you can get a detailed view of the configured Outlook meeting by clicking the expand icon in the calendar app. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                <p>Enter the <b>rule name</b>. Select a condition for the rule from <b>Add a condition</b> dropdown and Select the action from <b>Add an action</b> dropdown. Example: you could configure a rule like if the <b>Subject</b> includes the <b>word urgent, move it</b> to <b>important mails</b> folder as shown in the image. </p>
+                                <img class="img-fluid" src="img/add-rule-3.png" alt="Image shows how you can get a detailed view of the configured Outlook meeting by clicking the expand icon in the calendar app. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                <p><b>Note: </b>Only <b>group owners</b> can <b>add new subfolders</b> under the group Inbox folder. To add a new folder, right click the <b>Inbox</b> folder >> select <b>Create new subfolder</b> option like you would do in your personal inbox. </p>
+                                <img class="img-fluid" src="img/add-sub-folder.png" alt="Image shows how you can get a detailed view of the configured Outlook meeting by clicking the expand icon in the calendar app. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                <li><b>Leave Group</b>: Lets you leave the group. The group you leave will <b>no longer appear in the Outlook Groups home page</b>. If you are the <b>group’s owner</b>, then you will be requested to <b>transfer the ownership</b> before you leave the group. You can always rejoin a group you left by sending a request to join the group. </li>
+                                <img class="img-fluid" src="img/leave-group.png" alt="Image shows how you can get a detailed view of the configured Outlook meeting by clicking the expand icon in the calendar app. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                            </ul>
+
+
+
+                            <h3 id="add-group-members" style="color:red">Adding group members and guests  </h3>
+                            <p>Group members can be added any time by clicking the <img class="img-fluid" src="img/add-members-icon.jpg" />  <b>Add Members </b>icon. This opens the <b>Add members</b> box. Type in the <b>user email addresses</b>, select them from the <b>user list</b> and click the <b>Add button</b> to add the users as members.       </p>
+                            <img class="img-fluid" src="img/add-members.png" alt="Image shows how you can edit the configured Outlook meeting details by clicking the edit icon in the calendar app. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <p>You can also add external users <b>(guests)</b> to your Outlook group. These <b>guests can not only send mails</b> to the group but can work on the <b>Outlook group’s files and folders</b> by logging into the Microsoft 365 portal via security codes. </p>
+                            <p><b>Note:</b> Guests have limited permission compared to group owners and members.  </p>
+                            <img class="img-fluid" src="img/verification-code.png" alt="Image shows how you can edit the configured Outlook meeting details by clicking the edit icon in the calendar app. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                            <h3 id="integrated-apps">Accessing integrated apps Notebook, Planner and SharePoint  </h3>
+                            <p>Microsoft 365 apps <b>OneNote, Planner and SharePoint</b> get provisioned when you create a Microsoft 365 Outlook group. You can use them by clicking on their icons. Read <a href="" style="color:red">Microsoft 365 OneNote</a>, <a href="" style="color:red">Microsoft 365 Planner</a> and <a href="" style="color:red">Microsoft 365 SharePoint</a> to know more.        </p>
+                            <img class="img-fluid" src="img/integrated-apps.png" alt="Image shows how you can edit the configured Outlook meeting details by clicking the edit icon in the calendar app. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                            <h3 id="tabs">The 4 Tabs – Email, Files, Events, Members   </h3>
+                            <p>The following 4 tabs help you work with your Outlook Group.      </p>
+
+                            <ul>
+                                <li><b>Email</b> – Your Outlook Group inbox where you can access all your group mails.  </li>
+                                <img class="img-fluid" src="img/email-tab.png" alt="Image shows how you can edit the configured Outlook meeting details by clicking the edit icon in the calendar app. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                                <li><b>Files</b> – All your files (both created by you and shared with you) get listed here. You can also create new files and upload files too from this section. </li>
+                                <img class="img-fluid" src="img/files-tab.png" alt="Image shows how you can edit the configured Outlook meeting details by clicking the edit icon in the calendar app. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                                <li>
+                                    <b>Events</b> – This is your group calendar which you can check for any group-related events.
+                                    <b>Note:</b> You can also create a new event by selecting New event dropdown  and selecting New event option.
+                                </li>
+                                <img class="img-fluid" src="img/events-tab.png" alt="Image shows how you can edit the configured Outlook meeting details by clicking the edit icon in the calendar app. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                                <li><b>Members</b> – All your group members get listed here. You can also change their group role (from member to owner or owner to member) and delete them if you want to. </li>
+                                <img class="img-fluid" src="img/members-tab.png" alt="Image shows how you can edit the configured Outlook meeting details by clicking the edit icon in the calendar app. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                            </ul>
+
+                            <h2 id="group-actions-1">Group-related Actions you can perform from the Outlook Group’s Overview Page </h2>
+                            <p><b>Clicking the group’s name</b> from the <b>Outlook Group’s tab home page</b> opens <b>group’s overview page</b> as shown in the image. You can send a group mail by clicking the <b>Send Mail</b> button. You also have <b>More Options</b> button that lets you to: i) Add members, ii) Invite Others, iii) Stop following the group in Inbox and iv) Leave the group.   </p>
+                            <img class="img-fluid" src="img/outlook-group-overview-1.png" alt="Image explains how you can access Microsoft Outlook from the app launcher by clicking the Outlook app icon. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <p><b>Note:</b> Invite others option within the <b>More Options</b> button lets you <b>email group invites link</b> (as shown in the image 1). When users click this link, the <b>group owner receives a request for approval</b>. When the group owner approves, either using <b>Outlook mail</b> (as shown in the image 2) or from <b>within the Groups Overview page</b> (as shown in the image 3), the user becomes a member. </p>
+                            <img class="img-fluid" src="img/outlook-group-overview-2.png" alt="Image explains how you can access Microsoft Outlook from the app launcher by clicking the Outlook app icon. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <img class="img-fluid" src="img/outlook-group-overview-3.png" alt="Image explains how you can access Microsoft Outlook from the app launcher by clicking the Outlook app icon. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <img class="img-fluid" src="img/outlook-group-overview-4.png" alt="Image explains how you can access Microsoft Outlook from the app launcher by clicking the Outlook app icon. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                            <p>The<b> group overview page</b> also contains 2 tabs – <b>Overview</b> and <b>Members</b>. </p>
+                            <ul>
+                                <li><b>Overview tab</b>: This is the default page (shown in the image above). Here you get to view the <b>group’s description, email address, its members</b>. You can also find links to useful some Microsoft 365 apps the Outlook Group integrates with. </li>
+                                <li><b>Members tab</b>: This page lists <b>group’s members</b>. You can also <b>add new members, change member roles</b> and <b>delete them</b>, if necessary. </li>
+                            </ul>
+
+                            <h2 id="group-actions-2">Group-related Actions you can perform from the Outlook Group’s Home Page </h2>
+                            <p>You can perform the following actions from the Outlook Groups home page:    </p>
+                            <ul>
+                                <li id="favorite-group"><b>Mark a Group as Favorite</b>: When a group is marked as favorite, it appears under the <b>Favorites</b> folder. This is especially useful if you are a member of multiple groups. </li>
+                                <img class="img-fluid" src="img/group-home-page-1.png" alt="Image explains how you can access Microsoft Outlook from the app launcher by clicking the Outlook app icon. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                                <p><b>Note:</b> You can also mark a group as favorite from within the Groups page too. </p>
+                                <li id="group-mails-files"><b>Access Group mails, files, events and members</b>: The Outlook Group cards also contain buttons that help you access the <b>group mails, files, events and group members</b>. </li>
+                                <img class="img-fluid" src="img/group-home-page-2.png" alt="Image explains how you can access Microsoft Outlook from the app launcher by clicking the Outlook app icon. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                                <li id="recent-files"><b>Access your recent files across Groups</b>: The files you recently accessed across the groups you are part of get listed under the <b>Recent files</b> section. You can click on these files to access them. You can also <b>share these files</b> with others by <b>clicking the link icon</b> shown in the image. </li>
+                                <img class="img-fluid" src="img/group-home-page-3.png" alt="Image explains how you can access Microsoft Outlook from the app launcher by clicking the Outlook app icon. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                                <li id="join-group"><b>Discover/Join New Groups</b>: You can also <b>discover or join new groups </b>from the Outlook Groups home page by clicking the <b>Join </b>button. Groups that get listed are public groups that are open to other users.  </li>
+                                <img class="img-fluid" src="img/group-home-page-4.png" alt="Image explains how you can access Microsoft Outlook from the app launcher by clicking the Outlook app icon. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                            </ul>
+
+                            <h2 id="groups-mail-folder">Working with Microsoft 365 Outlook Groups from Groups mail folder  </h2>
+                            <p>Microsoft 365 Outlook Groups also get listed in your <b>personal inbox</b> under the <b>Groups</b> folder.  You can <b>open the Group inbox by clicking on it</b>.   </p>
+                            <img class="img-fluid" src="img/outlook-mail-folder-1.png" alt="The image shows how to access Microsoft 365 Outlook group from the Groups folder in the Microsoft 365 personal user inbox.  " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <p>You can perform the following actions: </p>
+                            <ul>
+                                <li id="send-mail-another"><b>Send mail to the Group</b>: Click <b>Send email</b> button to compose and send group mails .</li>
+                                <li id="group-mails-files-1"><b>Access the Group’s files and Calendar</b>: Click the <b>File icon </b>to access the Group’s files and Click the <b>Calendar icon</b> to access the Group’s calendar. </li>
+                                <li id="integrated-apps-1"><b>Mark the Group as Favorite</b>: Click the <b>Star icon</b> to mark the group as favorite.<b>Groups marked as Favorite</b> appear under the <b>Favorites folder</b> in your personal inbox. </li>
+                                <li id="group-settings-1"><b>Modify Group’s Settings</b>: You can also modify the <b>Group’s settings</b> by clicking the <b>More button</b> >> and selecting the <b>Settings</b> option.  </li>
+                            </ul>
+                            <img class="img-fluid" src="img/outlook-mail-folder-2.png" alt="The image shows how to access the Microsoft 365 Outlook group's settings from the Microsoft 365 personal user inbox.  " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <p><b>Note:</b> You also get to access integrated apps Notebook, Planner and Site from the More button. </p>
+
+                            <h2 id="access-group-from-admin-center">How Groups can be accessed from Microsoft 365 admin center </h2>
+                            <p>Previously, we just had a brief look at the <a href="" style="color:red">Microsoft 365 admin center</a>. Let’s start exploring it further by looking for the <b>Microsoft 365 Outlook Group</b> you just created in the admin center. You’ll be able to find it under the <b>Teams & Groups </b>dropdown. </p>
+                            <p>Do the following to access the group you just created in the Microsoft 365 Admin Center:</p>
+                            <ol>
+                                <li>Click the <b>Admin tab</b> in the <b>Microsoft 365 home page</b>. </li>
+                                <img class="img-fluid" src="img/admin-center-1.png" alt="The image shows how to access the admin tab in the Microsoft 365 home page.  " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                                <li>The <b>Microsoft 365 Admin Center</b> opens. Select <b>Teams & Groups</b> >> <b>Active Teams & Groups</b>. </li>
+                                <img class="img-fluid" src="img/admin-center-2.png" alt="The image shows how to access the Active teams & groups option in the Microsoft 365 admin center.  " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                                <li>You’ll find the <b>Microsoft 365 Outlook Group you created</b> in the list of available groups. </li>
+                                <img class="img-fluid" src="img/admin-center-3.png" alt="The image shows how to view the newly created Microsoft 365 Outlook group from the Microsoft 365 admin center. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                            </ol>
+                            <h3 id="granularity">Microsoft 365 Admin Center Offers More Granularity </h3>
+                            <p>In the Microsoft 365 Admin Center, you have the following additional options for Outlook Groups: </p>
+                            <ul>
+                                <li>
+                                    <b>Making the Group a Teams-Enabled Group</b>: You can turn the Outlook group into a Teams-enabled group. A teams-enabled group is a Microsoft Teams group with <b>video conferencing</b> and <b>voice call facilities</b> available to its members.  Read <a href="" style="color:red">Microsoft Teams</a> to know more.
+                                    To convert an Outlook Group to Microsoft Teams-enabled group, <b>select the group</b> and click the <b>Add Teams</b> button.
+                                </li>
+                                <img class="img-fluid" src="img/granularity-1.png" alt="The image shows how to convert an Outlook group to a Teams-enabled group from Microsoft 365 admin center by clicking Add teams.  " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                                <p>You can also <b>confirm your action </b>by checking for the <b>Teams</b> icon. Microsoft 365 groups that contain the Teams icon are Teams-enabled groups. </p>
+                                <img class="img-fluid" src="img/granularity-2.png" alt="The image shows how you can identify Teams-enabled groups in the Microsoft 365 admin center by looking for the teams icon.  " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+
+                                <li><b>Adding View Only Visitors to the Group Site</b>: You can also add view-only visitors to the <b>Outlook group site</b>. This is especially useful if you want members <b>outside of the group</b> to view (or maybe monitor) the group’s activities. </li>
+                                <p><b>Note:</b> <b>Outlook group site</b> is the page you can access when you <b>click the SharePoint app icon</b> from the <b>Outlook group’s page</b>. </p>
+
+                                <p>To add visitors to the Outlook Group site, click open the <b>Outlook group </b>>> select the <b>Membership</b> tab >> Select <b>Site Visitors</b> option. Use <b>Add site visitors</b> button to add visitors as shown in the image. </p>
+                                <img class="img-fluid" src="img/granularity-3.png" alt="The image shows how to add visitors to Microsoft 365 Outlook group from membership tab by clicking Add site visitors button." style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                                <li><b>Allowing People Outside the Organization Email the Group</b>: By default, only members and guests you added can mail the group. But even people outside the organization can be allowed to mail the group by enabling the <b>Let people outside the organization email this team</b> option. </li>
+                                <li><b>Allowing Files to be Shared with Outsiders</b>: By default, the group’s external file sharing capabilities extends only to <b>New and existing guests</b>. But this can be changed and <b>even outsiders can be granted access to the group files</b> using the <b>External file sharing</b> dropdown.  </li>
+                                <img class="img-fluid" src="img/granularity-4.png" alt="The image shows how you can allow outsiders to mail the Microsoft 365 Outlook group from the Settings tab  " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+
+                                <li><b>Editing the Outlook Group details and Add Group Owners/Members</b>: You’ll find <b>edit links</b> that help you edit group details like the <b>name, description, and the email address</b> under the General tab. You can also <b>add group owners</b> and <b>group members</b> from under the <b>Membership</b> tab.  </li>
+                                <img class="img-fluid" src="img/granularity-5.png" alt="The image shows how you edit the Microsoft 365 Outlook group's details like name and description from the 365 admin center" style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                            </ul>
+                            <p><b>Note:</b></p>
+                            <ul>
+                                <li>Read <a href="" style="color:red;">How to add Microsoft 365 groups</a> using Microsoft Admin Center to understand the exact steps involved better. </li>
+                                <li>Also remember that your Outlook inbox will list not just Outlook-based groups, but also other Microsoft 365 groups – be it Teams-based, Planner-based, SharePoint based etc., - that you are a part of in some capacity.  </li>
+                            </ul>
+
+
+                            <h3 id="delete-outlook-group">How to delete Microsoft 365 Outlook Groups?  </h3>
+                            <p>This can be done in two ways:  </p>
+                            <ul>
+                                <li id="delete-group-details-page"><b>Using the Microsoft 365 Admin Center</b>: <b>Select the Microsoft 365 Outlook group</b> and click the <b>Delete group</b> button as shown in the image. </li>
+                                <img class="img-fluid" src="img/delete-group-1.png" alt="The image shows how you can add Outlook group members from the Membership tab of the Microsoft 365 admin center.   " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                                <li id="delete-microsoft-admin-center"><b>From Microsoft 365 Outlook Groups Tab</b>: Click the <b>Settings</b> icon (from within the Group’s page) >> Select <b>Edit group</b> option. Then select the <b>Delete group</b> button from the <b>Edit group</b> page. </li>
+                                <img class="img-fluid" src="img/delete-group-2.png" alt="The image shows how you can delete a Microsoft 365 Outlook group by selecting it and clicking the delete group button.  " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                <img class="img-fluid" src="img/delete-group-3.png" alt="The image shows how you can edit an Outlook group from the Microsoft 365 admin center " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                            </ul>
+
+
+                        </div>
+
+
+
+                    </div>
+                    <!-- News Detail End -->
+
+                    <!-- side TOC start -->
+                    <div class="side-table-box">
+                        <div class="table-content">
+                            <h5 class="menu-icon">Table of Contents</h5>
+                        </div>
+                    </div>
+            <!-- side TOC end         -->
+            <!-- side TOC menu slider section start         -->
+                    <div class="scroll-box menu">
+                        <div class="icons-scroll">
+                            <h1 class="x">X</h1>
+                        </div>
+                        <h1>Table of Contents</h1>
+                        <ul>
+                            <li><a href="#outlook-group-def">What is a Microsoft 365 Group?</a></li>
+                            <li><a href="#access-microsoft-outlook-groups-tab">Accessing Microsoft 365 Outlook Groups tab</a></li>
+                            <li><a href="#create-outlook-group">How to create a Microsoft 365 Outlook Group?</a></li>
+                            <li><a href="#access-microsoft-outlook-group">Accessing the newly created Microsoft 365 Outlook Group</a>
+                                <ul>
+                                    <li><a href="#send-mail">Sending mail to the group</a></li>
+                                    <li><a href="#follow-unfollow-group">Following/Unfollowing Group from Inbox</a></li>
+                                    <li><a href="#group-settings">Accessing Group Settings</a></li>
+                                    <li><a href="#add-group-members">Adding group members and guests</a></li>
+                                    <li><a href="#integrated-apps">Accessing integrated apps Notebook, Planner and SharePoint</a></li>
+                                    <li><a href="#tabs">The 4 Tabs – Email, Files, Events, Members</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#group-actions-1">Group-related Actions you can perform from the Outlook Group’s Overview Page</a></li>
+                            <li><a href="#group-actions-2">Group-related Actions you can perform from Outlook Groups Home page</a>
+                                <ul>
+                                    <li><a href="#favorite-group">Mark a Group as Favorite</a></li>
+                                    <li><a href="#group-mails-files">Access Group mails, files, events and members</a></li>
+                                    <li><a href="#recent-files">Access your recent files across Groups</a></li>
+                                    <li><a href="#join-group">Discover/Join New Groups</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#groups-mail-folder">Working with Microsoft 365 Outlook Groups from Groups mail folder</a>
+                            <ul>
+                                <li><a href="#send-mail-another">Sending mail to the group</a></li>
+                                <li><a href="#group-mails-files-1">Accessing group related files and events</a></li>
+                                <li><a href="#integrated-apps-1">Mark a Group as Favorite</a></li>
+                                <li><a href="#group-settings-1">Accessing Group Settings</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#access-group-from-admin-center">How Groups can be accessed from Microsoft 365 admin center</a>
+                            <ul>
+                                <li><a href="#granularity">Microsoft 365 Admin Center Offers More Granularity</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#delete-outlook-group">How to delete Microsoft 365 Outlook Groups?</a>
+                            <ul>
+                                <li><a href="#delete-group-details-page">From the Microsoft 365 Admin Center</a></li>
+                                <li><a href="#delete-microsoft-admin-center">From within the Group Details page</a></li>
+                            </ul>
+                        </li>
+                       </ul>
+                    </div>
+            <!-- side TOC menu slider section end         -->
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- News With Sidebar End -->
+    <!-- Footer Start -->
+
+    <div class="container-fluid py-4 px-sm-3 px-md-5" style="background: #111111;">
+        <p class="m-0 text-center">
+            &copy; <a href="#">Your Site Name</a>. All Rights Reserved.
+
+            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+            Design by <a href="https://htmlcodex.com">HTML Codex</a>
+        </p>
+    </div>
+    <!-- Footer End -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+   
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script>
+        document.querySelector('.menu-icon').addEventListener('click', function () {
+            //alert('haiii')
+            document.querySelector('.menu').classList.remove('hide');
+            //alert('clicked')
+            //document.querySelector('.menu').style.transform = "translateX(-110%)";
+            document.querySelector('.menu').classList.toggle('move-menu');
+        })
+
+        document.querySelector('.x').addEventListener('click', function () {
+            document.querySelector('.menu').classList.add('hide');
+        })
+    </script>
+</body>
+
+</html>

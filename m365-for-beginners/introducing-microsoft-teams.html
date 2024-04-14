@@ -1,0 +1,404 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Microsoft Outlook Basics IV explains Microsoft 365 Outlook Groups</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    
+    <meta name="description" content="Learn to create Microsoft 365 Outlook groups, add members, send group email, share files, set up group meets. Use Microsoft 365 admin center to manage the group."> 
+    <meta name="keywords" content="Microsoft 365 Outlook Group, Office 365 Outlook Group, Microsoft 365 Outlook, Office 365 Outlook, Microsoft 365 Admin Center"> 
+
+
+    <link rel="stylesheet" href="https://unpkg.com/freezeframe@3.0.10/build/css/freezeframe_styles.min.css">
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+   
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">  
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../css/style.css" rel="stylesheet">
+    <style>
+        /*line height*/
+        p, li{
+            line-height:35px;
+        }
+        /*line height*/
+
+        thead td{
+            border:2px solid black;
+            text-align:center;
+        }
+        thead{
+            font-weight:900;
+        }
+
+        td {
+            border: 1px solid black;
+            text-align: center;
+        }
+        ol li{
+            margin:5px;
+            line-height:30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid d-none d-lg-block">
+        <div class="row align-items-center bg-white py-3 px-lg-5">
+            <div class="col-lg-4">
+                <a href="../index.html" class="navbar-brand p-0 d-none d-lg-block">
+                    <p class="m-0 display-4 text-uppercase text-primary">m365<span class="text-secondary font-weight-normal">Corner</span></p>
+                </a>
+            </div>
+            <div class="col-lg-8 text-center text-lg-right">
+
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-2 py-lg-0 px-lg-5">
+            <a href="../index.html" class="navbar-brand d-block d-lg-none">
+                <p class="m-0 display-4 text-uppercase text-primary">m365<span class="text-white font-weight-normal">Corner</span></p>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-0 px-lg-6" id="navbarCollapse">
+                <div class="navbar-nav mr-auto py-0">
+                    <a href="../index.html" class="nav-item nav-link active">Home</a>
+                    <a href="../m365-for-beginners/microsoft-365-beginner-series-overview.html" class="nav-item nav-link">M365 for Beginners</a>
+                    <a href="../m365-how-tos/how-to-overview.html" class="nav-item nav-link">M365 How Tos</a>
+                    <a href="../m365-graph-api/graph-api-overview.html" class="nav-item nav-link">M365 Graph API</a>
+                    <a href="../m365-updates/m365-updates-overview.html" class="nav-item nav-link">M365 Updates</a>
+                    <a href="../m365-administration/m365-administration-overview.html" class="nav-item nav-link">M365 Administration</a>
+                    <a href="../contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <div class="input-group ml-auto d-none d-lg-flex" style="width: 100%; max-width: 300px;">
+
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+    <!-- Breaking News Start -->
+    <div class="container-fluid mt-5 mb-3 pt-3">
+
+    </div>
+    <!-- Breaking News End -->
+    <!-- News With Sidebar Start -->
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- News Detail Start -->
+                    <div class="position-relative mb-3">
+
+                        <div class="bg-white border border-top-0 p-4">
+                            <div class="mb-3">
+                                <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                   href="">Business</a>
+                            </div>
+                            <h1 class="mb-3 text-secondary font-weight-bold">Introducing Microsoft Teams</h1>
+                            <div class="linking-table-overall">
+                                <!-- <div class="table-content">
+                                    <span>Table of Contents</span>
+                                    
+                                </div> -->
+                            </div>
+                            <p>Microsoft Teams is the perfect communication and collaboration tool if you team is spread across the world. It offers everything expected of a remote work collaboration tool like video conferencing, chats, file sharing, audio calls and more. So, if your team wants to go beyond the traditional email and communicate better and faster, then Microsoft Teams is what you should choose.  </p>
+
+
+
+
+                            <h2 id="What-Does-micsft-Team-Offer">What Does Microsoft Teams Offer?  </h2>
+                            <p>Microsoft Teams offers the following and much more: </p>
+                                <ul>
+                                    <li><b>Video Meets or Conferences:</b> You get to communicate with your colleagues in real-time.  </li>
+                                    <li><b>Group and Individual Chats:</b> You can have group chats and one-on-one chats.  </li>
+                                    <li><b>File Sharing:</b> You can share files with the entire group or specific people within the team.  </li>
+                                    <li><b>Multiple Channels:</b> You can have multiple channels within a team, each with a specific purpose.  </li>
+                                    <li><b>Team Shifts:</b> You can also let your team members clock in/clock out of their shifts in teams.  </li>
+                                    <li><b>Integration with Other Apps:</b> You can integrate teams with other productivity apps like the Microsoft Planner, Outlook Calendar, OneNote etc.,  </li>
+                                </ul>
+                                <p>You will learn more about <u>how you can configure your team’s shift using Microsoft Teams Admin Center</u> later. For now, let’s just focus on how the Microsoft Teams app looks like and how you can access the Content Writing team which we created when we had a <u>brief look at the Microsoft 365 admin center.</u>  </p>
+
+                            <h2 id="How-to-Acces-Micsft-team-app">How to Access Microsoft Teams App? </h2>
+                            <p>You can access Microsoft Teams using:</p>
+                                <ul>
+                                    <li>The Teams icon in the left pane (OR) </li>
+                                    <li>The App Launcher </li>
+                                </ul>
+
+                            <h3 id="The-teams-icon-in-left-pane">The Teams icon in the left pane </h3> 
+                            <p>After you sign in to your Microsoft 365 portal, click the Teams icon available in the left pane.  </p> 
+                            <img class="img-fluid" src="img/accessing-msft-teams-1.png" alt="" style="margin-top: 30px !important; margin-bottom: 30px !important;">  
+                             <h3 id="The-App-Launch">Using the App Launcher </h3>  
+                             <p>Click the app launcher and select Teams app. </p> 
+                             <img class="img-fluid" src="img/accessing-msft-teams-2.png" alt=" " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+
+                            <h2 id="Search-for-your-team">Searching for Your Team </h2>
+                            <p>Once you are in the <b>Teams</b> app, click the Teams tab. All the teams within your tenant – most of them created by default – get listed here. Look for the <b> Content Writing Team </b> you created earlier. </p>
+
+                            <img class="img-fluid" src="img/teams-tab.png" alt="" style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                            <h2 id="Send-you-first-msg">Sending your first message</h2>
+                            <p>Try starting a conversation by clicking the <b> New conversation </b> button and typing in a message. </p>
+                            <img class="img-fluid" src="img/teams-chat-4.png" alt="" style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                            <p>If your team members are online and logged into the <b>Teams</b> app, they can respond immediately. An <b>email notification</b> regarding the chat message also gets sent to them so that they don’t miss out on the message. 
+                            </p>
+                            <img class="img-fluid" src="img/teams-chat-1.png" alt="" style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <p>When your team members login to the <b>Teams</b> app, they’ll be notified of your chat in the <b>Activity</b> tab as well.</p>
+                            <img class="img-fluid" src="img/teams-chat-2.png" alt="" style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <p>And if they are logging in for the first time, then a message notifying them that they are now a part of the Content Writing Team also gets displayed under the Activity tab. </p>
+                            <img class="img-fluid" src="img/teams-chat-3.png" alt="" style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <p>An <b>ongoing conversation between team members</b> looks like this. </p>
+                            <img class="img-fluid" src="img/teams-chat-5.png" alt="" style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                            <h2 id="Replaying-to-a-msg">Replying to a message</h2>
+                            <p>Clicking <b>Reply</b> opens the message box where you can type your message. The 5 icons – shown in the image below – help you with your message.</p>
+                            <img class="img-fluid" src="img/teams-chat-6.png" alt="" style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <ul>
+                                <li><b>Format Icon </b>– this helps you format the text of your message. </li>
+                                <li><b>Attachment Icon </b>– this helps you upload attachments. </li>
+                                <li><b>Emoji Icon</b> – this helps you add emojis to your conversation. </li>
+                                <li><b>GIF Icon</b> – this helps you add animated GIFs to your conversation. </li>
+                                <li><b>Sticker Icon</b> – this helps you add memes to your conversation. </li>
+                            </ul>
+                            <p>Once you’ve typed in your message, just click the send icon to your extreme right.</p>
+                            <p><b>Note:</b> We’ll take a look at the remaining icons later.  </p>
+
+                            <h2 id="Accessing-your-team-file">Accessing your team files </h2>
+                            <p>The Files tab contains all the files you and your team members upload to the team. This tab also contains the attachments you drop in your chat conversations. </p>
+                            <img class="img-fluid" src="img/teams-files-1.png" alt="" style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <p>Other actions you can perform on your team files from this section: </p>
+                            <ul>
+                                <li><b>Add new files</b> – You can also create or add new files by clicking the <b> New dropdown </b> and selecting the file of your choice. You can also create a new <b>folder.</b> 
+                                    <img class="img-fluid" src="img/teams-files-2.png" alt="" style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                </li>
+                                <li><b>Upload files</b> – You can upload files to your team by clicking the><b> Upload</b> option. </li>
+                                <li><b>Share files </b>– You can share files with others by clicking the Share option.</li>
+                                <li><b>Copy link to files</b> – You can copy link to files and share your files as links with others. </li>
+                                <li><b>Sync files</b> – Helps you sync your personal OneDrive with the files available in your teams. </li>
+                                <li><b>And more </b>– The more option lets you (i) Lets you add shortcut to OneDrive (this basically creates a separate folder in your OneDrive for your Team-related files with your Team name on it and serves as a shortcut to your team’s files from your OneDrive) (ii) Lets you download all your team’s files in one go (iii) Lets you open the Team’s SharePoint site (Whenever you create a Team, a SharePoint site gets provisioned for the team and it serves as the community site for all your team members. More on Microsoft 365 SharePoint sites here) and (iv) Lets you Add Cloud Storage to your Team if you feel your team needs a dedicated cloud storage space. 
+                                    <img class="img-fluid" src="img/teams-files-3.png" alt="" style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                </li>
+                            </ul>
+                            <p><b>Notes: </b></p>
+                            <ul>
+                                <li>You can customize the <b>New</b> dropdown to suit your needs by selecting the <b>New</b> dropdown <b> Edit New menu</b> option as shown in the image below. 
+                                    <img class="img-fluid my_class_2" src="img/teams-files-4.gif" alt="" style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                </li>
+                            </ul>
+
+                            <h2 id="Acces-your-team-notebook">Accessing your team notebook</h2>
+                            <p>Microsoft Notebook app gets provisioned for use when you create a Team. Your team can use this notebook to record important stuff like team-related notes, team guidelines, goals and objectives etc., Read how to use <u>Microsoft Notebook for more</u> info. </p>
+                            <p>A content writing team related can a notebook that offers generic tips on blog writing and SEO writing basics as shown in the image that can be useful for newbies in the team. </p>
+                            <img class="img-fluid" src="img/teams-notebook-1.png" alt="" style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                            <h2 id="Integrate-Other-app-with-team">Integrate Other Apps with Teams</h2>
+                            <img class="img-fluid" src="img/plus-icon.JPG" alt="" style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <p>The plus icon  helps you integrate other apps – Microsoft owned and others – with team to increase productivity. For example, you could integrate the <u>Planner app</u> with your team so that you can create tasks, assign them to team members and track them efficiently. The image below shows how you can integrate the <u>Planner app</u> with Teams. </p>
+                            <img class="img-fluid my_class_2" src="img/integrate-apps.gif" alt="" style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <p><b>Note:</b> The newly added app sits next to the Notes tab as indicated in the image above.  
+                            </p>
+
+
+                            <h2 id="Video-confing-Optn">Video Conferencing Options: </h2>
+                            <p>A feature you will use a lot besides chat conversations is video calls as these help you with real-time communication with your team thatx can be spread across the world. When it comes to video conferencing or video calls, you are provided with two options. </p>
+
+                            <h3 id="Meet-Now">Option 1: Meet Now </h3>
+                            <p>This helps you launch yourself into a video meet immediately with team mates with whom you might be chatting. Quite useful for ad-hoc meetings. </p>
+                            <p>2 ways for launching a video meet immediately: </p>
+                            <ul>
+                                <li>Clicking <b>Meet</b> or <b>Meet Now</b> Option at the top right corner [OR]
+                                    <img class="img-fluid my_class_2" src="img/meet-now-1.gif" alt="" style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                </li>
+                                <li>Clicking <b>Meet Now</b> icon available in the <b>Reply</b> options</li>
+                                <img class="img-fluid my_class_2" src="img/meet-now-2.gif" alt="" style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            </ul>
+
+                            <h3 id="Schedule-a-meeting">Option 2: Schedule a meeting</h3>
+                            <p>This helps you schedule a meeting, allow attendees respond to meeting invites, decide whether the meeting should be recorded or not etc., You also have a scheduling assistant that helps select a date and time at which all the attendees would be available. </p>
+                            <p>You can schedule a meeting in three ways: </p>
+                            <ul>
+                                <li>By clicking <b>Meet</b> dropdown  and selecting <b>Schedule a meeting</b> option [OR]
+                                    <img class="img-fluid" src="img/schedule-meet-1.png" alt="" style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                </li>
+                                <li>By clicking <b>Schedule a meeting</b> icon from the <b>Reply</b> option.
+                                    <img class="img-fluid" src="img/schedule-meet-2.png" alt="" style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                </li>
+                                <li>Selecting the <b>Calendar app</b>  clicking the <b>New Meeting</b> option. 
+                                    <img class="img-fluid" src="img/schedule-meet-3.png" alt="" style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                    <img class="img-fluid" src="img/schedule-meet-4.png" alt="" style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                    <p>All of these actions open the New meeting box as shown in the image. </p>
+                                    <img class="img-fluid" src="img/new-meeting.png" alt="" style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                </li>
+                                <li>Enter the <b>meeting title</b> </li>
+                                <li>Select the <b>meeting attendees</b> by typing their names and selecting them from the list.
+                                    <img class="img-fluid" src="img/selecting-meeting-attendees.png" alt="" style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                    <p><b>Note:</b> You can add optional attendees by clicking the Optional link shown in the image above. 
+                                    </p>
+                                    <img class="img-fluid" src="img/optional-attendees.png" alt="" style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                </li>
+                                <li>Select the <b>Date and Time</b> for the meeting. And if this meeting is going to be a recurring event, you could configure the repeat schedule using the<b> Does not repeat</b> dropdown. 
+                                    <img class="img-fluid" src="img/add-channel.png" alt="" style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                    <p><b>Note:</b> Select the <b>General</b> option under <b>Content Writing</b> team for now. We’ll look at what channels within Teams are later. </p>
+                                </li>
+                                <li>You can also send personal invites, if required, by turning on <b>Send personal invites</b> option.
+                                    <img class="img-fluid" src="img/send-personal-invites.png" alt="" style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                    <p><b>Note:</b> By default, the meeting invites are sent to team member chats and gets added to the team calendar. If you opt for personal invites, then the <b>meeting details get added to the personal calendars</b> of your team members. </p>
+                                </li>
+                                <li>Enter the location in the<b> Add location</b> box if it’s going to be a physical meet. 
+                                </li>
+                                <li>Type the <b>meeting details</b> in the box provided. 
+                                    <img class="img-fluid" src="img/location-and-details.png" alt="" style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                </li>
+                                <li>You can also select who can bypass the lobby.  The recommended option is <b>People in my org and guests,</b> because they are ones you can trust. But you can modify this to suit your meeting requitements. You can also choose to record the meeting automatically by turning on the <b>Record automatically</b> option.
+                                    <img class="img-fluid" src="img/advanced-options.png" alt="" style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                </li>
+                                <li>Click <b>Send</b> to send out the meeting invite.
+                                    <p><b>Notes: </b></p>
+                                    <ul>
+                                        <li>You can decide how members attending the meeting would appear to others using the <b>Show</b> as option. 
+                                            <img class="img-fluid" src="img/show-as.png" alt="" style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                        </li>
+                                        <li>You can also enable the meeting attendees to respond to the meeting request and allow forwarding of the meeting details using the<b> Response options </b>dropdown.
+                                            <img class="img-fluid" src="img/response-options.png" alt="" style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                        </li>
+                                        <li>You can also setup registrations for the meeting with the help of <b>Require registration</b> option. </li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+
+                            <h3 id="How-Attendess-View-the-Meeting-Details">How Attendees View the Meeting Details </h3>
+                            <p>The meeting details pop up in the team chat as a card. When this card is clicked, it expands and offers more details about the meeting as shown in the second image. </p>
+                            <img class="img-fluid" src="img/meeting-details-1.png" alt="" style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <img class="img-fluid" src="img/meeting-details-2.png" alt="" style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <p>The attendees can join the meeting by clicking the <b>Join</b> button at the top right corner. </p>
+                        </div>
+
+
+
+                    </div>
+                    <!-- News Detail End -->
+
+                    <div class="side-table-box">
+                        <div class="table-content">
+                            <h5 class="menu-icon">Table of Contents</h5>
+                        </div>
+                    </div>
+            <!-- side TOC end         -->
+            <!-- side TOC menu slider section start         -->
+                    <div class="scroll-box menu">
+                        <div class="icons-scroll">
+                            <h1 class="x">X</h1>
+                        </div>
+                        <h1>Table of Contents</h1>
+                        <ul>
+                            <li><a href="#What-Does-micsft-Team-Offer">What Does Microsoft Teams Offer?  </a></li>
+                            <li><a href="#How-to-Acces-Micsft-team-app">How to Access Microsoft Teams App?  </a>
+                                <ul>
+                                    <li><a href="#The-teams-icon-in-left-pane">The Teams icon in the left pane</a> </li>
+                                    <li><a href="#The-App-Launch">Using the App Launcher </a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#Search-for-your-team">Searching for Your Team </a></li>
+                            <li><a href="#Send-you-first-msg">Sending your first message </a></li>
+                            <li><a href="#Replaying-to-a-msg">Replying to a message</a></li>
+                            <li><a href="#Accessing-your-team-file">Accessing your team files </a></li>
+                            <li><a href="#Acces-your-team-notebook">Accessing your team notebook </a></li>
+                            <li><a href="#Integrate-Other-app-with-team">Integrate Other Apps with Teams </a></li>
+                            <li><a href="#Video-confing-Optn">Video Conferencing Options:</a></li>
+                                <ul>
+                                    <li><a href="#Meet-Now">Option 1: Meet Now  </a></li>
+                                    <li><a href="#Schedule-a-meeting">Option 2: Schedule a meeting </a></li>
+                                    <li><a href="#How-Attendess-View-the-Meeting-Details">How Attendees View the Meeting Details </a> </li>
+                                </ul>
+                            </li>
+                       </ul>
+                    </div>
+            <!-- side TOC menu slider section end         -->
+                </div>
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- News With Sidebar End -->
+    <!-- Footer Start -->
+
+    <div class="container-fluid py-4 px-sm-3 px-md-5" style="background: #111111;">
+        <p class="m-0 text-center">
+            &copy; <a href="#">Your Site Name</a>. All Rights Reserved.
+
+            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+            Design by <a href="https://htmlcodex.com">HTML Codex</a>
+        </p>
+    </div>
+    <!-- Footer End -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+    <script type="text/javascript" src="https://unpkg.com/freezeframe@3.0.10/build/js/freezeframe.pkgd.min.js"></script>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+
+    <script>
+
+        $(function () {
+            second = new freezeframe({
+                'selector': '.my_class_2',
+                'animation_play_duration': Infinity,
+                'non_touch_device_trigger_event': 'click'
+            }).freeze();
+        })
+
+
+        document.querySelector('.menu-icon').addEventListener('click', function () {
+            //alert('haiii')
+            document.querySelector('.menu').classList.remove('hide');
+            //alert('clicked')
+            //document.querySelector('.menu').style.transform = "translateX(-110%)";
+            document.querySelector('.menu').classList.toggle('move-menu');
+        })
+
+        document.querySelector('.x').addEventListener('click', function () {
+            document.querySelector('.menu').classList.add('hide');
+        })
+    </script>
+</body>
+
+</html>

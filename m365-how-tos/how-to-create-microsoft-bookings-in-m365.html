@@ -1,0 +1,413 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>How to Create Microsoft 365 Bookings using Bookings app?</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    
+    <meta name="description" content="Learn to use Microsoft 365 bookings app to create customer appointments, invite staff for booking service, create multiple services with a booking and more. "> 
+    <meta name="keywords" content="Microsoft 365 Outlook Group, Office 365 Outlook Group, Microsoft 365 Outlook, Office 365 Outlook, Microsoft 365 Admin Center"> 
+
+
+    <link rel="stylesheet" href="https://unpkg.com/freezeframe@3.0.10/build/css/freezeframe_styles.min.css">
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+   
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">  
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../css/style.css" rel="stylesheet">
+    <style>
+        /*line height*/
+        p, li{
+            line-height:35px;
+        }
+        /*line height*/
+
+        thead td{
+            border:2px solid black;
+            text-align:center;
+        }
+        thead{
+            font-weight:900;
+        }
+
+        td {
+            border: 1px solid black;
+            text-align: center;
+        }
+        ol li{
+            margin:5px;
+            line-height:30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid d-none d-lg-block">
+        <div class="row align-items-center bg-white py-3 px-lg-5">
+            <div class="col-lg-4">
+                <a href="../index.html" class="navbar-brand p-0 d-none d-lg-block">
+                    <p class="m-0 display-4 text-uppercase text-primary" style="font-weight: 700;">m365<span class="text-secondary font-weight-normal">Corner</span></p>
+                </a>
+            </div>
+            <div class="col-lg-8 text-center text-lg-right">
+
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-2 py-lg-0 px-lg-5">
+            <a href="../index.html" class="navbar-brand d-block d-lg-none">
+                <p class="m-0 display-4 text-uppercase text-primary" style="font-weight: 700;">m365<span class="text-white font-weight-normal">Corner</span></p>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-0 px-lg-6" id="navbarCollapse">
+                <div class="navbar-nav mr-auto py-0">
+                    <a href="../index.html" class="nav-item nav-link active">Home</a>
+                    <a href="../m365-for-beginners/microsoft-365-beginner-series-overview.html" class="nav-item nav-link">M365 for Beginners</a>
+                    <a href="../m365-how-tos/how-to-overview.html" class="nav-item nav-link">M365 How Tos</a>
+                    <a href="../m365-graph-api/graph-api-overview.html" class="nav-item nav-link">M365 Graph API</a>
+                    <a href="../m365-updates/m365-updates-overview.html" class="nav-item nav-link">M365 Updates</a>
+                    <a href="../m365-administration/m365-administration-overview.html" class="nav-item nav-link">M365 Administration</a>
+                    <a href="../contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <div class="input-group ml-auto d-none d-lg-flex" style="width: 100%; max-width: 300px;">
+
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+    <!-- Breaking News Start -->
+    <div class="container-fluid mt-5 mb-3 pt-3">
+
+    </div>
+    <!-- Breaking News End -->
+    <!-- News With Sidebar Start -->
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- News Detail Start -->
+                    <div class="position-relative mb-3">
+
+                        <div class="bg-white border border-top-0 p-4">
+                            <div class="mb-3">
+                                <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                   href="">Business</a>
+                            </div>
+                            <h1 class="mb-3 text-secondary font-weight-bold">How to Create Bookings in Microsoft 365? </h1>
+                            <p style="background-color:red;color:white;text-align:center;"><b>Note:</b> Most of the images contained within this article are gifs. Click them to understand how Microsoft To dos work better. </p>
+
+                            <div class="linking-table-overall">
+                                <!-- <div class="table-content">
+                                    <span>Table of Contents</span>
+
+                                </div> -->
+                            </div>
+                            <p>Bookings app helps you create multiple booking pages for your organization. Booking pages allow you to: </p>
+                            <ul>
+                                <li>Book appointments with your customers, </li>
+                                <li>Decide the appointment duration and slots, </li>
+                                <li>Decide whether it’s going to be free or paid service, </li>
+                                <li>Select users who will service the customers etc., </li>
+                            </ul>
+                            <p>Let’s understand how you can create such bookings, customize the business hours and set up a dedicated team to service the customer bookings using the Microsoft 365 bookings app.</p>
+
+
+
+                            <h2 id="Accessing-micft-365-booking-app">Accessing Microsoft 365 Bookings App</h2>
+                            <p>Microsoft Forms can be accessed in 2 ways:</p>
+                            <ul>
+                                <li><b>By clicking this URL:</b> <a href="" style="color: black;"><u>https://outlook.office.com/bookings/homepage</u></a></li>
+                                <li>
+                                    <b>From the App Launcher:</b> If this is your first working with Microsoft Bookings, then it will not be available within the listed apps in the app launcher. You’ll have to select <b>App Launcher >> Explore all your Apps >></b> and you’ll find the <b>Forms</b> app under <b>Productivity</b> tab.
+                                    <img class="img-fluid my_class_2" src="img/accessing-bookings-app-1.gif" alt="Accessing bookings app from app launcher by clicking explore all apps option." style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                    <p>
+                                        <b>Note:</b> Once you start using Microsoft Bookings, you’ll notice that it gets listed in the list of App Launcher apps.
+                                    </p>
+                                    <img class="img-fluid my_class_2" src="img/accessing-bookings-app-2.gif" alt="Accessing bookings app from app launcher. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                </li>
+                            </ul>
+
+                            <h2 id="Creating-the-booking-page">Creating the Bookings Page </h2>
+
+                            <p>Follow the instruction below to create a shared booking page - for your organization – to be shared among individuals who are going to serve the customers.  </p>
+                            <p><b>Note:</b> Every Microsoft 365 user also gets a pre-configured <u style="color: rgb(246, 106, 106);">personal booking page</u> as well. </p>
+
+
+                            <h3 id="Adding-name">Step 1: Adding Name, Business type and Business hours </h3>
+                            <p>Provide a <b>name</b> for the booking service and add a <b>logo.</b> Then select the <b>business type</b> from the available options and configure the <b>business hours.Note: Default business hours</b> is configured for you, but you can modify this to suit your requirements by clicking the <b>Change</b> link as shown in the image below. Click<b> Next</b> to proceed further. </p>
+                            <img class="img-fluid my_class_2" src="img/create-bookings-1.gif" alt="Adding business name, logo, business type and business hours to booking page. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                            <h3 id="Invite-staff">Step 2: Invite Staff </h3>
+                            <p>Select users by <b>typing their usernames</b> and <b>selecting them from the list.</b> You can also <b>change the user role</b> while adding users. <b>Note:</b> The one <b>creating the bookings page becomes its administrator</b> by default as shown in the image below. Read <u style="color: rgb(240, 113, 113);">user roles</u> for more info. </p>
+                            <img class="img-fluid my_class_2" src="img/create-bookings-2.gif" alt="Selecting staff for the booking service by entering their usernames. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <h3 id="Set-up-a-booking-service-r-default">Step 3: Set up a booking service or use the default option </h3>
+                            <p>
+                                You can either go with the default service configured for you or modify it to suit your organization requirements. Here you decide the schedule for your booking service alone within your office hours. <b>Note:</b> It’s best to leave the <b>Make this a Team meeting</b> option enabled as customers mostly want to meet online these days.
+                            </p>
+                            <h3 id="Choose-who-can-appointment">Step 4: Choose who can book appointments </h3>
+                            <p>
+                                Select who can use this service. You have 2 options to choose from: (i) People in my organization and (ii) Anyone. It’s best to go with <b>Anyone</b> option the first time since you probably want deal with customers who are outsiders as well. Click <b>Create</b> to create the booking page.
+                            </p>
+                            <img class="img-fluid" src="img/create-bookings-4.png" alt="Choosing who can book appointments. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <p>Once the booking page is ready, you get a <b>link to the booking page</b> as shown in the image. Make note of it as you will need it in the future. You can either close the booking page by clicking the close icon or click the Get Started button now to further explore your newly created booking. </p>
+                            <img class="img-fluid" src="img/creating-bookings-5.png" alt="Generated booking page link is displayed. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+
+                            <h2 id="Booking-the-Service-as-customer">Booking the Service as Customer</h2>
+                            <p>It’s best to test out how the booking service works even before you explore it further, as this helps you <b>understand Microsoft 365 Bookings</b> better. So try pasting the link you obtained in the previous step in a separate browser tab and see what happens. The<b> booking page you just created gets served </b>– as shown in the image - and you’ll be able to book the service as customer. </p>
+                            <img class="img-fluid" src="img/booking-service-page.png" alt="Customer accessing the booking page link. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <p>Try using this booking service as a customer with an alternate email address or even a fictional email address as shown in the image below. </p>
+                            <img class="img-fluid my_class_2" src="img/customer-booking-service.gif" alt="Customer filling out the form for booking appointments. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <p>You’ll notice that as a customer you get to select who you want to interact with and the booking schedule. Once the booking is complete, you can reschedule or cancel it as shown in the image. And since the booking service is a shared booking service among a group of users, all of them – not just the user chosen by the customer - receive the booking notification. </p>
+                            <img class="img-fluid my_class_2" src="img/booked-appointment.png" alt="Booking notification received by booking service staff. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+
+                            <h2 id="Viewing-the-customer-book">Viewing the Customer Booking</h2>
+                            <p>The booking you create appears as a card. You should click on it to access the booking page as shown in the second image. </p>
+                            <img class="img-fluid" src="img/booking-card.png" alt="Various booking services displayed on the bookings app page. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <img class="img-fluid" src="img/booking-page-1.png" alt="Bookings app calendar tab view. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <p>You can view the customer booking in 2 ways: </p>
+                            <h3 id="From-calender-tab">From the Calendar Tab  </h3>
+                            <p>If you modify the <b>Day by Staff</b> view to <b>Month</b> option, then the customer booking gets displayed clearly as shown in this image. <b>Click on the booking</b> card to view who the booking is assigned to. </p>
+                            <img class="img-fluid my_class_2" src="img/booking-page-2.gif" alt="Setting Calendar tab to month-based view to view the appointments for month." style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <p><b>Note:</b> You can also notice that Edit and Cancel options are available on the booking card. </p>
+
+                            <h3 id="From-staff-tab">From the Staff Tab  </h3>
+                            <p>If you click the <b>Staff</b> tab and <b>select the user</b> on whose name the booking was made, the booking details get displayed with the <b>user profile</b> as shown in the image.   </p>
+                            <img class="img-fluid" src="img/booking-page-3.png" alt="Viewing customer appointments in staff profile. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+
+                            <h2 id="Booking-service-on-behalf-customer">Booking Service on Behalf of Customer </h2>
+                            <p>What if the customer agreed for an appointment over phone? You can create bookings on customer behalf from the<b> Calendar tab</b> by clicking the <b>New booking</b> button at the top-left corner. Note: If this customer is a first-timer, then the customer details get added to the Customers tab.  </p>
+                            <img class="img-fluid my_class_2 my_class_2" src="img/booking-page-4.gif" alt="Creating new customer booking from Calendar tab.  " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <p>Users can also book customer appointments by clicking the<b> Book appointment</b> button from within their profile and filling out the meeting details.  </p>
+                            <img class="img-fluid my_class_2" src="img/booking-page-5.png" alt="Creating new customer booking from staff profile. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+
+                            <h2 id="Handling-multiple-services-withn-booking">Handling Multiple Services Within a Booking  </h2>
+                            <p>You can have multiple services running – each handled by <u>specific</u> user or users – within a booking service. To create a new service, select the <b>Services tab</b> and click on the<b> Add new service</b> option at the top.  </p>
+                            <img class="img-fluid" src="img/booking-service-6.png" alt="Adding a new booking service." style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <p>The <b>Add service</b> box opens. <b>Name</b> the service and provide a <b>description.</b> Decide whether the service would be <b>online</b> or not. Set the <b>meeting duration.</b> Set Buffer time if required. If it’s going to be a paid service, then specify the same using the <b>Price not set</b> dropdown. <b>Add notes,</b> if any. Click <b>Save changes button</b> to add the service.  </p>
+                            <img class="img-fluid my_class_2" src="img/booking-page-7.gif" alt="Filling out the new service details like name, description, time slot etc., " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <p><b>Notes:</b></p>
+                            <ul>
+                                <li>Buffer time is the leeway you might offer to the customer before and after the meeting duration has concluded. Buffer time is usually implemented for paid service so that the customer is charged accordingly. </li>
+                            </ul>
+
+
+                            <h3 id="How-multiple-services-appear-customers">How Multiple Services Appear to Customers  </h3>
+                            <p>Your booking page will now contain 2 services – the <b>default one</b> (created when you setup the booking) and <b>Payment Enquiries</b> (the one created in the previous step). Notice that if you select Payment Enquiries service,<b> only those users who were selected for the service</b> get listed as shown in the image.  </p>
+                            <img class="img-fluid my_class_2" src="img/booking-service-8.gif" alt="Customer filling out a booking with multiple services. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+
+                            <h2 id="Managing-you-booking-page">Managing Your Booking Page  </h2>
+                            <p>Here you can manage your booking page and various elements associated with it. Some of the actions you can perform here are:  </p>
+                            <ul>
+                                <li>
+                                    <b>Get the Embed Code for your Booking Page –</b> and publish it on your website.
+                                    <img class="img-fluid" src="img/booking-info-1.png" alt="Getting the embed code for the booking page to be published on website. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                </li>
+                                <li>
+                                    <b>Disable Search Indexing and Set Password –</b> you can disable search engine indexing for the booking page and also password protection creation of bookings.
+                                    <img class="img-fluid" src="img/booking-info-2.png" alt="Disabling search indexing for the booking page and password protecting the creation of bookings.  " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                </li>
+                                <li>
+                                    <b>Display Customer data usage consent –</b> you choose to display a disclaimer in your bookings explaining that you’ll be collecting customer data when they make the booking.
+                                    <img class="img-fluid" src="img/booking-info-3.png" alt="Displaying customer data usage consent message on booking page.  " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                </li>
+                                <li>
+                                    <b>Modify Default scheduling policy –</b> you can also modify the default scheduling policy that is set up for you when you create a booking to suit your requirements.
+                                    <img class="img-fluid" src="img/booking-info-4.png" alt="Default scheduling policy of bookings. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                </li>
+                                <li>
+                                    <b>Customize your booking page –</b> you can also customize your booking page’s color and design.
+                                    <img class="img-fluid" src="img/booking-info-5.png" alt="Customizing your booking page’s color and layout.  " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                </li>
+                                <li>
+                                    <b>Region and time zone settings –</b> you can also modify region and time zone settings to suit your requirements.
+                                    <img class="img-fluid" src="img/booking-info-6.png" alt="Setting region and time zone for your booking page.  " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                </li>
+                            </ul>
+
+                            <h2 id="Mabagubg-your-business-information">Managing Your Business Information </h2>
+                            <p>You can do the following under the Business Information tab:  </p>
+                            <ul>
+                                <li>
+                                    <b>Basic Details –</b> the business details you provided while setting up the bookings page like the business name, address, phone, business type etc., can be modified here.
+                                    <img class="img-fluid" src="img/business-info-1.png" alt="Modifying basic business details like business name, address, phone etc., " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                </li>
+                                <li>
+                                    <b>Privacy Policy/Terms and conditions –</b> if you have a privacy policy/terms and conditions page configured for your company, you can add its URL so that the same can be displayed in the bookings page.
+                                    <img class="img-fluid" src="img/business-info-2.png" alt="Adding privacy policy/terms of conditions to the booking page.  " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                </li>
+                                <li>
+                                    <b>Business logo –</b> helps you modify your business logo.
+                                    <img class="img-fluid" src="img/business-info-3.png" alt="Adding or modifying your business logo.  " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                </li>
+                                <li>
+                                    <b>Business hours –</b> helps you modify business hours.
+                                    <img class="img-fluid" src="img/business-info-4.png" alt="Adding or modifying your business hours. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                </li>
+                                <p><b>Note:</b> ACS App Integration is an advanced topic which deserves its own article.  </p>
+                            </ul>
+
+                            <h2 id="Integrations">Integrations </h2>
+                            <p>You can also integrate bookings app with Power Automate and build automated workflows with other products and services like Microsoft 365 Dynamics, Forms, SharePoint, Outlook etc., These workflows can enhance your booking team’s productivity. <b>Note:</b> You should be the shared booking page administrator and have a Power Automate license to create automated workflows.  </p>
+                            <img class="img-fluid" src="img/integrations.png" alt="Adding integrations to bookings app. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                            <h2 id="Additional-Notes">Additional Notes  </h2>
+                            <p>You can also do the following in Microsoft Bookings:  </p>
+                            <ul>
+                                <li>
+                                    <b>Add Customers from Customers tab:</b> You can also add customers from customers tab by clicking 	the <b>Add new customer</b> button and filling in the customer details.
+                                    <img class="img-fluid" src="img/add-customers.png" alt="Adding customers from customers tab.  " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                </li>
+                                i
+                                <li>
+                                    <b>Import Customers from CSV file:</b> You can also bulk import customers into your booking page from a CSV file by using the <b>Import</b> button.
+                                    <img class="img-fluid" src="img/import-customers.png " alt="Import customers from CSV file.  " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                </li>
+                                <li>
+                                    <b>Book appointments from Customers tab:</b> You can also Book appointments from <b>Customer tab</b> by clicking the <b>Book appointment</b> button.
+                                    <img class="img-fluid" src="img/booking-page-5.png " alt="Booking appointments from customer tab.  " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                </li>
+                            </ul>
+                        </div>
+
+
+
+                    </div>
+                    <!-- News Detail End -->
+
+                    <div class="side-table-box">
+                        <div class="table-content">
+                            <h5 class="menu-icon">Table of Contents</h5>
+                        </div>
+                    </div>
+                    <!-- side TOC end         -->
+                    <!-- side TOC menu slider section start         -->
+                    <div class="scroll-box menu">
+                        <div class="icons-scroll">
+                            <h1 class="x">X</h1>
+                        </div>
+                        <h1>Table of Contents</h1>
+                        <ul>
+                            <li><a href="#Accessing-micft-365-booking-app">Accessing Microsoft 365 Bookings App </a></li>
+                            <li>
+                                <a href="#Creating-the-booking-page">Creating the Bookings Page  </a>
+                                <ul>
+                                    <li><a href="#Adding-name">Step 1: Adding Name, Business type and Business hours</a></li>
+                                    <li><a href="#Invite-staff">Step 2: Invite Staff  </a></li>
+                                    <li><a href="#Set-up-a-booking-service-r-default">Step 3: Set up a booking service or use the default option</a></li>
+                                    <li><a href="#Choose-who-can-appointment">Step 4: Choose who can book appointments  </a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#Booking-the-Service-as-customer">Booking the Service as Customer </a></li>
+                            <li>
+                                <a href="#Viewing-the-customer-book">Viewing the Customer Booking </a>
+                                <ul>
+                                    <li><a href="#From-calender-tab">From the Calendar Tab </a></li>
+                                    <li><a href="#From-staff-tab">From the Staff Tab  </a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#Booking-service-on-behalf-customer">Booking Service on Behalf of Customer </a></li>
+                            <li>
+                                <a href="#Handling-multiple-services-withn-booking">Handling Multiple Services Within a Booking  </a>
+                                <ul>
+                                    <li><a href="#How-multiple-services-appear-customers">How Multiple Services Appear to Customers  </a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#Managing-you-booking-page">Managing Your Booking Page  </a></li>
+                            <li><a href="#Mabagubg-your-business-information">Managing Your Business Information </a></li>
+                            <li><a href="#Integrations">Integrations  </a></li>
+                            <li><a href="#Additional-Notes">Additional Notes </a></li>
+                        </ul>
+                    </div>
+                    <!-- side TOC menu slider section end         -->
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+    </div>
+    </div>
+    <!-- News With Sidebar End -->
+    <!-- Footer Start -->
+
+    <div class="container-fluid py-4 px-sm-3 px-md-5" style="background: #111111;">
+        <p class="m-0 text-center">
+            &copy; <a href="#">Your Site Name</a>. All Rights Reserved.
+
+            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+            Design by <a href="https://htmlcodex.com">HTML Codex</a>
+        </p>
+    </div>
+    <!-- Footer End -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+
+    <script type="text/javascript" src="https://unpkg.com/freezeframe@3.0.10/build/js/freezeframe.pkgd.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            second = new freezeframe({
+                'selector': '.my_class_2',
+                'animation_play_duration': Infinity,
+                'non_touch_device_trigger_event': 'click'
+            }).freeze();
+        })
+    </script>
+    <!-- JavaScript Libraries -->
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+
+    <script>
+        document.querySelector('.menu-icon').addEventListener('click', function () {
+            //alert('haiii')
+            document.querySelector('.menu').classList.remove('hide');
+            //alert('clicked')
+            //document.querySelector('.menu').style.transform = "translateX(-110%)";
+            document.querySelector('.menu').classList.toggle('move-menu');
+        })
+
+        document.querySelector('.x').addEventListener('click', function () {
+            document.querySelector('.menu').classList.add('hide');
+        })
+    </script>
+</body>
+
+</html>

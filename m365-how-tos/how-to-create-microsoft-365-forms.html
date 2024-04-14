@@ -1,0 +1,632 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>How to create Microsoft 365 form based survey and quiz?</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Microsoft 365 Forms, Office 365 Forms, Microsoft Forms, Microsoft 365 Form Based Survey, Office 365 Form Based Survey, Microsoft 365 Form Based Quiz, Office 365 Form Based Quiz " name="keywords ">
+    <meta content="Learn to create Microsoft 365 form surveys and quizzes for collecting data. Find out how to view/analyze Microsoft 365 survey/quiz results and import form data." name="description">
+
+    <link rel="stylesheet" href="https://unpkg.com/freezeframe@3.0.10/build/css/freezeframe_styles.min.css">
+    
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../css/style.css" rel="stylesheet">
+    <style>
+
+        p, li {
+            line-height: 35px;
+        }
+
+        ol li {
+            line-height: 35px!important;
+        }
+
+
+
+        thead td {
+            border: 2px solid black;
+            text-align: center;
+        }
+
+        thead {
+            font-weight: 900;
+        }
+
+        td {
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        ol li {
+            margin: 5px;
+            line-height: 25px;
+        }
+
+        h2 {
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid d-none d-lg-block">
+
+        <div class="row align-items-center bg-white py-3 px-lg-5">
+            <div class="col-lg-4">
+                <a href="index.html" class="navbar-brand p-0 d-none d-lg-block">
+                    <p class="m-0 display-4  text-primary" style="font-weight: 700;">M365<span class="text-secondary font-weight-normal">Corner</span></p>
+                </a>
+            </div>
+            <div class="col-lg-8 text-center text-lg-right">
+
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-2 py-lg-0 px-lg-5">
+            <a href="index.html" class="navbar-brand d-block d-lg-none">
+                <p class="m-0 display-4 text-primary" style="font-weight: 700;">m365<span class="text-white font-weight-normal">Tutorials</span></p>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-0 px-lg-6" id="navbarCollapse">
+                <div class="navbar-nav mr-auto py-0">
+                    <a href="../index.html" class="nav-item nav-link active">Home</a>
+                    <a href="../m365-for-beginners/microsoft-365-beginner-series-overview.html" class="nav-item nav-link">M365 for Beginners</a>
+                    <a href="../m365-how-tos/how-to-overview.html" class="nav-item nav-link">M365 How Tos</a>
+                    <a href="../m365-graph-api/graph-api-overview.html" class="nav-item nav-link">M365 Graph API</a>
+                    <a href="../m365-updates/m365-updates-overview.html" class="nav-item nav-link">M365 Updates</a>
+                    <a href="../m365-administration/m365-administration-overview.html" class="nav-item nav-link">M365 Administration</a>
+                    <a href="../contact.html" class="nav-item nav-link">Contact</a>
+
+                </div>
+                <div class="input-group ml-auto d-none d-lg-flex" style="width: 100%; max-width: 300px;">
+
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+    <!-- Breaking News Start -->
+    <div class="container-fluid mt-5 mb-3 pt-3">
+
+    </div>
+    <!-- Breaking News End -->
+    <!-- News With Sidebar Start -->
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- News Detail Start -->
+                    <div class="position-relative mb-3">
+
+                        <div class="bg-white border border-top-0 p-4">
+                            <div class="mb-3">
+                                <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                   href="">How Tos</a>
+                                <a class="text-body" href="">Feb 06, 2024</a>
+                            </div>
+
+                            <h1 class="mb-3 text-secondary font-weight-bold">
+                                How to Create Forms in Microsoft 365?
+                            </h1>
+                            <p style="background-color:red;color:white;text-align:center;"><b>Note:</b> Most of the images contained within this article are gifs. Click them to understand how Microsoft Forms work better. </p>
+
+                           
+                            <p>Microsoft forms help you create user surveys and quizzes. These forms collect vital data that help you take informed decisions. Let’s understand how to create these Microsoft forms (using pre-defined templates and from scratch), send them to users and view/analyze the user responses.  </p>
+                            <h2 class="mb-3 text-secondary font-weight-bold" id="access-forms">
+                                Accessing Microsoft 365 Forms App
+                            </h2>
+                            <p>Microsoft Forms can be accessed in 2 ways: </p>
+                            <ul>
+                                <li><b>From the App Launcher</b>: If this is your first working with Microsoft Forms, then it will not be available within the listed apps in the app launcher. You’ll have to select <b>App Launcher</b> >> <b>Explore all your Apps</b> >> and under <b>Productivity tab</b> you’ll find the <b>Forms</b> app.  </li>
+                                <img class="img-fluid my_class_2" src="img/accessing-msft-forms-1.gif" style="border:1px solid black;" alt="Image shows how to access Microsoft 365 Forms app the first time from App Launcher by clicking Explore all your Apps link.">
+                                <p><b>Note:</b> Once you start using Microsoft Forms, you’ll notice that it gets listed in the <b>list of App Launcher apps</b>. </p>
+                                <img class="img-fluid my_class_2" src="img/accessing-msft-forms-2.gif" style="border:1px solid black;" alt="Image shows how you can access the Microsoft 365 Forms app from the App Launcher in the Microsoft 365 home page.">
+                                <li><b>By clicking this URL</b>: <a href="https://forms.office.com/" style="color:red">https://forms.office.com/</a> Clicking this URL directly takes you to the Microsoft Forms app. </li>
+
+                            </ul>
+
+
+                            <h2 class="mb-3 text-secondary font-weight-bold" id="create-form-survey">
+                                Microsoft 365 Forms Based Survey
+                            </h2>
+                            <p>You can create all kinds of user surveys with Microsoft forms. You can either <a href="#create-survey-2" style="color:red;">create them from scratch</a> or make use of the pre-defined templates if you quickly want to put together a survey. </p>
+                            <br />
+                            <h3 id="create-survey-1">Creating Surveys from Pre-Defined Template </h3>
+                            <p>Let’s create an employee satisfaction survey from a pre-defined template. </p>
+                            <p>Once you are within the Forms app, do the following: </p>
+
+                            <ol>
+                                <li>Click the <b>Explore templates</b> dropdown available at the <b>top right corner</b>. A list of pre-defined survey templates gets listed.   </li>
+                                <img class="img-fluid my_class_2" src="img/pre-defined-template-1.gif" style="border:1px solid black;" alt="Image shows how you can view all the pre-defined survey templates by clicking the explore templates dropdown.">
+                                <li>Select the <b>Improve employee satisfaction</b> template by clicking on it. You can <b>preview</b> the template by <b>scrolling down</b> and selecting the <b>Start Now</b> option. You’ll notice that the entire form gets listed and it contains all that is expected of an employee satisfaction survey.  </li>
+                                <img class="img-fluid my_class_2" src="img/pre-defined-template-2.gif" style="border:1px solid black;" alt="Image shows how you preview the employee satisfaction pre-defined survey template by clicking on it. ">
+                                <li>Click the <b>Start to edit</b> button to work on the form. Since the aim is to put together a quick survey here, we’ll skip the working on the form fields and see the different ways in which you can send out the form. <b>Note:</b> To understand how you can work on the form’s fields, skip to: create <a href="" style="color:red">Microsoft forms from scratch</a> section. </li>
+                                <li>The pre-defined <b>Microsoft form opens in edit mode</b> as shown in the image. </li>
+                                <img class="img-fluid my_class_2" src="img/pre-defined-template-3.gif" style="border:1px solid black;" alt="Image shows how a pre-defined survey template opens in edit mode when you click the start to edit button. ">
+                                <li>Click the <b>Collect responses </b>button. The <b>Send and collect responses</b> box opens up. </li>
+                                <img class="img-fluid my_class_2" src="img/pre-defined-template-4.gif" style="border:1px solid black;" alt="Image shows how you can send the survey to users by clicking the collect responses button. ">
+
+
+
+
+                                <p>The following options are available: </p>
+                                <ul>
+                                    <li><b>Selecting the user group you are going to share the form with</b>: You have 3 different options to choose from: </li>
+                                    <ul>
+                                        <li style="list-style-type:disc"><b>Anyone can respond</b> – for sending surveys to people outside of MSFT community. </li>
+                                        <li style="list-style-type:disc"><b>Only people in MSFT can respond </b> – for sending exclusive MSFT community-based surveys. </li>
+                                        <li style="list-style-type:disc"><b>Specific people in MSFT can respond </b> – for sending MSFT community-based surveys only to specific people or groups.  </li>
+
+                                    </ul>
+                                    <li><b>Selecting the format you are going to share the form in:</b>  </li>
+                                    <ul>
+                                        <li style="list-style-type:disc"><b>As link </b> – for sending the survey as link.  </li>
+                                        <li style="list-style-type:disc"><b>Via email  </b> – for sending the survey through email.  </li>
+                                        <li style="list-style-type:disc"><b>As QR codes  </b> – for sending the survey as scannable QR codes.   </li>
+                                        <li style="list-style-type:disc"><b>As widgets to be included in webpages or Microsoft Sway   </b> – for embedding the survey as widgets within webpages or Microsoft Sway.   </li>
+
+                                    </ul>
+                                </ul>
+                                <li><b>Select a group</b> and <b>share the survey</b> with them as shown in the image. </li>
+
+                                <img class="img-fluid my_class_2" src="img/pre-defined-template-5.gif" style="border:1px solid black;" alt="Image shows how you can send the survey to users by clicking the collect responses button. ">
+
+                                <p><b>Notes:</b>  </p>
+                                <ul>
+                                    <li>Enable <b>One response per person</b> option before sending the survey.  Otherwise, responders will be able to send multiple responses. </li>
+                                    <li>Since the group Sales and Marketing selected in the above image is a <b>teams-enabled group</b>, Teams checkbox gets enabled. This means the form link gets sent through both <b>Microsoft Outlook and Microsoft Teams</b> apps. </li>
+                                    <li>You can also embed the cover of the survey template in the mail by turning on the <b>Embed cover</b> option as shown in the image. </li>
+                                </ul>
+
+                                <img class="img-fluid my_class_2" src="img/pre-defined-template-6.gif" style="border:1px solid black;" alt="Image shows how you can send the survey to users by clicking the collect responses button.">
+
+                                <p>Read <a href="" style="color:red">viewing survey results</a> to understand how to check user responses and analyze survey results. </p>
+
+                            </ol>
+
+
+                            <h3 id="create-survey-2">Creating Surveys from Scratch </h3>
+                            <p>Let’s create a team trip related survey – that uses all the available form fields – from scratch.  </p>
+                            <ol>
+
+
+
+                                <li>Click the <b>New Form </b>button.  </li>
+                                <img class="img-fluid my_class_2" src="img/survey-from-scratch-1.png" style="border:1px solid black;" alt="Image highlights the new form button.">
+
+                                <li>The new form opens. Enter the <b>form title</b> and <b>description</b>.   </li>
+                                <img class="img-fluid my_class_2" src="img/survey-from-scratch-2.gif" style="border:1px solid black;" alt="Image shows how you can enter the form title and description.">
+
+
+                                <li>Let’s create a <b>multi-choice question</b> which lets participants select the trip location of their choice.   </li>
+                                <img class="img-fluid my_class_2" src="img/survey-from-scratch-3.gif" style="border:1px solid black;" alt="Image shows how a multi-choice survey question can be created.">
+
+                                <p><b>Note:</b> Notice how AI-based suggestions pop up which you can make use of, if needed.</p>
+                                <ul>
+                                    <li>Let’s make this question a <b>mandatory</b> one - since the entire survey depends on this – by turning on the <b>Required</b> option.   </li>
+                                    <img class="img-fluid my_class_2" src="img/survey-from-scratch-4.gif" style="border:1px solid black;" alt="Image shows how a survey question can be marked as mandatory.">
+
+                                </ul>
+                                <li>
+                                    Let’s add a <b>text-based question</b> now which prompts participants to explain their choice of location using a few words. And make this a <b>non-mandatory field</b>.
+                                </li>
+                                <img class="img-fluid my_class_2" src="img/survey-from-scratch-5.gif" style="border:1px solid black;" alt="Image shows how a text-based survey question can be created." />
+                                <li>
+                                    Let’s a <b>create a date field</b> this time which prompts participants to enter a <b>preferred date</b> for the trip and make it a <b>mandatory</b> field. .
+                                </li>
+                                <img class="img-fluid my_class_2" src="img/survey-from-scratch-6.gif" style="border:1px solid black;" alt="Image shows how a date-based survey question can be created" />
+
+                                <li>
+                                    Let’s create a <b>rating question</b> this time to seek the participants’ opinion on whether they are okay with a non-booze party or not. <b>Note:</b> Rating question is a question which allows participants to rate their opinion about something by giving it stars.
+                                </li>
+                                <img class="img-fluid my_class_2" src="img/survey-from-scratch-7.gif" style="border:1px solid black;" alt="Image shows how a rating-based survey question can be created." />
+
+                                <p><b>Note:</b> As shown in the image, you also get to decide the no. of levels and the symbol that denotes the rating. </p>
+                                <li>
+                                    Let’s create a <b>Likert</b> question now for deciding whether the participants will be bringing along their spouse and children for the trip. <b>Note:</b> Likert questions are questions with multiple statements which can have multiple answers.
+                                </li>
+                                <img class="img-fluid my_class_2" src="img/survey-from-scratch-8.gif" style="border:1px solid black;" alt="Image shows how a likert-based survey question can be created" />
+
+                                <img class="img-fluid my_class_2" src="img/survey-from-scratch-9.gif" style="border:1px solid black;" alt="Image shows how a likert-based survey question can be created" />
+
+                                <li>Next let’s create a <b>Net Promoter Score</b> question for letting participants rate the previous team trip on the scale of 0-10. </li>
+                                <img class="img-fluid my_class_2" src="img/survey-from-scratch-10.gif" style="border:1px solid black;" alt="Image shows how a net promoter-based survey question can be created" />
+
+
+                                <li>Next let’s create an <b>upload question</b> that asks for the participant’s passport. <b>Note:</b> Upload questions are questions which accept an upload as the answer. </li>
+                                <img class="img-fluid my_class_2" src="img/survey-from-scratch-11.gif" style="border:1px solid black;" alt="Image shows how an upload-based survey question can be created" />
+                                <p><b>Note:</b> As shown in the image, you also get to choose the <b>number of files</b> to be uploaded and the <b>size</b> of the file. Only <b>word, excel, ppt, pdf, image, video, audio</b> file formats are supported. </p>
+
+                                <li>Finally, let’s add a <b>ranking question</b> that help participants rank the activities they would prefer the most on the trip from top to bottom. </li>
+                                <img class="img-fluid my_class_2" src="img/survey-from-scratch-12.gif" style="border:1px solid black;" alt="Image shows how a ranking-based survey question can be created" />
+
+                                <p><b>Note:</b> You can also get question suggestions by clicking on the suggestions icon as shown in the image. You can select one of the suggestions or all of them based on your requirement.</p>
+
+                                <h4 id="branching-question-1">Branching Questions</h4>
+                                <p>Sometimes you may have to break the regular survey flow and send or direct the participant to some other question depending on the choices they select. For example, redirecting the participant depending on the sex they select (in a health-related survey) and asking appropriate questions. Such questions which are capable of changing the flow of the survey are known as branching (redirecting) questions. </p>
+                                <p>Let’s create a branching question in our team trip survey. The <b>first question is going to be our branching question</b> that decides what the next question is the survey going to be.</p>
+                                <p style="margin-left:30px;">If the <b>participants opt for Goa</b>, we are going to send them straight to the <b>question whether they are going to be okay with a non-booze party</b>. (The idea behind this is that Goa is famous for booze; so those opting for Goa may not like a non-booze party. So it’s best to get their thoughts on this). </p>
+                                <p style="margin-left:30px">If the <b>participants opt for locations other than Goa</b>, the survey follows the normal flow and serves up the next question we set up in the survey. And whether they are okay with the non-booze party question comes up later. </p>
+                                <br />
+                                <h4 id="branching-question-2">Turning the First Question into a Branching Question </h4>
+                                <p>Follow the instructions below: </p>
+                                <ul>
+                                    <li>Select the <b>branching question</b> by clicking on it. Next click <b>‘…’ more options</b> (at the bottom) >> select <b>Add branching</b> option. </li>
+                                    <li>Branching options page opens. Here you decide where the <b>participants selecting the Goa as the trip location get branched or redirected to</b> by selecting the question from the <b>Next dropdown against the Goa option</b> as shown in the image. </li>
+
+                                    <img class="img-fluid my_class_2" src="img/branching-question-1.gif" style="border:1px solid black;" alt="Image shows how you can create a branching question." />
+
+                                </ul>
+                                <br />
+                                <h4 id="branching-question-3">Testing Whether Branching Works or Not</h4>
+                                <p>You can test whether the branching question works as it is supposed to while previewing the survey. You’ll notice that <b>if you select the Goa as the trip location</b>, the non-booze party question gets listed immediately. If you <b>select locations other than Goa</b>, then the survey follows the normal flow that we set up earlier. </p>
+
+                                <img class="img-fluid my_class_2" src="img/branching-question-2.gif" style="border:1px solid black;" alt="Image shows how to test whether branching question works or not" />
+
+
+
+                            </ol>
+
+
+
+
+
+                            <h3 id="survey-settings">Modify Survey Settings   </h3>
+                            <p>Before you send the survey to participants, you may want to edit the following survey settings as shown in the image. </p>
+                            <ul>
+                                <li><b>Enabling One response per person</b>: enabling this prevents participants from sending multiple responses to the survey.  </li>
+                                <li><b>Allow respondents to edit their responses</b>: enabling this lets participants to edit their responses, if they change their mind or select the wrong option the first time. (Since this is a survey and not a quiz, it’s best to have this option turned on).     </li>
+
+                            </ul>
+                            <p><b>Note:</b> To reach the survey settings, select <b>‘…’ more options</b> >> <b>Settings</b> (as shown in the image). </p>
+
+                            <img class="img-fluid my_class_2" src="img/survey-settings.gif" style="border:1px solid black;" alt="Image shows how you can modify the survey settings." />
+
+
+
+
+                            <br />  <br />
+                            <h3 id="send-survey">Sending the Survey    </h3>
+
+                            <p>Let’s send the survey through mail (as shown in the mail). </p>
+
+                            <ol>
+                                <li>Click <b>Collect responses</b> button >> and <b>select the group</b> >> and click <b>Send</b>.   </li>
+
+                                <img class="img-fluid my_class_2" src="img/send-survey-1.gif" style="border:1px solid black;" alt="The image shows how you can send the form survey.">
+
+                                <p><b>Note:</b> Since the group Sales and Marketing selected in the above image is a <b>teams-enabled group</b>, Teams checkbox gets enabled. This means the form link gets sent through both <b>Microsoft Outlook</b> and <b>Microsoft Teams</b> apps. </p>
+                                <p><b>Note:</b> You can also share the survey as <b>links, QR codes and embed codes</b> (to be included in webpages or Microsoft Sway) as shown in the image. </p>
+                                <img class="img-fluid my_class_2" src="img/send-survey-2.gif" style="border:1px solid black;" alt="The image shows how you can send the form survey.">
+
+                            </ol>
+
+                            <br />
+
+                            <h3 id="users-take-survey-1">How Users Take the Survey     </h3>
+
+                            <p>Participants take the survey by clicking the form link shared with them.  </p>
+
+
+                            <img class="img-fluid my_class_2" src="img/users-take-survey-1.gif" style="border:1px solid black;" alt="The image shows how users can fill out the survey.">
+
+                            <br /><br />
+                            <h3 id="view-survey-results">Viewing Survey Results </h3>
+
+
+                            <ol>
+                                <li>Open the <b>form </b>and click the <b>Responses</b> tab.     </li>
+                                <img class="img-fluid my_class_2" src="img/survey-results-1.gif" style="border:1px solid black;" alt="The image shows how you can view the survey responses by clicking the response tab.">
+
+                                <li>Click <b>More Details</b> link to get more info about specific data. </b>.  </li>
+                                <img class="img-fluid my_class_2" src="img/survey-results-2.gif" style="border:1px solid black;" alt="The image shows how you can view more details about a specify survey question.">
+
+                                <li>Click <b>View results</b> button to get individual participant submissions. </li>
+                                <img class="img-fluid my_class_2" src="img/survey-results-3.gif" style="border:1px solid black;" alt="The image shows how you can view survey results per user.">
+
+
+                                <li> You can also view and share the survey results in <b>excel</b> format.</li>
+
+
+
+                                <img class="img-fluid my_class_2" src="img/survey-results-4.gif" style="border:1px solid black;" alt="The image shows how you can view survey results in excel format.">
+
+                                <li>You can also <b>send reminder</b> to participants who are yet to complete the survey.  </li>
+                                <img class="img-fluid my_class_2" src="img/survey-results-5.png" style="border:1px solid black;" alt="The image shows how you can send survey-related reminders.">
+
+                            </ol>
+
+
+                            <h2 id="create-form-quiz">Microsoft 365 Forms Based Quiz  </h2>
+                            <p>You can create two types of quizzes with Microsoft Forms. </p>
+                            <ul>
+                                <li><b>Quiz with Practice Mode Turned On:</b> These quizzes are more like training. They guide the participant with the correct answer (if they need one) and help them gain knowledge they are lacking. </li>
+                                <li><b>Quiz without Practice Mode:</b> These quizzes test the participant knowledge without offering any kind of support or tips. </li>
+                            </ul>
+
+                            <p>Let create one of each to understand how Microsoft Forms based quizzes work.  </p>
+
+
+
+                            <h3 id="practice-mode-on">Quiz with Practice Mode Turned On </h3>
+                            <ol>
+                                <li>Click the <b>New Quiz</b> button. Provide a <b>name</b> and <b>description</b> for the quiz.  </li>
+                                <img class="img-fluid my_class_2" src="img/security-quiz-1.gif" style="border:1px solid black;" alt="The image highlights the add quiz button.">
+
+                                <li>Click <b>Add New</b> button and select multi-<b>choice</b> answers option for the quiz. Enter the question and the answers. </li>
+                                <img class="img-fluid my_class_2" src="img/security-quiz-2.gif" style="border:1px solid black;" alt="The image shows how you can create a multi-choice quiz.">
+
+                                <ul>
+                                    <li style="margin-left:30px;"><b>Selecting the correct answer:</b> Check the option which is the correct answer. This enables the Microsoft Forms to grade the answers submitted by the participants</li>
+                                    <img class="img-fluid my_class_2" src="img/security-quiz-3.gif" style="border:1px solid black;" alt="The image shows how you can mark the correct answer.">
+
+
+                                    <li style="margin-left:30px;"><b>Adding points to the quiz:</b> You can enter the points each question carries in the points box. </li>
+                                    <img class="img-fluid my_class_2" src="img/security-quiz-4.gif" style="border:1px solid black;" alt="The image shows how you add points to a question.">
+
+                                </ul>
+                                <li>Let’s add 2 more questions to our quiz and keep it short.  </li>
+                                <img class="img-fluid my_class_2" src="img/security-quiz-5.gif" style="border:1px solid black;" alt="The image shows how you can add multi-choice questions.">
+
+                                <p><b>Note:</b> You can mark all questions are required if you want. </p>
+
+                                <li>Turn on practice mode: Go to select <b>‘…’ More Options</b> >> <b>Settings</b> >> Turn on <b>Practice Mode</b>.  </li>
+                                <img class="img-fluid my_class_2" src="img/security-quiz-6.gif" style="border:1px solid black;" alt="The image shows how you can turn on practice mode for quiz.">
+
+
+                                <li>You can also set a <b>Start date</b> and <b>End date</b> for the quiz. You can also <b>Shuffle questions</b>. But you <b>cannot Set time duration</b> for quizzes with practice mode turned on. </li>
+                                <img class="img-fluid my_class_2" src="img/security-quiz-7.png" style="border:1px solid black;" alt="Image shows how you can set start and end dates for the quiz.">
+
+                                <li>Click the <b>Collect responses</b> button and <b>mail the quiz</b> to the participants. </li>
+                                <img class="img-fluid my_class_2" src="img/security-quiz-8.gif" style="border:1px solid black;" alt="Image shows how you can mail the quiz to participants.">
+
+                            </ol>
+
+
+
+                            <h4 id="users-take-survey-2">Participant taking the Quiz</h4>
+                            <p>Like mentioned before, quizzes with practice mode turned on are more like trainings that guide participants through the quiz with the correct answers. The idea is to help the participant gain knowledge. </p>
+
+                            <img class="img-fluid my_class_2" src="img/participant-takes-quiz-1.gif" style="border:1px solid black;" alt="Image shows how you participants can take the quiz.">
+
+
+                            <p><b>Note:</b> The participants can also review the results once the quiz is completed. If the answer was revealed to the participant, that question gets marked as ‘Revealed correct answer’. </p>
+
+                            <br />
+                            <h3 id="practice-mode-off">Quiz with Practice Mode Turned Off </h3>
+                            <p>Let’s turn off the practice mode and see how the quiz appears to the participants. </p>
+
+                            <ul>
+                                <li>Turn off practice mode: Go to select <b>‘…’ More Options >> Settings >> Turn off Practice Mode</b>. </li>
+                                <img class="img-fluid my_class_2" src="img/security-quiz-10.gif" style="border:1px solid black;" alt="Image shows how to turn off the practice mode for quiz.">
+
+                            </ul>
+
+
+                            <h4 id="users-take-survey-3">Participant taking the Quiz</h4>
+                            <p>Like mentioned before, quizzes with practice mode turned on are more like trainings that guide participants through the quiz with the correct answers. The idea is to help the participant gain knowledge. </p>
+
+                            <img class="img-fluid my_class_2" src="img/security-quiz-11.gif" style="border:1px solid black;" alt="The image shows participants can take the quizzes with practice mode turned off.">
+                            <p><b>Note:</b> The participant score is displayed at the end <b>only for quizzes that are automatically graded</b> based on the <b>correct answers marked</b> in the questionnaire. For <b>manual quizzes</b>, participants get their scores only after their <b>answers are reviewed manually</b>. </p>
+
+                            <br /><br />
+                            <h3 id="view-quiz-results">Viewing the Quiz Results  </h3>
+
+                            <ul>
+                                <li>Open the form and select <b>Responses</b> tab. Results for all the questions based on the answers provided by the participants get listed.   </li>
+                                <img class="img-fluid my_class_2" src="img/security-quiz-12.gif" style="border:1px solid black;" alt="Image shows how to access quiz results by clicking the Respones tab.">
+                                
+                                <li>Using <b>More Details</b> links, you can get more details on the answers like who answered what and whether it was correct or not.    </li>
+                                <img class="img-fluid my_class_2" src="img/security-quiz-13.gif" style="border:1px solid black;" alt="Image shows how to view more details about a specific question.">
+                                
+                                <li>Click <b>Review answers</b> to view individual participant answers to the questionnaire. </li>
+                                <img class="img-fluid my_class_2" src="img/security-quiz-14.gif" style="border:1px solid black;" alt="Image shows how to view answers to questions on participant basis.">
+                                
+                                <li>Click <b>Remind them</b> to send reminders to those who are yet to take the quiz. </li>
+                                <img class="img-fluid my_class_2" src="img/security-quiz-15.gif" style="border:1px solid black;" alt="Image shows how to send quiz survey related reminders.">
+                                
+                                <li>You can also share the quiz results as <b>excel sheets</b>. </li>
+                                <img class="img-fluid my_class_2" src="img/security-quiz-16.gif" style="border:1px solid black;" alt="Image shows how to share the quiz results as excel sheets.">
+                            </ul>
+
+                            <br /><br />
+
+                            <h3 id="posting-score">Posting Scores</h3>
+                            <p>Though the participants get their quiz scores immediately with automated quizzes, you still have the option of posting the score and adding your feedback to the participants  </p>
+                            <p><b>Note:</b>Participants can view the posted scores and quiz feedback using the same quiz link that was shared earlier. </p>
+
+                            <h4 id="posting-score-without-feedback">Posting Scores without Feedback</h4>
+                            <ul>
+                                <li>Click <b>Post Scores</b> >> <b>Select the participant</b> >> <b>Post scores</b> button   </li>
+                                <img class="img-fluid my_class_2" src="img/security-quiz-17.gif" style="border:1px solid black;" alt="Image shows how to post scores by clicking the post scores button. ">
+
+                            </ul>
+
+                            <br /><br />
+                            <h4 id="posting-score-with-feedback">Posting Scores with Feedback</h4>
+                            <ul>
+                                <li>Click <b>Post Score</b> button >> <b>Select the participant</b> by clicking the <b>user name</b>. Click the <b>message bubble</b> below the respondent’s name and enter the <b>quiz feedback</b>.    </li>
+                                <img class="img-fluid my_class_2" src="img/security-quiz-18.gif" style="border:1px solid black;" alt="Image shows how to add feedback to the quiz. ">
+                                <li>The participant receives your feedback along with the posted score. Your feedback appears at the top of the form as shown in the image.    </li>
+                                <img class="img-fluid my_class_2" src="img/security-test-19.png" style="border:1px solid black;" alt="Image shows where the feedback appears in the form.">
+
+                            </ul>
+
+                            <h2 id="duplication">Duplicating and Collaborating on Forms</h2>
+
+                            <ul>
+                                <li>You also can <b>duplicate or make a copy of the form</b> so that it can serve as base for another quiz by selecting <b>‘…’ icon >> Collaborate or Duplicate >> Share as a template</b> option. You can then modify the newly created form to suit your requirements.   </li>
+                                <img class="img-fluid my_class_2" src="img/duplicating-form.gif" style="border:1px solid black;" alt="Image shows how to dupicate a form quiz survey and reuse it. ">
+
+
+                                <li>You can also <b>add collaborators to the form </b>so that they can jointly work with you on the survey or quiz by selecting <b>‘…’ icon >> Collaborate or Duplicate >> Add collaborators</b> option.     </li>
+                                <img class="img-fluid my_class_2" src="img/collaborating-1.gif" style="border:1px solid black;" alt="Image shows how to collaborate with others on the form based quiz. ">
+
+                                <p><b>Note:</b> Collaborators can be (i) Anyone with an Office 365 work or school account, (ii) Only people with MSFT accounts or (iii) Specific people within MSFT community. You can choose collaborators by clicking on the dropdown as shown in the image. </p>
+                                <img class="img-fluid my_class_2" src="img/collaborating-2.gif" style="border:1px solid black;" alt="Image shows the various form collaborator options available. ">
+
+
+                            </ul>
+                            <br />
+                            <h2 id="importing">Importing Forms</h2>
+                            <p>You can also import data from your <b>word documents or PDF files</b> by clicking the <b>Quick Import</b> button and specifying whether you want a <b>form or quiz</b> to be created from the data being uploaded. </p>
+                            <img class="img-fluid my_class_2" src="img/import-1.gif" style="border:1px solid black;" alt="Image shows how to import form data. ">
+
+                            <p>The format your file should be in can be viewed by clicking the <b>See import guidance</b> as shown in the image. The file being imported should contain i) multiple choices, ii) clear separation between questions, and iii) content should be arranged vertically. The file should not contain i) figures or complex equations. </p>
+                            <img class="img-fluid my_class_2" src="img/import-2.gif" style="border:1px solid black;" alt="Image shows the guidance for importing form data.">
+
+                            <br /><br/>
+                            <h2 id="notes">Additional Notes</h2>
+                            <ol>
+                                <li>You can also <b>upload images</b> to your survey and quiz questions. </li>
+                                <img class="img-fluid my_class_2" src="img/uploading-images.gif" style="border:1px solid black;" alt="This image shows how to upload images to form questions. ">
+
+                                <li>You can also <b>customize the form theme </b>for your surveys and quizzes. </li>
+                                <img class="img-fluid my_class_2" src="img/customize-forms.gif" style="border:1px solid black;" alt="This image shows how to customize the form's theme or style.">
+
+                                <li>Quizzes can also contain <b>branching questions</b>, just like surveys. </li>
+                            </ol>
+                        </div>
+
+
+
+                    </div>
+                    <!-- News Detail End -->
+                    <!-- side TOC start -->
+                    <div class="side-table-box">
+                        <div class="table-content">
+                            <h5 class="menu-icon">Table of Contents</h5>
+                        </div>
+                    </div>
+            <!-- side TOC end         -->
+            <!-- side TOC menu slider section start         -->
+                    <div class="scroll-box menu">
+                        <div class="icons-scroll">
+                            <h1 class="x">X</h1>
+                        </div>
+                        <h1>Table of Contents</h1>
+                        <ul>
+                            <li><a href="#access-forms">Accessing Microsoft 365 Forms App</a></li>
+                            <li><a href="#create-form-survey">Microsoft 365 Forms Based Survey</a>
+                                <ul>
+                                    <li><a href="#create-survey-1">Creating Surveys from Pre-Defined Template</a></li>
+                                    <li><a href="#create-survey-2">Creating Surveys from Scratch</a>
+                                        <ul>
+                                            <li><a href="#branching-question-1">Branching Questions</a></li>
+                                            <li><a href="#branching-question-2">Turning the First Question into a Branching Question</a></li>
+                                            <li><a href="#branching-question-3">Testing Whether Branching Works or Not</a></li>
+                                        </ul>
+                                        <li><a href="#survey-settings">Modify Survey Settings</a></li>
+                                        <li><a href="#send-survey">Sending the Survey</a></li>
+                                        <li><a href="#users-take-survey-1">How Users Take the Survey</a></li>
+                                        <li><a href="#view-survey-results">Viewing Survey Results</a></li>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#create-form-quiz">Microsoft 365 Forms Based Quiz</a>
+                                <ul>
+                                    <li><a href="#practice-mode-on">Quiz with Practice Mode Turned On</a>
+                                        <ul>
+                                            <li><a href="#users-take-survey-2">Participant taking the Quiz</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#practice-mode-off">Quiz with Practice Mode Turned Off</a>
+                                        <ul>
+                                            <li><a href="#users-take-survey-3">Participant taking the Quiz</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#view-quiz-results">Viewing Quiz Results</a></li>
+                                    <li><a href="#posting-score">Posting Scores</a>
+                                        <ul>
+                                            <li><a href="#posting-score-without-feedback">Posting Scores without Feedback</a></li>
+                                            <li><a href="#posting-score-with-feedback">Posting Scores with Feedback</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#duplication">Duplicating and Collaborating on Forms</a></li>
+                            <li><a href="#importing">Importing Forms</a></li>
+                            <li><a href="#notes">Additional Notes</a></li>
+                       </ul>
+                    </div>
+            <!-- side TOC menu slider section end         -->
+          
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- News With Sidebar End -->
+    <!-- Footer Start -->
+    <div class="container-fluid py-4 px-sm-3 px-md-5" style="background: #111111;">
+        <p class="m-0 text-center">
+            &copy; <a href="#">m365corner.com</a>. All Rights Reserved.
+
+            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+            Design by <a href="https://htmlcodex.com">HTML Codex</a>
+        </p>
+    </div>
+    <!-- Footer End -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+    <script type="text/javascript" src="https://unpkg.com/freezeframe@3.0.10/build/js/freezeframe.pkgd.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            second = new freezeframe({
+                'selector': '.my_class_2',
+                'animation_play_duration': Infinity,
+                'non_touch_device_trigger_event': 'click'
+            }).freeze();
+        })
+    </script>
+    <!-- JavaScript Libraries -->
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script>
+        document.querySelector('.menu-icon').addEventListener('click', function () {
+            //alert('haiii')
+            document.querySelector('.menu').classList.remove('hide');
+            //alert('clicked')
+            //document.querySelector('.menu').style.transform = "translateX(-110%)";
+            document.querySelector('.menu').classList.toggle('move-menu');
+        })
+
+        document.querySelector('.x').addEventListener('click', function () {
+            document.querySelector('.menu').classList.add('hide');
+        })
+    </script>
+</body>
+
+</html>

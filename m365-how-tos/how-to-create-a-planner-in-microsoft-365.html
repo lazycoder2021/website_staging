@@ -1,0 +1,511 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>How to Create a Planner in Microsoft 365 using the Planner app?</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Microsoft 365 Planner, Planner buckets, Planner tasks, Planner members, create planner tasks, copy and move planner tasks" name="keywords ">
+    <meta content="Learn how to create a Microsoft 365 planner, add planner tasks/members; how planner buckets can group tasks; copy/move tasks; and the different bucket views." name="description">
+
+    <link rel="stylesheet" href="https://unpkg.com/freezeframe@3.0.10/build/css/freezeframe_styles.min.css">
+    
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../css/style.css" rel="stylesheet">
+    <style>
+
+        p, li {
+            line-height: 35px;
+        }
+
+
+
+        thead td {
+            border: 2px solid black;
+            text-align: center;
+        }
+
+        thead {
+            font-weight: 900;
+        }
+
+        td {
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        ol li {
+            margin: 5px;
+            line-height: 25px;
+        }
+
+        h2 {
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid d-none d-lg-block">
+
+        <div class="row align-items-center bg-white py-3 px-lg-5">
+            <div class="col-lg-4">
+                <a href="../index.html" class="navbar-brand p-0 d-none d-lg-block">
+                    <p class="m-0 display-4  text-primary" style="font-weight: 700;">M365<span class="text-secondary font-weight-normal">Corner</span></p>
+                </a>
+            </div>
+            <div class="col-lg-8 text-center text-lg-right">
+
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-2 py-lg-0 px-lg-5">
+            <a href="index.html" class="navbar-brand d-block d-lg-none">
+                <p class="m-0 display-4 text-primary" style="font-weight: 700;">m365<span class="text-white font-weight-normal">Tutorials</span></p>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-0 px-lg-6" id="navbarCollapse">
+                <div class="navbar-nav mr-auto py-0">
+                    <a href="../index.html" class="nav-item nav-link active">Home</a>
+                    <a href="../m365-for-beginners/microsoft-365-beginner-series-overview.html" class="nav-item nav-link">M365 for Beginners</a>
+                    <a href="../m365-how-tos/how-to-overview.html" class="nav-item nav-link">M365 How Tos</a>
+                    <a href="../m365-graph-api/graph-api-overview.html" class="nav-item nav-link">M365 Graph API</a>
+                    <a href="../m365-updates/m365-updates-overview.html" class="nav-item nav-link">M365 Updates</a>
+                    <a href="../m365-administration/m365-administration-overview.html" class="nav-item nav-link">M365 Administration</a>
+                    <a href="../contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <div class="input-group ml-auto d-none d-lg-flex" style="width: 100%; max-width: 300px;">
+
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+    <!-- Breaking News Start -->
+    <div class="container-fluid mt-5 mb-3 pt-3">
+
+    </div>
+    <!-- Breaking News End -->
+    <!-- News With Sidebar Start -->
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- News Detail Start -->
+                    <div class="position-relative mb-3">
+
+                        <div class="bg-white border border-top-0 p-4">
+                            <div class="mb-3">
+                                <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                   href="">Business</a>
+                                <a class="text-body" href="">Jan 01, 2045</a>
+                            </div>
+
+                            <h1 class="mb-3 text-secondary font-weight-bold">
+                                How to Create a Planner in Microsoft 365?
+                            </h1>
+                            <p style="background-color:red;color:white;text-align:center;"><b>Note:</b> Most of the images contained within this article are gifs. Click them to understand how Microsoft Planner works better. </p>
+
+                            <p>The planner app in Microsoft 365 helps you create plans, add tasks to them, group similar tasks under a common label, and invite members so that you can collaborate with them and work on the plan. Planner app is very useful for already existing Microsoft 365 groups and teams to execute their plans. </p>
+                            <p>In this article, let’s understand how you can create a Microsoft 365 Planner and execute all the necessary steps required to put your plan into action. </p>
+                            <h2 class="mb-3 text-secondary font-weight-bold" id="access-planner">
+                                Accessing the planner app the first time
+                            </h2>
+                            <ol>
+                                <li>Login to Microsoft 365 using your credentials. </b>. </li>
+                                <li>Click <b>App Launcher</b> >> Select <b>Explore all your Apps</b> . Then choose <b>Project Management</b> tab. <b>The Planner app</b> gets listed. </li>
+                                <img class="img-fluid my_class_2" src="img/accessing-planner-app.gif" style="border:1px solid black;" alt="Image shows how to access Microsoft 365 Planner app the first time from App Launcher by clicking Explore all your Apps link.">
+                                <p><b>Note:</b> After you access the <b>Planner</b> for the first time, it becomes available under the <b>Apps launcher</b>. </p>
+                                <img class="img-fluid my_class_2" src="img/planner-under-app-launcher.gif" style="border:1px solid black;" alt="Image shows how you can access the Microsoft 365 Planner app from the App Launcher in the Microsoft 365 home page.">
+
+                            </ol>
+                            <h2 class="mb-3 text-secondary font-weight-bold" id="create-planner">
+                                Creating your first planner in Microsoft 365
+                            </h2>
+                            <ol>
+                                <li>Select the <b>Planner app</b>. It opens in a separate tab.  </li>
+                                <img class="img-fluid my_class_2" src="img/launching-planner-app.gif" style="border:1px solid black;" alt="Image shows how the Microsoft 365 Planner app home page looks like and contains the Create a plan button.">
+                                <li>Click <b>Create a plan</b> button.  </li>
+                                <img class="img-fluid my_class_2" src="img/create-a-plan.gif" style="border:1px solid black;" alt="Image shows how the New Plan dialog box opens up when the Create a Plan button is clicked from the Planner home page.">
+                                <li>Creating a <b>New Blank Plan</b> </li>
+                                <ul>
+                                    <li>Select the <b>New Blank Plan</b> option</li>
+                                    <li>Provide a <b>title</b> for the plan. Select or Set the <b>Privacy and Sensitivity</b> dropdown for the plan. Options available: <b>Public</b> or <b>Private</b>. </li>
+                                    <li>Click the <b>Create</b> button. </li>
+                                </ul>
+                                <img class="img-fluid my_class_2" src="img/blank-plan-1.gif" style="border:1px solid black;" alt="Image shows how you can create a new blank plan by adding plan name and plan sensitivity - public or private - details.">
+                                <p><b>Note:</b> If you select a group from the <b>Add to existing group</b> dropdown, then the <b>Privacy and Sensitivity</b> dropdown gets disabled. This is because the Group’s sensitivity applies for the plan too. </p>
+                                <img class="img-fluid my_class_2" src="img/blank-plan-2.gif" style="border:1px solid black;" alt="Image shows how you can assign a group to the new plan by clicking Add to existing group dropdown and selecting the group.">
+                                <li>Creating a plan from an existing <b>template</b>.   </li>
+                                <ul>
+                                    <li>Select the <b>template</b> using which you want to create the plan. </li>
+                                    <li>Provide a title for the plan. Select or Set the <b>Privacy and Sensitivity</b> dropdown for the plan. Options available: <b>Public</b> or <b>Private</b>.  </li>
+                                    <li>Click the <b>Create</b> button.  </li>
+                                </ul>
+                                <img class="img-fluid my_class_2" src="img/template-plan-1.gif" style="border:1px solid black;" alt="Image shows how you can create a plan from an existing template by adding plan name and plan sensitivity - public or private - details.">
+                                <p><b>Note:</b> If you select a group from the <b>Add to existing group dropdown</b>, then the <b>Privacy and Sensitivity</b> dropdown gets disabled. This is because the Group’s sensitivity applies for the plan too. </p>
+                                <img class="img-fluid my_class_2" src="img/template-plan-2.gif" style="border:1px solid black;" alt="Image shows how you can assign a group to the new plan by clicking Add to existing group dropdown and selecting the group.">
+                            </ol>
+                            <h2 id="add-planner-tasks">Adding planner tasks and assigning them to users   </h2>
+                            <ol>
+                                <li>Click <b>Add task</b> icon. The task form opens.  </li>
+                                <li>Enter the <b>task name</b>, set the <b>due date</b> and <b>assign the task</b> to the user.    </li>
+                                <li>Click Add task button. The task gets added. </li>
+
+
+                                <img class="img-fluid my_class_2" src="img/adding-planner-task.gif" style="border:1px solid black;" alt="The image shows how you can add a planner task, set its due date, assign it to a member by adding the details and clicking Add task button.">
+
+                                <p><b>Note:</b> You can also assign tasks from task card by clicking ‘<b>…</b>’ icon >> and selecting <b>Assign</b> option. </p>
+                                <img class="img-fluid my_class_2" src="img/assign-task-another.png" style="border:1px solid black;" alt="The image shows how you can assign planner tasks to members by clicking the three dots icon within the task details section.">
+
+                            </ol>
+
+                            <h2 id="add-planner-buckets">Adding planner buckets   </h2>
+
+                            <p>Buckets help you group similar tasks. For example, all tasks belonging to ‘Planning’ phase of a project can be grouped under a separate bucket called ‘Planning’.</p>
+
+                            <ol>
+                                <li>Click the <b>Add new bucket</b> option  </li>
+                                <li>Enter the <b>bucket name</b>. </li>
+                                <li>Hit <b>Enter key</b>. The new bucket gets created. </li>
+
+
+                                <img class="img-fluid my_class_2" src="img/adding-new-bucket.gif" style="border:1px solid black;" alt="The image shows how you can add a planner bucket by clicking the Add new bucket option and providing the bucket name.">
+
+
+
+                            </ol>
+
+                            <br />
+
+                            <h2 id="add-planner-members">Adding members to planner    </h2>
+
+                            <p>You can add members in the following two ways: </p>
+
+                            <ol>
+                                <li>Click the <b>Members</b> dropdown.   </li>
+                                <li>Type the name of the user going to be added as a member. The username pops up. <b>Click on the username</b> and the user gets added to the planner.  </li>
+
+
+
+                                <img class="img-fluid my_class_2" src="img/adding-members-1.gif" style="border:1px solid black;" alt="The image shows how you can add members to the planner by clicking the Members dropdown and selecting the member from the planner overview page.">
+
+
+                            </ol>
+
+                            <p><b>[OR]</b></p>
+                            <ol>
+                                <li>Add the user as a member of the planner while <b>assigning the task</b> to him/her.    </li>
+                                <li>Click the <b>Assign</b> option. Type in the <b>username</b>.  </li>
+                                <li><b>Select the user</b> from the pop up. </li>
+                                <li><b>Confirm the action</b>. The user gets added to the planner as a member.</li>
+                                <p><b>Note:</b> If the user is not a part of the plan already, then the user gets added the plan. </p>
+
+
+
+                                <img class="img-fluid my_class_2" src="img/adding-members-2.gif" style="border:1px solid black;" alt="This image shows how you can add a member to the planner from within the task details page as you assign a task to them.">
+
+
+                            </ol>
+
+
+                            <h2 id="add-task-details">Adding task details like notes, checklist, attachments, comments </h2>
+                            <p><b>Adding notes: </b></p>
+                            <ul>
+                                <li>Just click the <b>notes</b> section and type your notes for the task. </li>
+                            </ul>
+
+                            <p><b>Note:</b> You also have the option of displaying the notes on the card itself by selecting the <b>Show on card</b> checkbox. </p>
+
+
+
+                            <p><b>Adding Attachments: </b></p>
+                            <ul>
+                                <li>Click the <b>Add attachment</b> button. You have 3 options to choose from.  </li>
+                                <li style="list-style-type:circle;margin-left:40px;">From computer – for uploading files from your computer. </li>
+                                <li style="list-style-type:circle;margin-left:40px;">From team files – for uploading files from your teams portal.  </li>
+                                <li style="list-style-type:circle;margin-left:40px;">A link to a URL - for sharing one-drive or SharePoint files in the form of URL.  </li>
+                                <li><b>Select the file</b> and click the Upload button. The file gets uploaded. </li>
+                            </ul>
+
+                            <p><b>Adding Comments: </b></p>
+                            <ul>
+                                <li>In the <b>Comments</b> section, type your comment and click the <b>Send</b> button. The comment gets added. </li>
+                            </ul>
+
+                            <img class="img-fluid my_class_2" src="img/task-details-1.gif" style="border:1px solid black;" alt="This image shows how you can add task details like notes, checklist, attachments, comments etc., in the task details section.">
+                            <br /><br />
+                            <h2 id="moving-task">Moving task from one bucket to another, updating task status, assigning task priority  </h2>
+                            <p><b>Moving task from one bucket to another  </b></p>
+                            <p>This could be done in two ways: </p>
+                            <ul>
+                                <li>From the <b>task card</b>: Click the <b>…</b> icon >> select the <b>Move task</b> option.  </li>
+                                <img class="img-fluid my_class_2" src="img/moving-task-1.gif" style="border:1px solid black;" alt="This image shows how you can move a task from one bucket to another by clicking more options, selecting move task, and selecting the bucket.">
+                                <li>From within the <b>task details section</b>: <b>Click the Bucket</b> dropdown >> <b>Select the bucket</b> you wish to move the task to.  </li>
+                                <img class="img-fluid my_class_2" src="img/moving-task-2.gif" style="border:1px solid black;" alt="This image shows how you can move a task from one bucket to another by clicking the Bucket dropdown from within the task details section.">
+
+                            </ul>
+
+
+                            <p><b>Updating task status and Assigning task priority   </b></p>
+
+                            <ol>
+                                <li>From within the <b>task details section</b>: Select the desired progress level from the <b>Progress dropdown</b> and the desired status from the <b>Priority dropdown</b>.  </li>
+                                <img class="img-fluid my_class_2" src="img/setting-progress-priority.gif" style="border:1px solid black;" alt="This image shows how you can update the task status and select task priority from within the task details section. ">
+
+                            </ol>
+
+                            <br /><br />
+                            <h2 id="copying-task">Copy task, Copy link to task and Delete task</h2>
+                            <p><b>Copy task  </b></p>
+                            <p>This could be done in two ways: </p>
+                            <ul>
+                                <li>From the <b>task card</b>: Click the <b>…</b> icon >> select the <b>Copy task</b> option. Specify whether you would like to clone the task or choose specific elements from it and click <b>Copy</b> button. The task gets copied.  </li>
+                                <img class="img-fluid my_class_2" src="img/copy-task-1.gif" style="border:1px solid black;" alt="This image shows how to copy task by clicking the more option, selecting Copy task option, choosing the details to be copied and clicking the copy button.">
+                                <li>From within the <b>task details section</b>: Click the ‘…’ icon (from the top right corner) >> Select the <b>Copy task</b> option. Specify whether you would like to clone the task or choose specific elements from it and click <b>Copy</b> button. The task gets copied.   </li>
+                                <img class="img-fluid my_class_2" src="img/copy-task-2.gif" style="border:1px solid black;" alt="This section shows how you can copy a task by clicking more options and selecting Copy task option from within task the details section.">
+
+                            </ul>
+
+                            <br /><br />
+
+                            <p><b>Copy link to task  </b></p>
+                            <p>You can also copy link to task so that you can share it with your members. This can be done in two ways:  </p>
+                            <ul>
+                                <li>From the <b>task card</b>: Click the <b>…</b> icon >> select the <b>Copy link to task </b> option.   </li>
+                                <img class="img-fluid my_class_2" src="img/copy-link-to-task-1.png" style="border:1px solid black;" alt="This image shows how you can copy link to a task by clicking the three dots icon and selecting the copy link to task option from the menu. ">
+                                <li>From within the <b>task details section</b>: Click the ‘…’ icon (from the top right corner) >> Select the <b>Copy link to task</b> option.    </li>
+                                <img class="img-fluid my_class_2" src="img/copy-link-to-task-2.png" style="border:1px solid black;" alt="This image shows how you can copy a task by clicking the three dots icon and selecting the Copy link to task option from within the task details section.">
+
+                            </ul>
+
+                            <br /><br />
+
+                            <p><b>Delete task   </b></p>
+                            <p>This can be done in two ways:  </p>
+                            <ul>
+                                <li>From the <b>task card</b>: Click the <b>…</b> icon >> select the <b>Delete </b> option.   </li>
+                                <img class="img-fluid my_class_2" src="img/delete-task-1.gif" style="border:1px solid black;" alt="This image shows how you can delete a task by clicking the three dots icon and selecting the Delete option from the task card.">
+                                <li>From within the <b>task details section</b>: Click the ‘…’ icon (from the top right corner) >> Select the <b>Delete</b> option.    </li>
+                                <img class="img-fluid my_class_2" src="img/delete-task-2.gif" style="border:1px solid black;" alt="This image shows how you can delete a task by clicking the three dots icon and selecting the Delete option from within the task details section.">
+
+                            </ul>
+
+
+                            <h2 class="mb-3 text-secondary font-weight-bold" id="planner-views">
+                                Different planner bucket/task views
+                            </h2>
+                            <p>You are presented with 4 different views.</p>
+                            <ul>
+                                <li>Grid view</li>
+                                <li>Board view (the default option)</li>
+                                <li>Charts view </li>
+                                <li>Schedule view (calendar view) </li>
+                            </ul>
+
+                            <img class="img-fluid my_class_2" src="img/grid-view.png" style="border:1px solid red;" alt="This image shows how the grid view of the Planner bucket and the tasks looks like. ">
+                            <img class="img-fluid my_class_2" src="img/chart-view.png" style="border:1px solid red;" alt="This image shows how the charts view of the Planner bucket and the tasks looks like. ">
+                            <img class="img-fluid my_class_2" src="img/calendar-view.png" style="border:1px solid red;" alt="This image shows how the calendar view of the Planner bucket and the tasks looks like. ">
+
+                            <p><b>Filter Dropdown</b></p>
+                            <p>You have 7 filters (as shown in the image below) using which you can filter the information being displayed to suit your requirements. Check the next image to understand how the filter works. </p>
+                            <img class="img-fluid my_class_2" src="img/planner-filter.png" style="border:1px solid red;" alt="This image shows the 7 filters available to you using which the planner tasks can be filtered to suit your requirements. ">
+
+                            <img class="img-fluid my_class_2" src="img/filter-working.gif" style="border:1px solid red;" alt="This image shows how you can use the various filters available within the filter dropdown to filter for the tasks you wish to view. ">
+
+
+                            <p><b>Group by Bucket Dropdown </b></p>
+                            <p>Grouping tasks by bucket is the default option. You can modify this to suit your requirement as shown in the image below.  </p>
+
+                            <img class="img-fluid my_class_2" src="img/group-by-bucket.gif" style="border:1px solid red;" alt="This image shows how you can group your planner tasks based on various options like bucket they come under, due date assigned, priority assigned to them etc., ">
+                            <br /><br />
+                            <h2 class="mb-3 text-secondary font-weight-bold" id="more-options">
+                                More Options [three dots]
+                            </h2>
+                            <p>When you click the more [three dots] option button, it opens the following options: </p>
+
+                            <img class="img-fluid my_class_2" src="img/more-options.png" style="border:1px solid red;" alt="This image shows the three dots icon available in the planner overview page and the various options it contains like conversations, members, files etc.,  ">
+
+
+                            <ul>
+                                <li><b>Conversations </b>– lets you converse with your planner group by sending mails to it via outlook that opens up when this option is clicked as shown in the image. </li>
+                                <img class="img-fluid my_class_2" src="img/conversations.png" style="border:1px solid red;" alt="This image shows how you can send mail to your planner group by selecting the conversation option from the three dots icon. ">
+                                <li><b>Members</b> – lets you chat with your planner group via outlook that opens up when this option is clicked as shown in the image</li>
+                                <img class="img-fluid my_class_2" src="img/members.png" style="border:1px solid red;" alt="This image shows how you can chat with your planner group members by selecting the members option from the three dots icon. ">
+                                <li><b>Files</b> – lets you access all the files uploaded to your planner group by clicking this option which leads you to the SharePoint site dedicated for your planner group. </li>
+                                <li><b>Notebook</b> – lets you take your planner related notes and save them in one central location dedicated for your planner group.  </li>
+                                <li><b>Sites </b>– lets you access your planner group’s SharePoint site. Note: A SharePoint site is automatically created when you create a planner. </li>
+                                <li><b>Pin </b>– lets you pin the planner. The pinned planner appears under the Pinned category on the left pane</li>
+                                <li><b>Copy Plan</b> – lets you clone the plan and reuse it. You can choose the settings to be copied and the group to which the planner applies as shown in the image. </li>
+                                <img class="img-fluid my_class_2" src="img/copy-plan-one-more.png" style="border:1px solid red;" alt="This image shows how you can copy the plan details by selecting the copy plan option from the three dots icon and specifying what you want to copy. ">
+
+                                <li><b>Export plan to Excel </b>– lets you export the plan as excel file. </li>
+                                <li><b>Copy link to plan </b>– lets you generate a link to the plan which you can share with others. </li>
+                                <li><b>Plan settings </b>– lets you configure the planner settings. More on this in the Plan Settings section below. </li>
+                                <li><b>Add plan to Outlook calendar</b> – allows you share the planner link with the planner group using which they can add the planner to their outlook calendar. By default, this option is not selected as shown in the image below. </li>
+                                <img class="img-fluid my_class_2" src="img/add-plan-to-calendar.png" style="border:1px solid red;" alt="This image shows how you can publish the planner tasks to your calendar and share it with anyone who wants to see it in the form of a link.">
+
+                                <p><b>Note:</b> Once you select the ‘Publish, share with anyone’ option, the link to be shared gets generated and appears in the box. </p>
+                            </ul>
+
+
+                            <br /><br />
+                            <h2 class="mb-3 text-secondary font-weight-bold" id="plan-settings" style="color:red">
+                                Plan Settings
+                            </h2>
+                            <p>In plan settings,  </p>
+                            <ul>
+                                <li>you get to modify the plan name, </li>
+                                <li>change its template (or move from a blank to a pre-defined template and vice versa),  </li>
+                                <li>modify the plan’s sensitivity label (the public/private options),  </li>
+                                <li>enable/disable plan related notifications and,  </li>
+                                <li>delete the plan if it is no longer needed </li>
+                            </ul>
+                            <p>You can access the plan settings in two ways: </p>
+                            <ol>
+                                <li>By clicking the <b>more options</b> button in the planner overview section [or]</li>
+                                <img class="img-fluid my_class_2" src="img/more-options-another.png" style="border:1px solid red;" alt="This image shows how you can access the planner's settings by clicking the three dots icon and selecting the plan settings option. ">
+
+                                <li>By clicking the <b>plan name</b> itself</li>
+                                <img class="img-fluid my_class_2" src="img/plan-name-settings.png" style="border:1px solid red;" alt="This image shows an alternate way of accessing the planner's settings by directly clicking on the plan name. ">
+
+                                <li>Both open the <b>plan settings pane</b> as shown in the image. </li>
+                                <img class="img-fluid my_class_2" src="img/plan-settings.png" style="border:1px solid red;" alt="This image shows the three tabs the plan settings pane contains: i) General, ii) Group and iii) Notifications. ">
+
+                            </ol>
+
+                            <p><b>General Tab</b></p>
+                            <p>The general tab lets you change the <b>name of the plan</b> and its <b>template</b>. </p>
+                            <br />
+                            <p><b>Group Tab</b></p>
+                            <p>The group tab lets you change the <b>plan’s sensitivity label</b> from public to private or private to public.  </p>
+                            <img class="img-fluid my_class_2" src="img/group-tab.png" style="border:1px solid red;" alt="This image shows what the Group tab of the plan settings pane contains and how you can use it to modify the plan's sensitivity label from public to private and vice versa.  ">
+
+                            <br />
+                            <p><b>Notifications Tab</b></p>
+                            <p>The notifications tab lets you configure planner related notifications. There are 3 notifications you can enable or disable as shown in the image.   </p>
+
+                            <ul>
+                                <li>Send email to the group when a task is assigned or completed (not selected by default)</li>
+                                <li>Someone assigns a task to you (selected by default) </li>
+                                <li>When the task assigned to you is due or late (selected by default) </li>
+                            </ul>
+                            <img class="img-fluid my_class_2" src="img/notifications-tab.png" style="border:1px solid red;" alt="This image shows what the Notifications tab of the plan settings pane contains and how you can use it to enable or disable the various plan related notifications. ">
+
+                            <br />
+                            <p><b>Deleting the planner </b></p>
+                            <p>You can also delete the plan when it is no longer needed by clicking the Delete this plan button available under the General tab as shown in the image. </p>
+                            <img class="img-fluid my_class_2" src="img/deleting-the-planner.png" style="border:1px solid red;" alt="This image shows how you can delete a planner from the General tab of the plan settings pane by clicking the delete this plan option. ">
+
+                            <br />
+                        </div>
+
+
+
+                    </div>
+                    <!-- News Detail End -->
+                    <!-- side TOC start -->
+                    <div class="side-table-box">
+                        <div class="table-content">
+                            <h5 class="menu-icon">Table of Contents</h5>
+                        </div>
+                    </div>
+            <!-- side TOC end         -->
+            <!-- side TOC menu slider section start         -->
+                    <div class="scroll-box menu">
+                        <div class="icons-scroll">
+                            <h1 class="x">X</h1>
+                        </div>
+                        <h1>Table of Contents</h1>
+                        <ul>
+                            <li><a href="#access-planner">Accessing the planner app the first time</a></li>
+                            <li><a href="#create-planner">Creating your first planner in Microsoft 365</a></li>
+                            <li><a href="#add-planner-tasks">Adding planner tasks and assigning them to users</a></li>
+                            <li><a href="#add-planner-buckets">Adding planner buckets</a></li>
+                            <li><a href="#add-planner-members">Adding members to planner</a></li>
+                            <li><a href="#add-task-details">Adding task details like notes, checklist, attachments, comments</a></li>
+                            <li><a href="#moving-task">Moving task from one bucket to another, updating task status, assigning task priority</a></li>
+                            <li><a href="#copying-task">Copy task, Copy link to task and Delete task</a></li>
+                            <li><a href="#planner-views">Different planner bucket/task views</a></li>
+                            <li><a href="#more-options">More Options [three dots]</a></li>
+                            <li><a href="#plan-settings">Plan Settings</a></li>
+                       </ul>
+                    </div>
+            <!-- side TOC menu slider section end         -->
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- News With Sidebar End -->
+    <!-- Footer Start -->
+    <div class="container-fluid py-4 px-sm-3 px-md-5" style="background: #111111;">
+        <p class="m-0 text-center">
+            &copy; <a href="#">m365corner.com</a>. All Rights Reserved.
+
+            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+            Design by <a href="https://htmlcodex.com">HTML Codex</a>
+        </p>
+    </div>
+    <!-- Footer End -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+    <script type="text/javascript" src="https://unpkg.com/freezeframe@3.0.10/build/js/freezeframe.pkgd.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            second = new freezeframe({
+                'selector': '.my_class_2',
+                'animation_play_duration': Infinity,
+                'non_touch_device_trigger_event': 'click'
+            }).freeze();
+        })
+    </script>
+    <!-- JavaScript Libraries -->
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script>
+        document.querySelector('.menu-icon').addEventListener('click', function () {
+            //alert('haiii')
+            document.querySelector('.menu').classList.remove('hide');
+            //alert('clicked')
+            //document.querySelector('.menu').style.transform = "translateX(-110%)";
+            document.querySelector('.menu').classList.toggle('move-menu');
+        })
+
+        document.querySelector('.x').addEventListener('click', function () {
+            document.querySelector('.menu').classList.add('hide');
+        })
+    </script>
+</body>
+
+</html>

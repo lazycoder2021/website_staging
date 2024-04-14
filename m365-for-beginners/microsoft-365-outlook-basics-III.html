@@ -1,0 +1,366 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>M365 Corner Beginner Series - Set Up Outlook Meetings</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <meta content="Microsoft 365 Outlook Meetings, Office 365 Outlook Meetings" name="keywords ">
+    <meta content="Learn how to set up Microsoft 365 Outlook meetings and respond to meetings. Also learn how to set up, send and respond to Outlook Scheduling polls." name="description">
+
+    <!--GIF controller-->
+    <link rel="stylesheet" href="https://unpkg.com/freezeframe@3.0.10/build/css/freezeframe_styles.min.css">
+    <!--GIF controller-->
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../css/style.css" rel="stylesheet">
+    <style>
+        /*line height*/
+        p, li {
+            line-height: 35px;
+        }
+        /*line height*/
+
+        thead td {
+            border: 2px solid black;
+            text-align: center;
+        }
+
+        thead {
+            font-weight: 900;
+        }
+
+        td {
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        ol li {
+            margin: 5px;
+            line-height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid d-none d-lg-block">
+        <div class="row align-items-center bg-white py-3 px-lg-5">
+            <div class="col-lg-4">
+                <a href="../index.html" class="navbar-brand p-0 d-none d-lg-block">
+                    <p class="m-0 display-4 text-uppercase text-primary" style="font-weight: 700;">m365<span class="text-secondary font-weight-normal">Corner</span></p>
+                </a>
+            </div>
+            <div class="col-lg-8 text-center text-lg-right">
+
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-2 py-lg-0 px-lg-5">
+            <a href="../index.html" class="navbar-brand d-block d-lg-none">
+                <p class="m-0 display-4 text-uppercase text-primary" style="font-weight: 700;">m365<span class="text-white font-weight-normal">Corner</span></p>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-0 px-lg-6" id="navbarCollapse">
+                <div class="navbar-nav mr-auto py-0">
+                    <a href="../index.html" class="nav-item nav-link active">Home</a>
+                    <a href="../m365-for-beginners/microsoft-365-beginner-series-overview.html" class="nav-item nav-link">M365 for Beginners</a>
+                    <a href="../m365-how-tos/how-to-overview.html" class="nav-item nav-link">M365 How Tos</a>
+                    <a href="../m365-graph-api/graph-api-overview.html" class="nav-item nav-link">M365 Graph API</a>
+                    <a href="../m365-updates/m365-updates-overview.html" class="nav-item nav-link">M365 Updates</a>
+                    <a href="../m365-administration/m365-administration-overview.html" class="nav-item nav-link">M365 Administration</a>
+                    <a href="../contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <div class="input-group ml-auto d-none d-lg-flex" style="width: 100%; max-width: 300px;">
+
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+    <!-- Breaking News Start -->
+    <div class="container-fluid mt-5 mb-3 pt-3">
+
+    </div>
+    <!-- Breaking News End -->
+    <!-- News With Sidebar Start -->
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- News Detail Start -->
+                    <div class="position-relative mb-3">
+
+                        <div class="bg-white border border-top-0 p-4">
+                            <div class="mb-3">
+                                <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                   href="">Business</a>
+                            </div>
+                            <h1 class="mb-3 text-secondary font-weight-bold">Microsoft 365 Outlook Basics III</h1>
+                            <p>Now that you know how to send mails using Microsoft Outlook 365, in this article let’s understand how you can setup or configure Microsoft 365 Outlook meetings. This topic was briefly explained while discussing <a href="" style="color:red;">reply all by meeting to mail</a> option in the Microsoft 365 Outlook Basics I article. Here, let’s dive deep into the Microsoft Outlook 365 meetings and understand them better.  </p>
+                            <h2 id="outlook_meeting">How to setup Microsoft Outlook 365 meetings?</h2>
+                            <p>After you successfully login to your Microsoft 365 tenant using your login credentials, access the <b>Microsoft Outlook</b> app from the <b>App Launcher</b> as shown in the image. </p>
+                            <img class="img-fluid" src="img/access-outlook-1.png" alt="Image explains how you can access Microsoft Outlook from the app launcher by clicking the Outlook app icon. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <p>Once you are within the <b>Outlook</b> app, select the <b>Event</b> option from the <b>New mail</b> dropdown. </p>
+                            <img class="img-fluid" src="img/select-event.png" alt="Image shows how to select Event option from the New mail dropdown for setting up a Microsoft 365 Outlook meeting. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <h3 id="meeting-name">Adding a name for the meeting </h3>
+                            <p>Click the <b>Add a title</b> option to enter a name for the meeting. </p>
+                            <h3 id="inviting-attendees">Inviting attendees</h3>
+                            <p>Meeting attendees are of 2 types: required attendees and optional attendees. To add an attendee, click the <b>Invite attendees</b> box and select the users you wish to add to the meeting. To mark an attendee as optional, click the <b>Optional</b> link and enter the attendee email address in the respective box.  </p>
+                            <img class="img-fluid" src="img/inviting-attendees.png" alt="Image shows how to invite meeting attendees by entering their email addresses and selecting them from suggested contacts list. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <img class="img-fluid" src="img/inviting-attendees-2.png" alt="Image shows how to invite optional meeting attendees by clicking the Optional link and entering their email addresses. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <h3 id="schedule-meeting-date">Scheduling the meeting’s date and time</h3>
+                            <p>You’ll notice that once you select the meeting attendees, <b>suggested times </b>(which is generated by comparing the user calendars) get listed. You can either choose one of them or select the date and time on your own.   </p>
+                            <img class="img-fluid" src="img/schedule-date.png" alt="Image shows how you can select the meeting's date and time from the Suggested times being displayed below the attendee list. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <ul>
+                                <p><b>Note:</b></p>
+                                <li style="margin-left:30px;">Selecting a custom schedule can be difficult because you’ll have to check the other attendee calendars for any conflicts. This is where the <b>Scheduling Assistant</b> comes in handy. It displays the calendars of all the attendees side by side, so that you can select a schedule when everyone is available.   </li>
+
+
+                                <img class="img-fluid" src="img/scheduling-asst.png" alt="Image shows how the Scheduling Assistant displays attendee calendars side by side so that you can select a meeting schedule. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                                <li style="margin-left:30px;">You can also set up a recurring meeting (Weekly, Monthly etc.,) by clicking the <b>Don’t repeat dropdown</b> and selecting the appropriate option </li>
+                                <img class="img-fluid" src="img/do-not-repeat.png" alt="Image shows how to configure Outlook meetings that repeat every week, month, year etc., by clicking Don't repeat dropdown.  " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            </ul>
+
+
+
+
+
+                            <h3 id="schedule-meeting-location">Selecting a meeting location or opting for teams enabled meeting </h3>
+                            <p>You can either go for a physical meeting (in which case you should select the meeting’s location) or meeting via Microsoft Teams. For a physical meeting, you should <b>enter the meeting location</b>. For a Microsoft Team’s based meeting, you should <b>turn on the Teams meeting option</b>  </p>
+                            <img class="img-fluid" src="img/schedule-location.png" alt="Image shows how to configure meeting location by entering the location name or enabling Teams meeting option for virtual meets. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                            <h3 id="send-meeting-invite">Sending the meeting invite </h3>
+                            <p>Once you are sure you have got the meeting details right, click the <b>Send</b> button at the top to send the meeting invite to the attendees. (If you don’t want to send the meeting invite immediately, you can save the <b>invite as draft</b> [so that it can be sent later] by clicking the Send dropdown and selecting the <b>Save as draft</b> option).    </p>
+                            <img class="img-fluid" src="img/sending-meeting-invite-1.png" alt="Image shows how you can send the Microsoft 365 Outlook meeting invite to attendees by clicking the Send button. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <img class="img-fluid" src="img/sending-meeting-invite-2.png" alt="Image shows how save the Microsoft 365 Outlook meeting invite as draft by selecting Save as draft option from Send dropdown. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                            <h3 id="confirm-meeting">Checking whether the meeting was setup or not</h3>
+                            <p>Once the meeting is setup, it should appear in your <b>Calendar</b>. So go check your calendar by selecting the <b>Calendar tab</b>. The meeting you just setup appear in your Calendar as shown in the image.     </p>
+                            <img class="img-fluid" src="img/confirm-meeting-1.png" alt="Image shows how you can check for the configured Microsoft 365 Outlook meeting details in the calendar app. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <p>Click the <b>meeting card</b> to get more info about the meeting. Use the <b>Expand icon</b> to get a more detailed view of the meeting as shown in the image. </p>
+
+                            <img class="img-fluid" src="img/confirm-meeting-2.png" alt="Image shows how you can get a detailed view of the configured Outlook meeting by clicking the expand icon in the calendar app. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+
+
+                            <h3 id="edit-meeting">Editing the meeting details </h3>
+                            <p>If you want to edit the meeting details – say, add more members or change the scheduled meeting date/time – you can do so by <b>selecting the meeting card</b> from the calendar and clicking the <b>Edit</b> button as shown in the image.      </p>
+                            <img class="img-fluid" src="img/edit-meeting.png" alt="Image shows how you can edit the configured Outlook meeting details by clicking the edit icon in the calendar app. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <p><b>Note:</b>If you reschedule a meeting – while editing the meeting details – a new meeting invite gets sent to all the attendees. </p>
+
+
+
+
+
+
+                            <h2 class=" font-weight-bold mb-3" id="respond-to-meeting">How to respond to Microsoft Outlook 365 meetings?</h2>
+                            <p>Apart from the link to join the meeting – if it’s a Teams enabled meeting – the attendees can also respond to the meeting with a ‘Yes’, ‘Maybe’ or ‘No’.   </p>
+                            <h3 id="meeting-response">Accepting the meeting response</h3>
+                            <p>To respond to a meeting invite, the attendee should click the meeting invite. The meeting invite opens as shown in the image. The responses available to the attendee appear in the top right corner as shown in the image. Click <b>‘Yes’</b> to accept the meeting invite.   </p>
+                            <img class="img-fluid" src="img/accept-meeting-response.png" alt="Image shows how you can respond to a Microsoft 365 Outlook meeting invite by selecting yes, no or maybe in the calendar app. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <p><b>Note:</b> Meeting organizers decide whether attendees have the right to respond to meeting invites. While configuring a meeting, if the organizer unchecks <b>Request responses</b> option from <b>Response options</b> dropdown (check image below), then the attendees won’t have the right to respond to meetings.  </p>
+                            <img class="img-fluid" src="img/request-response.png" alt="Image shows how meeting organizers decide whether attendees can respond to meeting invites using Response options dropdown.  " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                            <h3 id="suggest-schedule">Suggesting a different schedule or time </h3>
+                            <p>Attendees have the option of suggesting a different schedule if they are not available at the time of the meeting. To propose a new time, the attendee has to click the ‘…’ icon >> <b>Select Propose new time</b> >> and select <b>I might attend</b> option as shown in the image.    </p>
+                            <img class="img-fluid" src="img/suggest-schedule.png" alt="Image shows how invitees can propose a new time for the Microsoft 365 Outlook meeting by selecting Propose new time option  " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <p>Doing so opens the meeting details box with the current scheduled time. You should <b>modify the current meeting time</b> to a time you are available and click the <b>Done</b> button. </p>
+                            <img class="img-fluid" src="img/meeting-details-box.png" alt="Image shows how invitees can enter the new Outlook meeting time they are proposing by using the current meeting time dropdown.  " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <p>The new proposed time is displayed. The attendees also get to <b>add a note</b> to the organizer explaining why they want a reschedule as shown in the image. After adding the note, the attendee clicks the <b>Send</b> button to send his reply. </p>
+                            <img class="img-fluid" src="img/meeting-details-box-2.png" alt="Image shows how invitees can add notes for the meeting organizer explaining why they are requesting for a meeting schedule. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+
+
+                            <h2 class=" font-weight-bold mb-3" id="schedule-poll">Using scheduling poll to setup Microsoft Outlook 365 meetings </h2>
+                            <h3 id="scheduling-poll">What is a scheduling poll? </h3>
+                            <p>The biggest issue outlook meetings are confronted with are schedule conflicts among users. Though meeting organizers have scheduling assistant to assist them, chances are the scheduling assistant might not work sometimes. This is where a scheduling poll comes to their rescue.   </p>
+                            <p>A scheduling poll is a poll sent out to the meeting attendees (by the meeting organizer) regarding the proposed meeting schedule. If a general consensus is reached among the meeting attendees, then a new meeting is setup at the proposed meeting schedule. If not, another scheduling poll can be launched until everyone agrees on the meeting hour. </p>
+                            <p>Let’s see how the scheduling poll works. </p>
+
+                            <h3 id="send-schedule-poll">Sending out a scheduling poll</h3>
+                            <p>You start off just as you would setup a meeting by selecting the <b>New Mail</b> dropdown >> <b>Event</b> option as shown in the image. </p>
+                            <img class="img-fluid" src="img/select-event.png" alt="Image shows how to select Event option from New mail dropdown for sending out an Outlook meeting related scheduling poll.  " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <p>The outlook meeting details page opens. Specify the <b>meeting title</b> and select the <b>meeting attendees</b>. Once this is done, you can create a <b>Scheduling poll</b> by clicking the Scheduling poll option at the top right corner as shown in the image below. </p>
+                            <img class="img-fluid" src="img/schedule-poll-1.png" alt="Image shows how you can access the Schedule poll option after entering the Microsoft 365 Outlook meeting details.   " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            
+                            <p>The <b>Scheduling poll dialog box</b> opens up. Select the <b>meeting duration</b> and the <b>meeting schedule</b> (date and time) as shown in the second image. (You also have the option of selecting multiple schedules).</p>
+                            <img class="img-fluid" src="img/schedule-poll-2.png" alt="Image shows how the Microsoft 365 Outlook meeting Scheduling poll looks like. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <img class="img-fluid" src="img/schedule-poll-3.png" alt="Image shows how multiple meeting schedules can be selected for polling among meeting attendees using the Scheduling poll box.  " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            
+                            <p><b>Note:</b> You can also view whether the meeting attendees are available or not at the proposed meeting schedule as shown in the image above. </p>
+                            <p>Once the <b>tentative meeting schedules</b> are selected, click the <b>Next</b> button to proceed further. </p>
+                            <p>The tentative meeting schedules you selected get displayed. There will also be a <b>Manage poll settings dropdown</b> (which has a bunch of predefined controls configured as shown in the second image). </p>
+                            <p><b>Note:</b> Enter the <b>location</b>, if it’s a physical meeting; else turn on the <b>Teams meeting</b> option. </p>
+                            <img class="img-fluid" src="img/schedule-poll-4.png" alt="Image shows how the meeting location can be entered. Alternatively, you can enable Teams meeting option for virtual meets. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            
+                            <p>After reviewing the tentative meeting schedules, click open the <b>Manage poll settings</b> dropdown.</p>
+                            <img class="img-fluid" src="img/schedule-poll-5.png" alt="Image shows how you can schedule meeting after polling is complete, enable/disable poll notifications using the poll settings." style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <p>You are presented with the following options, of which all but one is selected: </p>
+                            <ul>
+                                <li><b>Schedule when attendees reach consensus</b> – auto creates a meeting when all the meeting attendees agree to a specific time schedule for the meeting. </li>
+                                <li><b>Hold selected times on my calendar</b> – adds the tentative meeting schedules to the meeting organizer’s calendar once he or she successfully sends the schedule poll to the meeting attendees.  </li>
+                                <li><b>Notify me about poll updates</b> – notifies the organizer whenever attendees finish the poll </li>
+                                <li><b>Require attendees to verify their identity</b> – allows only signed-in users to access the poll. </li>
+                                <li><b>Lock poll for attendees</b> – does not allow attendees to propose a schedule of their own as response to the scheduled poll.  </li>
+
+                            </ul>
+                            <p>Configure the <b>poll settings</b> to meet your requirements. It’s best to go with the recommended settings though. Then click the <b>Create Poll</b> button. </p>
+                            <img class="img-fluid" src="img/schedule-poll-6.png" alt="The three dots icon or the more option available to the right of the mail. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                            <p>The Scheduling poll details get displayed. Click the <b>Send</b> button to send the scheduling poll details to the meeting attendees. </p>
+
+                            <h3 id="confirm-schedule-poll">Confirming the Scheduled Poll was mailed or not </h3>
+                            <p>You can do this in 2 ways:</p>
+                            <ul>
+                                <li><b>By checking your Sent Items folder:</b> The scheduling poll mail should appear in your Sent Items folder as shown in the image. This serves as confirmation that the schedule poll was sent to the attendees. </li>
+                                <img class="img-fluid" src="img/confirm-schedule-1.png" alt="Image shows how you can confirm the scheduling poll details were sent successfully by checking the Sent Items folder. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                                <li><b>By checking your Calendar:</b> Your calendar will contain the meeting details as on-hold items as shown in the image. When you click the on hold meeting card, it will tell you your schedule has been blocked for that period and that the block will be removed once the poll is completed, as shown in the second image. </li>
+                                <img class="img-fluid" src="img/confirm-schedule-2.png" alt="Image shows how you can confirm the scheduling poll details were sent successfully by checking your Outlook Calendar.  " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                                <img class="img-fluid" src="img/confirm-schedule-3.png" alt="Image shows how you can view the details of the scheduled poll by clicking on it in your Outlook Calendar.  " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                            </ul>
+                            <h3 class=" font-weight-bold mb-3" id="respond-schedule-poll">Responding to a scheduling poll </h3>
+                            <p>The meeting attendees receive the scheduling poll mail as shown in the image. When they click the <b>Vote</b> button, they get led to the <b>Scheduling poll </b>as shown in the second image. The attendees can select <b>multiple schedules</b>. Just as they can say ‘yes’, they can also say ‘No’ to multiple schedules as shown in the third image.  </p>
+                            <img class="img-fluid" src="img/responding-to-schedule-1.png" alt="Image shows how invitees receive a Microsoft 365 Outlook meeting scheduling poll mail.  " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                            <img class="img-fluid" src="img/responding-to-schedule-2.png" alt="Image shows how the scheduling poll for a Microsoft 365 Outlook meeting looks like. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+
+                            <img class="img-fluid" src="img/responding-to-schedule-3.png" alt="Image shows how meeting invitees can select or decline multiple meeting time schedules for the scheduling poll.  " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+                            <p>Once the <b>preferred time schedules</b> have been selected, the attendees should click the <b>Vote</b> button. The <b>meeting organizer receives the submitted details</b> as shown in the image below.</p>
+                            <img class="img-fluid" src="img/responding-to-schedule-4.png" alt="Image shows how the meeting organizer receives the scheduling poll results or updates. " style="margin-top: 30px !important; margin-bottom: 30px !important;">
+
+                            <p>The meeting organizer can get a more detailed view of the Scheduled poll by clicking the View Poll button available in the poll update mail. </p>
+                            <p>When all the attendees <b>unanimously select a preferred time schedule</b>, the tentative outlook meeting turns into a <b>confirmed outlook meeting</b> and becomes available in the meeting organizer/attendee calendars. </p>
+                            
+                        </div>
+
+
+
+                    </div>
+                    <!-- News Detail End -->
+
+                    <!-- side TOC start -->
+                    <div class="side-table-box">
+                        <div class="table-content">
+                            <h5 class="menu-icon">Table of Contents</h5>
+                        </div>
+                    </div>
+            <!-- side TOC end         -->
+            <!-- side TOC menu slider section start         -->
+                    <div class="scroll-box menu">
+                        <div class="icons-scroll">
+                            <h1 class="x">X</h1>
+                        </div>
+                        <h1>Table of Contents</h1>
+                        <ul>
+                            <li><a href="#outlook_meeting">How to setup Microsoft Outlook 365 meetings?</a>
+                                <ul>
+                                    <li><a href="#meeting-name">Adding a name for the meeting</a></li>
+                                    <li><a href="#inviting-attendees">Inviting attendees</a></li>
+                                    <li><a href="#schedule-meeting-date">Scheduling the meeting’s date and time</a></li>
+                                    <li><a href="#schedule-meeting-location">Scheduling a meeting location or opting for teams enabled meeting</a></li>
+                                    <li><a href="#send-meeting-invite">Sending the meeting invite</a></li>
+                                    <li><a href="#confirm-meeting">Checking whether the meeting was setup or not</a></li>
+                                    <li><a href="#edit-meeting">Editing the meeting details</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#respond-to-meeting">How to respond to Microsoft Outlook 365 meetings?</a>
+                                <ul>
+                                    <li><a href="#meeting-response">Accepting the meeting request</a></li>
+                                    <li><a href="#suggest-schedule">Suggesting a different schedule or time</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#scheduling-poll">Using scheduling poll to setup Microsoft Outlook 365 meetings</a>
+                                <ul>
+                                    <li><a href="#schedule-poll">What is scheduling poll?</a></li>
+                                    <li><a href="#send-schedule-poll">Sending out a scheduling poll</a></li>
+                                    <li><a href="#confirm-schedule-poll">Confirming the scheduled poll was mailed or not</a></li>
+                                    <li><a href="#respond-schedule-poll">Responding to a scheduling poll</a></li>
+                                </ul>
+                            </li>
+                       </ul>
+                    </div>
+            <!-- side TOC menu slider section end         -->
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- News With Sidebar End -->
+    <!-- Footer Start -->
+
+    <div class="container-fluid py-4 px-sm-3 px-md-5" style="background: #111111;">
+        <p class="m-0 text-center">
+            &copy; <a href="#">Your Site Name</a>. All Rights Reserved.
+
+            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+            Design by <a href="https://htmlcodex.com">HTML Codex</a>
+        </p>
+    </div>
+    <!-- Footer End -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+    <!--GIF Controller-->
+    <script type="text/javascript" src="https://unpkg.com/freezeframe@3.0.10/build/js/freezeframe.pkgd.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            second = new freezeframe({
+                'selector': '.my_class_2',
+                'animation_play_duration': Infinity,
+                'non_touch_device_trigger_event': 'click'
+            }).freeze();
+        })
+    </script>
+    <!--GIF Controller-->
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script>
+        document.querySelector('.menu-icon').addEventListener('click', function () {
+            //alert('haiii')
+            document.querySelector('.menu').classList.remove('hide');
+            //alert('clicked')
+            //document.querySelector('.menu').style.transform = "translateX(-110%)";
+            document.querySelector('.menu').classList.toggle('move-menu');
+        })
+
+        document.querySelector('.x').addEventListener('click', function () {
+            document.querySelector('.menu').classList.add('hide');
+        })
+    </script>
+</body>
+
+</html>
